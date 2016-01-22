@@ -1,0 +1,25 @@
+﻿.mega-menu > li {
+	float:right;
+}
+.mega-menu .dropdown {
+	text-align: right;
+}
+.mega-menu .dropdown.fullWidth {
+	right: 0;
+	margin-right: -1px;
+}
+.mega-menu .box {
+	float: right;
+}
+.mega-menu .box li a {
+	background: url('images/rtl-arrow1.png') right center no-repeat;
+}
+.mega-menu .picture {
+    float: right;
+}
+.mega-menu .box .subcategories {
+    margin: 0 100px 0 0;
+}
+.mega-menu .row .box li a {
+    padding: 5px 10px 5px 0;
+}

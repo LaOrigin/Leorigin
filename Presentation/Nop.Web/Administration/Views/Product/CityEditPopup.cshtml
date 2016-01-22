@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Administration/Views/Shared/_AdminPopupLayout.cshtml";
+}
+@model ProductModel.CityModel
+@{
+    //page title
+    ViewBag.Title = T("Admin.Configuration.Product.City.EditCityDetails").Text;
+    //var tempdata = TempData.message;
+    string tempdata = "";
+    if (TempData["message"] != null)
+    {
+        tempdata = Convert.ToString(TempData["message"]);
+    }
+}
+@using (Html.BeginForm())
+{
+    <div class="section-header">
+        <div class="title">
+            <img src="@Url.Content("~/Administration/Content/images/ico-configuration.png")" alt="" />
+            @T("Admin.Configuration.Product.City.EditCityDetails")
+        </div>
+        <div class="options">
+            <input type="submit" onclick="checkvalidate();" name="save" class="k-button" value="@T("Admin.Common.Save")" />
+        </div>
+    </div>
+    @Html.Partial("_CreateOrUpdateCity", Model)
+
+}
+

@@ -1,0 +1,144 @@
+﻿@model ProductModel.CityModel
+@Html.ValidationSummary(false)
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.ProductId)
+@{string tempdata = "";
+    if (TempData["message"] != null)
+    {
+        tempdata = Convert.ToString(TempData["message"]);
+    }}
+@if (ViewBag.RefreshPage == true)
+{
+    <script type="text/javascript">
+        try {window.opener.document.forms['@(ViewBag.formId)'].@(ViewBag.btnId).click();}
+        catch (e){} 
+        window.close();
+    </script>
+}
+@*@(Html.LocalizedEditor<StateProvinceModel, StateProvinceLocalizedModel>("state-localized",
+@<table class="adminContent">
+    <tr>
+        <td class="adminTitle">
+            @Html.NopLabelFor(model => model.Locales[item].Name):
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.Locales[item].Name)
+            @Html.ValidationMessageFor(model => model.Locales[item].Name)
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            @Html.HiddenFor(model => model.Locales[item].LanguageId)
+        </td>
+    </tr>
+</table>
+,
+@<table class="adminContent">
+    <tr>
+        <td class="adminTitle">
+            @Html.NopLabelFor(model => model.Name):
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </td>
+    </tr>
+</table>
+))*@
+<div id="error" style="display:none"> Please fill all fields</div>
+<table class="adminContent">
+    <tr>
+        <td class="adminTitle">
+            @Html.NopLabelFor(model => model.CountryId):
+        </td>
+        <td class="adminData">
+            @Html.DropDownListFor(model => model.CountryId,Model.Countries)
+            @Html.ValidationMessageFor(model => model.CountryId)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.NopLabelFor(model => model.State):
+        </td>
+        <td class="adminData">
+            @Html.DropDownListFor(model => model.StateId,Model.States)
+            @Html.ValidationMessageFor(model => model.StateId)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.NopLabelFor(model => model.City):
+        </td>
+        <td class="adminData">
+            @Html.DropDownListFor(model => model.CityId,Model.Cities)
+            @Html.ValidationMessageFor(model => model.CityId)
+        </td>
+    </tr>
+</table>
+<script>
+    function bindstates() {
+        $.ajax({
+            cache: false,
+            url: "@(Url.Action("StateList", "Country"))",
+            data: { "countryid": $("#CountryId").val() },
+            dataType: "json",
+            type: "POST",
+            success: function (result) {
+                $("#StateId").empty();
+                var data = result;
+                var r = "";
+                $.each(data, function (index, value) {
+                    r = r + "<option value='" + value.Value + "'>" + value.Text + "</option>";
+                });
+                $("#StateId").html(r);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                //$(placeholderName).html('Failed to load requirement content.');
+            }
+        });
+    }
+    function bindcity() {
+        $.ajax({
+            cache: false,
+            url: "@(Url.Action("AllCityList", "Product"))",
+            data: { "stateid": $("#StateId").val() },
+            dataType: "json",
+            type: "POST",
+            success: function (result) {
+                $("#CityId").empty();
+                var data = result;
+                var r = "";
+                $.each(data, function (index, value) {
+                    r = r + "<option value='" + value.Value + "'>" + value.Text + "</option>";
+                });
+                $("#CityId").html(r);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                //$(placeholderName).html('Failed to load requirement content.');
+            }
+        });
+    }
+    $("#CountryId").change(function () {
+        bindstates();
+    });
+    $("#StateId").change(function () {
+        bindcity();
+    });
+
+    function checkvalidate(){
+        if($("#CityId").val()!=0 && $("#StateId").val()!=0 && $("#CountryId").val()!=0 ){
+            return true;
+        }
+        else{
+            $("#error").show();
+            return false;
+        }
+    }
+    $(document).ready(function(){
+        if('@tempdata'!=""){
+            $("#error").empty();
+            $("#error").append('@tempdata');
+            $("#error").show();
+        }
+    });
+</script>

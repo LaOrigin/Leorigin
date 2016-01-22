@@ -1,0 +1,116 @@
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+D:\Bhumika_WorkingProject\Te\source\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+D:\Bhumika_WorkingProject\Te\source\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\Configure.cshtml
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\EditPopup.cshtml
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\_CreateOrUpdate.cshtml
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Views\ShippingByWeight\AddPopup.cshtml
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\web.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb

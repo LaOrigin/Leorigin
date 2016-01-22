@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes.Core.Admin.Help">
+    <Value>Help</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.CustomHeadStyles">
+    <Value>Custom Head Styles</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.CustomHeadStyles.Hint">
+    <Value>Insert your custom css styles that will be added in the head after all other css files. This way you can further customize the theme. Example: .footer { display: none; }</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.EnabledAsWidget">
+    <Value>Enable the theme plugin as widget</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.EnabledAsWidget.Hint">
+    <Value>If you check this opton you will enable the widget of the theme plugin.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.Picture">
+    <Value>Logo Image</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.Picture.Hint">
+    <Value>Choose the logo image.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.PinterestUrl">
+    <Value>Follow us pinterest url</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.PinterestUrl.Hint">
+    <Value>Insert your follow us URL address on pinterest. If left empty the icon in the footer will not be displayed.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.RemoveCopyright">
+    <Value>Remove Copyright</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.RemoveCopyright.Hint">
+    <Value>Remove Copyright notice after a copyright removal key had been purchased by www.nopCommerce.com</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.VimeoUrl">
+    <Value>Follow us vimeo url</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.Settings.VimeoUrl.Hint">
+    <Value>Insert your follow us URL address on vimeo. If left empty the icon in the footer will not be displayed.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Admin.SettingsSubmenu">
+    <Value>Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Common.BackSublist">
+    <Value>Back</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Common.CloseMenu">
+    <Value>Close</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Common.Filters">
+    <Value>Filters</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Common.MenuTitle">
+    <Value>Menu</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.Common.Personal">
+    <Value>Personal menu</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Themes.ProductCompareName">
+    <Value>Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="Order.Shipments.ID">
+    <Value>Shipments ID</Value>
+  </LocaleResource>
+</Language>

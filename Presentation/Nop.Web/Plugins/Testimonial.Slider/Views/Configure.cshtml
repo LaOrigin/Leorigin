@@ -1,0 +1,137 @@
+﻿@model NyunopCommerce.Nop.Widgets.Testimonial.Slider.Models.ConfigurationModel
+
+@{
+    Layout = "";
+}
+@using Nop.Web.Framework;
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+
+@*<div id="testimonial-edit">
+    <ul>
+        <li @Html.RenderSelectedTabIndex(0, GetSelectedTabIndex())>
+            @T("Admin.ContentManagement.Testimonial.Show")
+        </li>
+        <li @Html.RenderSelectedTabIndex(1, GetSelectedTabIndex())>
+            @T("Admin.ContentManagement.Testimonial.Details")
+        </li>
+        
+    </ul>
+    <div>
+        @TabShow()
+    </div>
+    <div>
+        @TabDetails()
+    </div>
+    
+</div>*@
+
+
+@*<script>
+    $(document).ready(function () {
+        $("#testimonial-edit").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: "fadeIn"
+                }
+            },
+            select: tabstrip_on_tab_select
+        });
+    });
+</script>*@
+
+@*<input type="hidden" id="selected-tab-index" name="selected-tab-index" value="@(GetSelectedTabIndex())">*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".check-all").hide();
+    });
+
+</script>
+@*@helper TabShow()
+{
+    
+}*@
+@*@helper TabDetails()
+{*@
+@using (Html.BeginForm())
+{
+    
+    <table class="adminContent">
+        <tr>
+            @*@T("Plugins.Testimonial.Slider.ConfigVisibleTitle")*@
+            <td>
+                <strong>General  Configuration</strong> :
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.ShowOnHomePage):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.ShowOnHomePage)
+                @Html.ValidationMessageFor(model => model.ShowOnHomePage)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.ShowTestimonialPage):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.ShowTestimonialPage)
+                @Html.ValidationMessageFor(model => model.ShowTestimonialPage)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @*@T("Plugins.Testimonial.Slider.ConfigDetailTitle")*@
+                <strong>Details  Configuration :</strong>
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.ClientNameEnable):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.ClientNameEnable)
+                @Html.ValidationMessageFor(model => model.ClientNameEnable)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.PageSizeOptions) (comma separated):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.PageSizeOptions)
+                @Html.ValidationMessageFor(model => model.PageSizeOptions)
+            </td>
+        </tr>
+        @*<tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.TitleEnable):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.TitleEnable)
+                    @Html.ValidationMessageFor(model => model.TitleEnable)
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.DateEnable):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.DateEnable)
+                    @Html.ValidationMessageFor(model => model.DateEnable)
+                </td>
+            </tr>*@
+    </table>
+    
+    <br />
+    <table class="adminContent">
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="save" class="k-button" value="@T("Admin.Common.Save")" />
+            </td>
+        </tr>
+    </table>
+}
+@*}*@

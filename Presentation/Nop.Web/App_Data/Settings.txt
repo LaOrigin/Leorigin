@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=IRIS-CSG-510;Initial Catalog=leorigin;User ID=sa;Password=password@1;Connect Timeout=1600;

@@ -1,0 +1,8 @@
+Group: NyunopCommerce
+FriendlyName: Nop Easy Tab
+SystemName: NyunopCommerce.Nop.Widgets.EasyTab
+Version: 1.0
+SupportedVersions: 3.50
+Author: NyunopCommerce Team
+DisplayOrder: 1
+FileName: NyunopCommerce.Nop.Widgets.EasyTab.dll

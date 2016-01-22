@@ -1,0 +1,319 @@
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\Bhumika_WorkingProject\Te\source\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Bhumika_WorkingProject\Te\source\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.csprojResolveAssemblyReference.cache
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.csprojResolveAssemblyReference.cache
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Working Projects 2014\LeoriginNewScope\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\Working Projects 2014\LeoriginNewScope\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.csprojResolveAssemblyReference.cache
+D:\Working Projects 2014\LeoriginNewScope\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Working Projects 2014\LeoriginNewScope\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.csprojResolveAssemblyReference.cache
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.csprojResolveAssemblyReference.cache
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.csprojResolveAssemblyReference.cache
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\Configure.cshtml
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner1.jpg
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner2.jpg
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\banner3.jpg
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\nivo-slider.css
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\arrows.png
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bar.css
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\bullets.png
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\loading.gif
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\arrows.png
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\bullets.png
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\dark.css
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\loading.gif
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\arrows.png
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\bullets.png
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\default.css
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\loading.gif
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\arrows.png
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\bullets.png
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\light.css
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\loading.gif
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Description.txt
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Scripts\jquery.nivo.slider.js
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\web.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\logo.jpg
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.pdb
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.csprojResolveAssemblyReference.cache
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.dll
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.Widgets.NivoSlider\obj\Debug\Nop.Plugin.Widgets.NivoSlider.pdb

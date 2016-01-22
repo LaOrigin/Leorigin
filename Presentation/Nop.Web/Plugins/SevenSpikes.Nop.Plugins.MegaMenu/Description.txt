@@ -1,0 +1,8 @@
+Group: 7Spikes
+FriendlyName: Nop Mega Menu
+SystemName: SevenSpikes.Nop.Plugins.MegaMenu
+Version: 3.50
+SupportedVersions: 3.50
+Author: Seven Spikes
+DisplayOrder: 1
+FileName: SevenSpikes.Nop.Plugins.MegaMenu.dll

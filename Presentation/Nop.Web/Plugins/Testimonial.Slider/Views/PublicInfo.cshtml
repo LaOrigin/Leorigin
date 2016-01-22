@@ -1,0 +1,173 @@
+﻿@model IList<NyunopCommerce.Nop.Widgets.Testimonial.Slider.Models.TestimonialRecord>
+@using System
+@using Nop.Core.Domain.Seo;
+@using Nop.Services.Localization;
+@using Nop.Web.Models.Catalog;
+@using Nop.Core.Plugins;
+@using Nop.Core.Domain.Cms;
+@using Nop.Services.Cms;
+@using Nop.Admin;
+@using Nop.Services.Configuration;
+@using NyunopCommerce.Nop.Widgets.Testimonial.Slider;
+@using Nop.Services.Stores;
+@using Nop.Web.Framework.Controllers;
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Framework.Themes
+@using Nop.Web.Framework.UI
+
+
+@{
+    var settingservice = EngineContext.Current.Resolve<ISettingService>();
+
+    var pluginmodel = settingservice.GetSettingByKey("mytestimonialsettings.showonhomepage", "null", 0, false);
+    var Testimonial = ViewBag.NyuNopTestimonial;
+    var themeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+
+
+    Html.AppendCssFileParts(string.Format("~/Plugins/Testimonial.Slider/Themes/{0}/Content/Testimonial.css", themeName));
+}
+@*<script src="~/Themes/DefaultClean/Scripts/jquery.bxslider.min.js"></script>*@
+@*<script src="~/Themes/DefaultClean/Scripts/jquery.bxslider.js"></script>*@
+@*<script src="~/Plugins/Testimonial.Slider/Scripts/jquery.bxslider.js"></script>*@
+
+@*<link href="~/Themes/DefaultClean/Scripts/jquery.bxslider.css" rel="stylesheet" />*@
+@*<link href="~/Plugins/Testimonial.Slider/Scripts/jquery.bxslider.css" rel="stylesheet" />*@
+<script src="~/Plugins/Testimonial.Slider/Scripts/jquery.jcarousel.min.js"></script>
+<link href="~/Plugins/Testimonial.Slider/Scripts/jcarousel.responsive.css" rel="stylesheet" />
+<script src="~/Plugins/Testimonial.Slider/Scripts/jcarousel.responsive.js"></script>
+@if (pluginmodel.Contains("True"))
+{
+    if (Model != null)
+    {
+        if (Model.Count() > 0)
+        {
+    <div class="block-testimonial">
+        <div class="title">
+            <h1>CUSTOMER STORIES</h1>
+        </div>
+        <div class="testimonial-bg">
+            <div class="jcarousel-wrapper">
+                <div id="jc1"  class="bxslider jcarousel">
+                    <ul>
+
+                    @foreach (var items in Model)
+                    { 
+                        <li>
+                        <div id="itemContainer" class="">
+
+
+
+
+                            <div class="listbox">
+
+
+
+
+                                @*<img src="@(!string.IsNullOrEmpty(items.ImagePath) ? Url.Content(items.ImagePath) : Url.Content("~/Plugins/Testimonial.Slider/Themes/DefaultClean/Upload/NoImage.jpg"))"  style="height:100px;width:100px;" />*@
+
+
+                                @{
+                        var description = "";
+                        if (items.Description != null)
+                        {
+                            var descriptionvalue = items.Description;
+                            if (descriptionvalue.Length > 72)
+                            {
+                                description = descriptionvalue.Substring(0, 72) + " <span>...</span>";
+                            }
+                            else
+                            {
+                                description = descriptionvalue;
+                            }
+                        }
+                                }
+                                <div class="testimonial-new">
+                                    <div class="user-icon-img">
+                                        <div class="user-icon-a">
+                                            <img src="@(!string.IsNullOrEmpty(items.ImagePath) ? Url.Content(items.ImagePath) : Url.Content("~/Plugins/Testimonial.Slider/Themes/DefaultClean/Upload/user-icon.png"))"  style="height:75px;width:75px;" />
+                                        </div>
+                                    </div>
+                                    @if (ViewBag.ClientName)
+                                    { <h5>
+                                        <label id="CustomerName" for=" @items.ClientName">@items.ClientName</label></h5>}
+
+                                    <div class="user-product-img">
+                                        <img src="@(!string.IsNullOrEmpty(items.PhotoPath) ? Url.Content(items.PhotoPath) : Url.Content("~/Plugins/Testimonial.Slider/Themes/DefaultClean/Upload/no-image-available.jpg"))"  />
+                                    </div>
+
+                                    <div class="testimonial-description">
+                                        <p id="Title" for="description">
+
+                                            @*@Html.Raw(items.Description)*@
+                                            @Html.Raw(description)
+                                        </p>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="testimonial-more">
+                                        <a href="~/testimonials">more »</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>        </li>                
+                    }
+                        </ul>
+                </div>
+                 @*  <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>*@
+            </div>
+        </div>
+
+    </div> 
+
+        }
+    }
+
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+ $('.jcarousel').jcarouselAutoscroll({
+            target: '+=3',
+            animation: 'slow',
+        });
+        //$('.bxslider').bxSlider({
+        //   slideWidth: 360,
+        //    minSlides: 1,
+        //    maxSlides: 3,
+        //    moveSlides: 1,
+        //    slideMargin: 10,
+        //    pager: false,
+        //    captions: false,
+        //    maxWidth: 1000,
+        //    //onSliderLoad: function (currentIndex) {
+        //    //    $('#slide-counter .current-index').text(currentIndex + 1);
+        //    //},
+        //    //onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+        //    //    $('#slide-counter .current-index').text(newIndex + 1);
+        //    //}
+        //});
+
+    });
+    //$('#slide-counter').prepend('<strong class="current-index"></strong>/');
+    //var slider =
+    //    $('.bxslider').bxSlider({
+    //    slideWidth: 300,
+    //    minSlides: 3,
+    //    maxSlides: 3,
+    //    moveSlides: 1,
+    //    slideMargin: 10,
+    //    pager: false,
+    //    captions: true,
+    //    onSliderLoad: function (currentIndex) {
+    //        $('#slide-counter .current-index').text(currentIndex + 1);
+    //    },
+    //    onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+    //        $('#slide-counter .current-index').text(newIndex + 1);
+    //    }
+    //});
+    //$('#slide-counter').append(slider.getSlideCount());
+
+</script>

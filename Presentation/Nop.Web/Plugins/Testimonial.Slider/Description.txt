@@ -1,0 +1,8 @@
+﻿Group: NyunopCommerce
+FriendlyName: Nop Testimonial Slider
+SystemName: NyunopCommerce.Nop.Widgets.Testimonial.Slider
+Version: 1.00
+SupportedVersions: 3.50
+Author: NyunopCommerce team
+DisplayOrder: 1
+FileName: NyunopCommerce.Nop.Widgets.Testimonial.Slider.dll

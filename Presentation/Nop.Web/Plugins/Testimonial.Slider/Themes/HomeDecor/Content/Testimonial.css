@@ -1,0 +1,167 @@
+
+.testimonials .block-testimonials ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+    .testimonials .block-testimonials ul li {
+        padding: 15px;
+        border: 1px solid #cccccc;
+        margin-bottom: 15px;
+    }
+
+        .testimonials .block-testimonials ul li p {
+            margin: 0px;
+            line-height: 18px;
+        }
+
+        .testimonials .block-testimonials ul li h5 {
+            text-align: right;
+        }
+
+            .testimonials .block-testimonials ul li h5 span {
+                font-weight: normal;
+                text-transform: capitalize;
+                font-style: italic;
+                color: #2ab300;
+            }
+
+.testimonials .page-title h1 {
+    /*color: #424242;
+    font-family: 'myriad_pro_condbold';
+    font-size: 30px;
+    font-weight: normal;
+    padding-bottom: 0;
+    text-transform: uppercase;*/
+}
+
+.home-page-testimonial .title {
+    text-align: center;
+}
+
+    .home-page-testimonial .title h1 {
+        font-family: 'AguizardTryout-Regular';
+        color: #1d3060;
+        font-size: 24px;
+        text-align: center;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-top: 30px;
+    }
+
+.home-page-testimonial .testimonial-bg {
+    /*background: #fafafa;*/
+    text-align: center;
+    padding: 15px 0px;
+    /*border: 1px solid #ecebeb;*/
+}
+
+    .home-page-testimonial .testimonial-bg p {
+        color: #1d3060;
+        font-family: "AguizardTryout-Regular";
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 22px;
+    }
+
+        .home-page-testimonial .testimonial-bg p span {
+            font-family: Arial;
+        }
+
+    .home-page-testimonial .testimonial-bg h5 {
+        color: #333333 !important;
+        font-size: 14px;
+        font-family: "AguizardTryout-Regular";
+        font-weight: normal;
+        margin: 8px 0;
+        text-transform: capitalize;
+    }
+
+        .home-page-testimonial .testimonial-bg h5 span {
+            color: #1d3060;
+        }
+
+.home-page-testimonial .testimonials-top {
+    background: url(images/testimonials-top.png) no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.home-page-testimonial .testimonials-bottom {
+    background: url(images/testimonials-bottom.png) no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 15px;
+    margin-left: 10px;
+}
+
+.holder {
+    float: right;
+}
+
+    .holder a {
+        margin-left: 5px;
+    }
+
+    .holder .jp-current {
+        background-color: #2ab300;
+        color: #ffffff;
+    }
+
+.jp-previous.jp-disabled {
+    display: none;
+}
+
+.jp-next.jp-disabled {
+    display: none;
+}
+
+.testimonials-top {
+    background: url(images/testimonials-top.png) no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.testimonials-bottom {
+    background: url(images/testimonials-bottom.png) no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 15px;
+    margin-left: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.description-testimonials {
+    color: #1d3060;
+    font-family: "AguizardTryout-Regular";
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+.testimonials-by {
+    font-family: "AguizardTryout-Regular";
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.testimonial-description {
+    height: 58px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.testimonial-more {
+    text-align: left;
+    color: #1d3060;
+    font-family: "AguizardTryout-Regular";
+    font-size: 14px;
+    letter-spacing: 1px;
+}

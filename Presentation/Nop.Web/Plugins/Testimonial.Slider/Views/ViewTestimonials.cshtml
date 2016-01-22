@@ -1,0 +1,302 @@
+﻿@model IList<NyunopCommerce.Nop.Widgets.Testimonial.Slider.Models.TestimonialRecord>
+@using System.Data.Entity;
+@using System
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Framework.Themes
+@using Nop.Web.Framework.UI
+
+@{
+    
+    var themeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+    Html.AppendCssFileParts(string.Format("~/Plugins/Testimonial.Slider/Themes/{0}/Content/Testimonial.css", themeName));
+
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    var count = TempData["TestimonialCount"];
+
+    int pagecount = 0, firstcount = 0;
+    if (HttpContext.Current.Request.QueryString["pagesize"] != null)
+    {
+        pagecount = Convert.ToInt32(HttpContext.Current.Request.QueryString["pagesize"]);
+    }
+    if (TempData["firstcount"] != null)
+    {
+        firstcount = Convert.ToInt32(TempData["firstcount"]);
+    }
+    var count1 = 0;
+
+}
+
+
+<div id="content" class="testimonials">
+    <div class="page-title">
+        <h1>Testimonials</h1>
+    </div>
+
+    @if (ViewData["Page"] != null)
+    {
+        <br />
+        <span>Display </span> @Html.DropDownList("drppagination", ViewData["Page"] as List<SelectListItem>, new { @onchange = "pagesizechange(this.value)" }) <span>per page</span>
+        <br />
+        <br />
+    }
+
+    <div class="page-body">
+        <div class="block-testimonials">
+            <div id="tablepaging">
+                <div id="pageingdiv">
+
+                    @foreach (var items in Model)
+                    {
+                        count1 = count1 + 1;
+                        <div class="itemContainer">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="user-icon-a">
+                                        <img src="@(!string.IsNullOrEmpty(items.ImagePath) ? Url.Content(items.ImagePath) : Url.Content("~/Plugins/Testimonial.Slider/Themes/DefaultClean/Upload/user-icon.png"))"  style="height:75px;width:75px;" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="user-product-img">
+                                        <img src="@(!string.IsNullOrEmpty(items.PhotoPath) ? Url.Content(items.PhotoPath) : Url.Content("~/Plugins/Testimonial.Slider/Themes/DefaultClean/Upload/no-image-available.jpg"))"  />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="description-testimonials">@Html.Raw(items.Description)</span>
+                                    @if (ViewBag.ClientName)
+                                    { <h5 class="testimonials-by">By&nbsp&nbsp<span id="CustomerName" for=" @items.ClientName">@items.ClientName</span></h5>}
+
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                                    if (count1 % 3 == 0)
+                                    { 
+                        <div class="clear"></div>
+                                    }
+                    }
+
+                </div>
+                <div class="clear"></div>
+                @if (Model.Count() == 0)
+                {
+                    <label>There are no testimonials to display.</label>
+                }
+            </div>
+
+        </div>
+        <div id="pageNavPosition" class="pagering" style="padding-top: 20px;">
+        </div>
+
+
+
+    </div>
+</div>
+
+@*<script src="~/Themes/DefaultClean/Scripts/jquery.pages.js"></script>*@
+<script src="~/Plugins/Testimonial.Slider/Scripts/jquery.pages.js"></script>
+<script type="text/javascript">
+    function pagesizechange(drpvalue) {
+        var urlsplit = this.location.href.split('?');
+        window.location.href = urlsplit[0] + '?pagesize=' + drpvalue;
+
+        
+
+    }
+    $(document).ready(function () {
+        
+        //Update
+        if ('@pagecount' != '0') {
+
+            document.getElementById("drppagination").value = '@pagecount';
+        }
+
+        var selectedvalue = document.getElementById("drppagination").value;
+        //debugger;
+        if (parseInt('@count') != '' && parseInt('@count') > parseInt(selectedvalue)) {
+            $(".pagination-part-02").show();
+        } else {
+            $(".pagination-part-02").hide();
+        }
+
+        var pager;
+    
+        if('@pagecount'=='0')
+        {
+            var pcount = document.getElementById("drppagination").value;
+            $("div.holder").jPages({
+                containerID: "pageingdiv",
+                perPage: @firstcount
+                });
+        }
+        else
+        {
+            $("div.holder").jPages({
+                containerID: "pageingdiv",
+                perPage: @pagecount
+                });
+        }
+        //Update
+
+        
+    });
+</script>
+@* <script type="text/javascript">
+        $(document).ready(function () {
+            $("div.holder").jPages({
+                containerID: "pageingdiv",
+                perPage: 5
+            });
+        });
+    </script>*@
+
+<div class="pagination-part-02">
+    <div class="holder pager" style="margin-left: 0px !important; margin-top: 35px;"></div>
+    <div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+    //Update
+    if ('@count' != '' && '@count' > 5) {
+
+        $(".pagination-part-02").show();
+    } else {
+        $(".pagination-part-02").hide();
+    }
+    //Update
+</script>
+@*<script type="text/javascript">
+    if ('@count' != '' && '@count' > 5) {
+
+        $("#pageNavPosition").show();
+    } else {
+        $("#pageNavPosition").hide();
+    }
+</script>
+<script type="text/javascript">
+
+    function Pager(tableName, itemsPerPage) {
+
+        this.tableName = tableName;
+
+        this.itemsPerPage = itemsPerPage;
+
+        this.currentPage = 1;
+
+        this.pages = 0;
+
+        this.inited = false;
+
+        this.showRecords = function (from, to) {
+
+            var rows = document.getElementById(tableName).rows;
+
+            // i starts from 1 to skip table header row
+
+            for (var i = 1; i < rows.length; i++) {
+
+                if (i < from || i > to)
+
+                    rows[i].style.display = 'none';
+
+                else
+
+                    rows[i].style.display = '';
+
+            }
+
+        }
+
+        this.showPage = function (pageNumber) {
+
+            if (!this.inited) {
+
+                alert("not inited");
+
+                return;
+
+            }
+
+            var oldPageAnchor = document.getElementById('pg' + this.currentPage);
+
+            oldPageAnchor.className = 'individual-page';
+            $('#pg' + this.currentPage + " a").removeClass("currentpage");
+
+            this.currentPage = pageNumber;
+
+            var newPageAnchor = document.getElementById('pg' + this.currentPage);
+            //newPageAnchor.childNodes.Addclass = 'current-page';
+            newPageAnchor.className = 'current-page';
+            $('#pg' + this.currentPage + " a").addClass("currentpage");
+
+
+            var from = (pageNumber - 1) * itemsPerPage + 1;
+
+            var to = from + itemsPerPage - 1;
+
+            this.showRecords(from, to);
+
+        }
+
+        this.prev = function () {
+
+            if (this.currentPage > 1)
+
+                this.showPage(this.currentPage - 1);
+
+        }
+
+        this.next = function () {
+
+            if (this.currentPage < this.pages) {
+
+                this.showPage(this.currentPage + 1);
+
+            }
+
+        }
+
+        this.init = function () {
+
+            var rows = document.getElementById(tableName).rows;
+
+            var records = (rows.length - 1);
+
+            this.pages = Math.ceil(records / itemsPerPage);
+
+            this.inited = true;
+
+        }
+
+        this.showPageNav = function (pagerName, positionId) {
+
+            if (!this.inited) {
+
+                alert("not inited");
+
+                return;
+
+            }
+
+            var element = document.getElementById(positionId);
+
+            var pagerHtml = '<div class="pager"><ul>';
+            //<li><span onclick="' + pagerName + '.prev();"  style="cursor:pointer"> Prev </span></li> ';
+            pagerHtml += '<li><span onclick="' + pagerName + '.prev();"  style="cursor:pointer"> Prev </span></li> ';
+            for (var page = 1; page <= this.pages; page++)
+
+                pagerHtml += '<li id="pg' + page + '"><a id="pg' + page + '"  onclick="' + pagerName + '.showPage(' + page + ');" style="cursor:pointer">' + page + '</a> </li>';
+
+            pagerHtml += '<li class="next-page"><span onclick="' + pagerName + '.next();"  style="cursor:pointer"> Next </span></li></ul></div>';
+
+            element.innerHTML = pagerHtml;
+
+        }
+
+    }
+    var pager = new Pager('tablepaging', 5);
+    pager.init();
+    pager.showPageNav('pager', 'pageNavPosition');
+    pager.showPage(1);
+    window.onload = alert("not inited");
+</script>*@

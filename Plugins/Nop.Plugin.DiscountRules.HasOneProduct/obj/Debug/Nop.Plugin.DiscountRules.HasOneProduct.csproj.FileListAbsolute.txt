@@ -1,0 +1,98 @@
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\Bhumika_WorkingProject\Te\source\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\Bhumika_WorkingProject\Te\source\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\ProductAddPopup.cshtml
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb

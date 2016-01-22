@@ -1,0 +1,853 @@
+﻿@{
+    Layout = "";    
+}
+@model NyunopCommerce.Nop.Widgets.EasyTab.Models.PublicInfoModel
+@using System
+@using System.Web.Mvc
+@using Nop.Web.Framework.UI
+@using Nop.Core.Domain.Orders
+@using Nop.Core.Infrastructure
+@using Nop.Core.Configuration
+@using Nop.Core
+@using Nop.Core.Domain.Tax
+@using NyunopCommerce.Nop.Widgets.EasyTab.Controllers.Extensions
+
+
+@*<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>*@
+<script>
+    $(function() {
+       
+        $( "#accordion" ).accordion({
+            collapsible: true,
+            heightStyle: "content"
+        });
+        $("#tabs").tabs({
+            collapsible: true
+        });
+        //if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+        //    $("#tabs").hide();
+        //    $("#accordion").show();
+            
+        
+        //} else {
+        //    $("#tabs").show();
+        //    $("#accordion").hide();
+           
+            
+        //}
+    });
+</script>
+<div id="tabs">
+    <ul style="margin-left: 0px !important">
+        @if (Model.DescriptionEnable)
+        {
+            <li><a href="#tabs-3">Full description</a></li>
+        }
+        @if (Model.TagsEnable)
+        {   
+            <li><a href="#tabs-7">Product tags</a></li>
+        }
+        @if (Model.SpecificationEnable)
+        { 
+            <li><a href="#tabs-9">Specification</a></li>
+        }
+        @if (Model.RelatedproductEnable)
+        { 
+            <li><a href="#tabs-10">Related Product</a></li>
+        }
+        @if (Model.ProductalsopurchasedEnable)
+        { 
+            <li><a href="#tabs-11">Purchased Product</a></li>
+        }
+    </ul>
+    @if (Model.DescriptionEnable)
+    {
+        <div id="tabs-3">
+            @Html.Raw(Model.Fulldescription)
+
+        </div>
+    }
+    @if (Model.TagsEnable)
+    {   
+        <div id="tabs-7">
+            <div class="product-tags-box">
+                <div class="title">
+                </div>
+                <div class="product-tags-list">
+                    <ul>
+                        @for (int i = 0; i < Model.ProductTags.Count; i++)
+                        {
+                            <li class="tag">
+                                <a href="@Url.RouteUrl("ProductsByTag", new { productTagId = Model.ProductTags[i].Id, SeName = Model.ProductTags[i].Name })" class="producttag">
+                                    @Model.ProductTags[i].Name</a> <span>@T("Products.Tags.Count", Model.ProductTags[i].ProductCount)</span></li>
+                            if (i != Model.ProductTags.Count - 1)
+                            {
+                            <li class="separator">,</li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+    @if (Model.SpecificationEnable)
+    { 
+        <div id="tabs-9">
+            <div class="product-specs-box">
+                <div class="title">
+                </div>
+                <table class="data-table">
+                    <colgroup>
+                        <col width="25%" />
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        @for (int i = 0; i < Model.ProductSpecifications.Count; i++)
+                        {
+                            var item = Model.ProductSpecifications[i];
+                            <tr @(i % 2 == 0 ? Html.Raw(" class=\"odd\"") : Html.Raw(" class=\"even\""))>
+                                <td class="a-left spec-name">
+                                    @item.SpecificationAttributeName
+                                </td>
+                                <td class="a-left spec-value">
+                                    @item.SpecificationAttributeOption
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    }
+    @if (Model.RelatedproductEnable)
+    { 
+        <div id="tabs-10">
+            <div class="category-page">
+                <div class="related-products-grid product-grid">
+                    @* <div class="title">
+                </div>*@
+                    <div class="row">
+                        @if (Model.productrelated != null)
+                        {
+                            foreach (var item in Model.productrelated)
+                            {
+                                string addtocartlink = "";
+                                var shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart;
+                                var quantity = 1;
+                                if (item.ProductPrice.ForceRedirectionAfterAddingToCart)
+                                {
+                                    addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = item.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, forceredirection = item.ProductPrice.ForceRedirectionAfterAddingToCart });
+                                }
+                                else
+                                {
+                                    addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = item.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, });
+                                }  
+                            <div class="col-md-4 col-sm-6">
+                                <div class="item-box">
+
+                                    <div class="product-item" data-productid="@item.Id">
+                                        <div class="picture">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td>
+                                                        <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })" class="aditionalInfo" flag="0" >
+                                                            <img alt="@item.DefaultPictureModel.AlternateText" src="@item.DefaultPictureModel.ImageUrl"/>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                @*                            <div class="windowsviewhover">
+                                                <div class="info" style="display: none; z-index: 10000; position: absolute">
+                                                    <div class="buttons-new">
+
+                                                      
+                                                        @if (!item.ProductPrice.DisableWishlistButton)
+                                                        {
+                                                            <input type="button" id="add-to-wishlist-button-@item.Id" class="add-to-wishlist-button-new" value="@T("ShoppingCart.AddToWishlist")" data-productid="@item.Id" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = item.Id, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })    ', '#product-details-form');return false;" />
+                                                        }
+                                                        @if (!item.ProductPrice.DisableBuyButton)
+                                                        {
+                                                            <input type="button" value="@(item.ProductPrice.AvailableForPreOrder ? T("ShoppingCart.PreOrder") : T("ShoppingCart.AddToCart"))" class="product-box-add-to-cart-button-new" onclick="AjaxCart.addproducttocart_catalog('@addtocartlink    ');return false;" />
+                                                        }
+
+                                                    </div>
+                                                </div>
+
+                                            </div>*@
+                                            <script type="text/javascript">
+                                                function diplayaditionalInfo(data){
+                                                    if(data.attr('flag')=='0'){
+                                                        $(".info").hide();
+                                                        $(".aditionalInfo").attr('flag',"0");
+                                                        var r= data.next('span').show();
+                                                        data.attr('flag',"1");
+                                                    }
+                                                    else{
+                                                        var r= data.next('span').hide();
+                                                        data.attr('flag',"0");
+                                                    }
+
+                                                    //alert(data);
+                                                }
+                                            </script>
+                                        </div>
+                                        <div class="details">
+                                            <h2 class="product-title">
+                                                @{ 
+                                                        var description = "";
+                                                        if (item.ShortDescription != null)
+                                                        {
+                                                            var descriptionvalue = item.ShortDescription;
+
+                                                            if (descriptionvalue.Length > 50)
+                                                            {
+                                                                description = descriptionvalue.Substring(0, 50) + "...";
+                                                            }
+                                                            else
+                                                            {
+                                                                description = descriptionvalue;
+                                                            }
+                                                        }
+                                                        var name = "";
+                                                        if (item.Name != null)
+                                                        {
+                                                            var namevalue = item.Name;
+
+                                                            if (namevalue.Length > 20)
+                                                            {
+                                                                name = namevalue.Substring(0, 20) + "...";
+                                                            }
+                                                            else
+                                                            {
+                                                                name = namevalue;
+                                                            }
+                                                        }
+                                                }
+                                                <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })">@name</a>
+                                            </h2>
+
+                                            <div class="description1" style="display:none">
+
+                                                @Html.Raw(description)
+                                            </div>
+                                            <div class="add-info">
+                                                <div class="prices home-best-seller">
+                                                    @if (!String.IsNullOrEmpty(item.ProductPrice.OldPrice))
+                                                    {
+                                                        <span class="price old-price">@item.ProductPrice.OldPrice</span>
+                                                    }
+                                                    <span class="price actual-price">@item.ProductPrice.Price</span>
+                                                    <div class="clear"></div>
+                                                    @if (item.ProductPrice.DisplayTaxShippingInfo)
+                                                    {
+                                                        var inclTax = EngineContext.Current.Resolve<IWorkContext>().TaxDisplayType == TaxDisplayType.IncludingTax;
+                                                        //tax info is already included in the price (incl/excl tax). that's why we display only shipping info here
+                                                        //of course, you can modify appropriate locales to include VAT info there
+                                                        <div class="tax-shipping-info">
+                                                            @T(inclTax ? "Products.Price.TaxShipping.InclTax" : "Products.Price.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
+                                                        </div>
+                                                    }
+                                                </div>
+                                               @* @if (item.ReviewOverviewModel.AllowCustomerReviews)
+                                                {
+                                                    int ratingPercent = 0;
+                                                    if (item.ReviewOverviewModel.TotalReviews != 0)
+                                                    {
+                                                        ratingPercent = ((item.ReviewOverviewModel.RatingSum * 100) / item.ReviewOverviewModel.TotalReviews) / 5;
+                                                    }
+                                                 <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, item.ReviewOverviewModel.TotalReviews)">
+                                                        <div class="rating">
+                                                            <div style="width: @(ratingPercent)%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }*@
+                                                <div class="clear"></div>
+                                                @*<div class="cart1" style="display: block">
+                                                    @if (!item.ProductPrice.DisableWishlistButton)
+                                                    {
+                                                        <input type="button" id="add-to-wishlist-button-@item.Id" class="add-to-wishlist-button-mobile" value="@T("ShoppingCart.AddToWishlist")" data-productid="@item.Id" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = item.Id, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })    ', '#product-details-form');return false;" />
+                                                    }
+                                                    @if (!item.ProductPrice.DisableBuyButton)
+                                                    {
+                                                        <input type="button" value="@(item.ProductPrice.AvailableForPreOrder ? T("ShoppingCart.PreOrder") : T("ShoppingCart.AddToCart"))" class="product-box-add-to-cart-button-mobile" onclick="AjaxCart.addproducttocart_catalog('@addtocartlink    ');return false;" />
+                                                    }
+
+                                                    <div class="clear"></div>
+                                                </div>*@
+                                                @*  @Html.Widget("productbox_add_info", item.Id)*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+    @if (Model.ProductalsopurchasedEnable)
+    { 
+        <div id="tabs-11">
+            <div class="category-page">
+                <div class="related-products-grid product-grid">
+                    <div class="row">
+                        @if (Model.productalsopurchased != null)
+                        {
+                            foreach (var item in Model.productalsopurchased)
+                            {
+
+                                //prepare "Add to cart" AJAX link
+                                string addtocartlink = "";
+                                var shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart;
+                                var quantity = 1;
+                                if (item.ProductPrice.ForceRedirectionAfterAddingToCart)
+                                {
+                                    addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = item.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, forceredirection = item.ProductPrice.ForceRedirectionAfterAddingToCart });
+                                }
+                                else
+                                {
+                                    addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = item.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, });
+                                }    
+                    
+                            <div class="col-md-4 col-sm-6">
+                                <div class="item-box">
+                                    <div class="product-item" data-productid="@item.Id">
+                                        <div class="picture">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td>
+                                                        <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })" class="aditionalInfo" flag="0" >
+                                                            <img alt="@item.DefaultPictureModel.AlternateText" src="@item.DefaultPictureModel.ImageUrl"/>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                          @*  <div class="windowsviewhover">
+                                                <div class="info" style="display: none; z-index: 10000; position: absolute">
+                                                    <div class="buttons-new">
+
+                                                        
+                                                        @if (!item.ProductPrice.DisableWishlistButton)
+                                                        {
+                                                            <input type="button" id="add-to-wishlist-button-@item.Id" class="add-to-wishlist-button-new" value="@T("ShoppingCart.AddToWishlist")" data-productid="@item.Id" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = item.Id, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })    ', '#product-details-form');return false;" />
+                                                        }
+                                                        @if (!item.ProductPrice.DisableBuyButton)
+                                                        {
+                                                            <input type="button" value="@(item.ProductPrice.AvailableForPreOrder ? T("ShoppingCart.PreOrder") : T("ShoppingCart.AddToCart"))" class="product-box-add-to-cart-button-new" onclick="AjaxCart.addproducttocart_catalog('@addtocartlink    ');return false;" />
+                                                        }
+
+                                                    </div>
+                                                </div>
+
+                                            </div>*@
+                                            <script type="text/javascript">
+                                                function diplayaditionalInfo(data){
+                                                    if(data.attr('flag')=='0'){
+                                                        $(".info").hide();
+                                                        $(".aditionalInfo").attr('flag',"0");
+                                                        var r= data.next('span').show();
+                                                        data.attr('flag',"1");
+                                                    }
+                                                    else{
+                                                        var r= data.next('span').hide();
+                                                        data.attr('flag',"0");
+                                                    }
+
+                                                    //alert(data);
+                                                }
+                                            </script>
+                                        </div>
+                                        <div class="details">
+                                            <h2 class="product-title">
+                                                @{ 
+                                                        var description = "";
+                                                        if (item.ShortDescription != null)
+                                                        {
+                                                            var descriptionvalue = item.ShortDescription;
+
+                                                            if (descriptionvalue.Length > 50)
+                                                            {
+                                                                description = descriptionvalue.Substring(0, 50) + "...";
+                                                            }
+                                                            else
+                                                            {
+                                                                description = descriptionvalue;
+                                                            }
+                                                        }
+                                                        var name = "";
+                                                        if (item.Name != null)
+                                                        {
+                                                            var namevalue = item.Name;
+
+                                                            if (namevalue.Length > 20)
+                                                            {
+                                                                name = namevalue.Substring(0, 20) + "...";
+                                                            }
+                                                            else
+                                                            {
+                                                                name = namevalue;
+                                                            }
+                                                        }
+                                                }
+                                                <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })">@name</a>
+                                            </h2>
+
+                                            <div class="description1" style="display:none">
+
+                                                @Html.Raw(description)
+                                            </div>
+                                            <div class="add-info">
+                                                <div class="prices home-best-seller">
+                                                    @if (!String.IsNullOrEmpty(item.ProductPrice.OldPrice))
+                                                    {
+                                                        <span class="price old-price">@item.ProductPrice.OldPrice</span>
+                                                    }
+                                                    <span class="price actual-price">@item.ProductPrice.Price</span>
+                                                    <div class="clear"></div>
+                                                    @if (item.ProductPrice.DisplayTaxShippingInfo)
+                                                    {
+                                                        var inclTax = EngineContext.Current.Resolve<IWorkContext>().TaxDisplayType == TaxDisplayType.IncludingTax;
+                                                        //tax info is already included in the price (incl/excl tax). that's why we display only shipping info here
+                                                        //of course, you can modify appropriate locales to include VAT info there
+                                                        <div class="tax-shipping-info">
+                                                            @T(inclTax ? "Products.Price.TaxShipping.InclTax" : "Products.Price.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
+                                                        </div>
+                                                    }
+                                                </div>
+                                               @* @if (item.ReviewOverviewModel.AllowCustomerReviews)
+                                                {
+                                                    int ratingPercent = 0;
+                                                    if (item.ReviewOverviewModel.TotalReviews != 0)
+                                                    {
+                                                        ratingPercent = ((item.ReviewOverviewModel.RatingSum * 100) / item.ReviewOverviewModel.TotalReviews) / 5;
+                                                    }
+                                                    <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, item.ReviewOverviewModel.TotalReviews)">
+                                                        <div class="rating">
+                                                            <div style="width: @(ratingPercent)%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }*@
+                                                <div class="clear"></div>
+                                                @*<div class="cart1" style="display: block">
+                                                    @if (!item.ProductPrice.DisableWishlistButton)
+                                                    {
+                                                        <input type="button" id="add-to-wishlist-button-@item.Id" class="add-to-wishlist-button-mobile" value="@T("ShoppingCart.AddToWishlist")" data-productid="@item.Id" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = item.Id, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })    ', '#product-details-form');return false;" />
+                                                    }
+                                                    @if (!item.ProductPrice.DisableBuyButton)
+                                                    {
+                                                        <input type="button" value="@(item.ProductPrice.AvailableForPreOrder ? T("ShoppingCart.PreOrder") : T("ShoppingCart.AddToCart"))" class="product-box-add-to-cart-button-mobile" onclick="AjaxCart.addproducttocart_catalog('@addtocartlink    ');return false;" />
+                                                    }
+
+                                                    <div class="clear"></div>
+                                                </div>*@
+                                                @*  @Html.Widget("productbox_add_info", item.Id)*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>
+<div id="accordion">
+    @if (Model.DescriptionEnable)
+    {
+        <h3>Full description</h3>
+        <div>
+            <p>
+                <div id="tabs-3">
+                    @Html.Raw(Model.Fulldescription)
+
+                </div>
+            </p>
+        </div>}
+    @if (Model.TagsEnable)
+    {   
+        <h3>Product tags</h3>
+        <div>
+            <p>
+                <div id="tabs-7">
+                    <div class="product-tags-box">
+                        <div class="title">
+                        </div>
+                        <div class="product-tags-list">
+                            <ul>
+                                @for (int i = 0; i < Model.ProductTags.Count; i++)
+                                {
+                                    <li class="tag">
+                                        <a href="@Url.RouteUrl("ProductsByTag", new { productTagId = Model.ProductTags[i].Id, SeName = Model.ProductTags[i].Name })" class="producttag">
+                                            @Model.ProductTags[i].Name</a> <span>@T("Products.Tags.Count", Model.ProductTags[i].ProductCount)</span></li>
+                                    if (i != Model.ProductTags.Count - 1)
+                                    {
+                                    <li class="separator">,</li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        </div>  
+    }
+    @if (Model.SpecificationEnable)
+    { 
+        <h3>Specification</h3> 
+        <div>
+            <p>
+                <div id="tabs-9">
+                    <div class="product-specs-box">
+                        <div class="title">
+                        </div>
+                        <table class="data-table">
+                            <colgroup>
+                                <col width="25%" />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                @for (int i = 0; i < Model.ProductSpecifications.Count; i++)
+                                {
+                                    var item = Model.ProductSpecifications[i];
+                                    <tr @(i % 2 == 0 ? Html.Raw(" class=\"odd\"") : Html.Raw(" class=\"even\""))>
+                                        <td class="a-left spec-name">
+                                            @item.SpecificationAttributeName
+                                        </td>
+                                        <td class="a-left spec-value">
+                                            @item.SpecificationAttributeOption
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </p>
+        </div>
+    }
+    @if (Model.RelatedproductEnable)
+    { 
+        <h3>Related Product</h3>
+        <div>
+            <p>
+                <div id="tabs-10">
+                    <div class="category-page">
+                        <div class="related-products-grid product-grid">
+                            @* <div class="title">
+                </div>*@
+                            <div class="row">
+                                @if (Model.productrelated != null)
+                                {
+                                    foreach (var item in Model.productrelated)
+                                    {
+                                        string addtocartlink = "";
+                                        var shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart;
+                                        var quantity = 1;
+                                        if (item.ProductPrice.ForceRedirectionAfterAddingToCart)
+                                        {
+                                            addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = item.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, forceredirection = item.ProductPrice.ForceRedirectionAfterAddingToCart });
+                                        }
+                                        else
+                                        {
+                                            addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = item.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, });
+                                        }  
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="item-box">
+
+                                            <div class="product-item" data-productid="@item.Id">
+
+                                                <div class="picture">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td>
+                                                                <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })" class="aditionalInfo" flag="0" >
+                                                                    <img alt="@item.DefaultPictureModel.AlternateText" src="@item.DefaultPictureModel.ImageUrl"/>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    @*<div class="windowsviewhover">
+                                                        <div class="info" style="display: none; z-index: 10000; position: absolute">
+                                                            <div class="buttons-new">
+
+                                                              
+                                                                @if (!item.ProductPrice.DisableWishlistButton)
+                                                                {
+                                                                    <input type="button" id="add-to-wishlist-button-@item.Id" class="add-to-wishlist-button-new" value="@T("ShoppingCart.AddToWishlist")" data-productid="@item.Id" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = item.Id, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })    ', '#product-details-form');return false;" />
+                                                                }
+                                                                @if (!item.ProductPrice.DisableBuyButton)
+                                                                {
+                                                                    <input type="button" value="@(item.ProductPrice.AvailableForPreOrder ? T("ShoppingCart.PreOrder") : T("ShoppingCart.AddToCart"))" class="product-box-add-to-cart-button-new" onclick="AjaxCart.addproducttocart_catalog('@addtocartlink    ');return false;" />
+                                                                }
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>*@
+                                                    <script type="text/javascript">
+                                                        function diplayaditionalInfo(data){
+                                                            if(data.attr('flag')=='0'){
+                                                                $(".info").hide();
+                                                                $(".aditionalInfo").attr('flag',"0");
+                                                                var r= data.next('span').show();
+                                                                data.attr('flag',"1");
+                                                            }
+                                                            else{
+                                                                var r= data.next('span').hide();
+                                                                data.attr('flag',"0");
+                                                            }
+
+                                                            //alert(data);
+                                                        }
+                                                    </script>
+                                                </div>
+                                                <div class="details">
+                                                    <h2 class="product-title">
+                                                        @{ 
+                                                                var description = "";
+                                                                if (item.ShortDescription != null)
+                                                                {
+                                                                    var descriptionvalue = item.ShortDescription;
+
+                                                                    if (descriptionvalue.Length > 53)
+                                                                    {
+                                                                        description = descriptionvalue.Substring(0, 53) + "...";
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        description = descriptionvalue;
+                                                                    }
+                                                                }
+                                                                var name = "";
+                                                                if (item.Name != null)
+                                                                {
+                                                                    var namevalue = item.Name;
+
+                                                                    if (namevalue.Length > 24)
+                                                                    {
+                                                                        name = namevalue.Substring(0, 24) + "...";
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        name = namevalue;
+                                                                    }
+                                                                }
+                                                        }
+                                                        <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })">@name</a>
+                                                    </h2>
+
+                                                    <div class="description1" style="display:none">
+
+                                                        @Html.Raw(description)
+                                                    </div>
+                                                    <div class="add-info">
+                                                        <div class="prices home-best-seller">
+                                                            @if (!String.IsNullOrEmpty(item.ProductPrice.OldPrice))
+                                                            {
+                                                                <span class="price old-price">@item.ProductPrice.OldPrice</span>
+                                                            }
+                                                            <span class="price actual-price">@item.ProductPrice.Price</span>
+                                                            <div class="clear"></div>
+                                                            @if (item.ProductPrice.DisplayTaxShippingInfo)
+                                                            {
+                                                                var inclTax = EngineContext.Current.Resolve<IWorkContext>().TaxDisplayType == TaxDisplayType.IncludingTax;
+                                                                //tax info is already included in the price (incl/excl tax). that's why we display only shipping info here
+                                                                //of course, you can modify appropriate locales to include VAT info there
+                                                                <div class="tax-shipping-info">
+                                                                    @T(inclTax ? "Products.Price.TaxShipping.InclTax" : "Products.Price.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                       @* @if (item.ReviewOverviewModel.AllowCustomerReviews)
+                                                        {
+                                                            int ratingPercent = 0;
+                                                            if (item.ReviewOverviewModel.TotalReviews != 0)
+                                                            {
+                                                                ratingPercent = ((item.ReviewOverviewModel.RatingSum * 100) / item.ReviewOverviewModel.TotalReviews) / 5;
+                                                            }
+                                                            <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, item.ReviewOverviewModel.TotalReviews)">
+                                                                <div class="rating">
+                                                                    <div style="width: @(ratingPercent)%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }*@
+                                                        <div class="clear"></div>
+                                                        @*<div class="cart1" style="display: block">
+                                                            @if (!item.ProductPrice.DisableWishlistButton)
+                                                            {
+                                                                <input type="button" id="add-to-wishlist-button-@item.Id" class="add-to-wishlist-button-mobile" value="@T("ShoppingCart.AddToWishlist")" data-productid="@item.Id" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = item.Id, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })    ', '#product-details-form');return false;" />
+                                                            }
+                                                            @if (!item.ProductPrice.DisableBuyButton)
+                                                            {
+                                                                <input type="button" value="@(item.ProductPrice.AvailableForPreOrder ? T("ShoppingCart.PreOrder") : T("ShoppingCart.AddToCart"))" class="product-box-add-to-cart-button-mobile" onclick="AjaxCart.addproducttocart_catalog('@addtocartlink    ');return false;" />
+                                                            }
+
+                                                            <div class="clear"></div>
+                                                        </div>*@
+                                                        @*  @Html.Widget("productbox_add_info", item.Id)*@
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        </div>
+    }
+    @if (Model.ProductalsopurchasedEnable)
+    { 
+        <h3>Purchased Product</h3>
+        <div>
+            <p>
+
+                <div id="tabs-11">
+                    <div class="category-page">
+                        <div class="related-products-grid product-grid">
+                            <div class="title">
+                            </div>
+                            @if (Model.productalsopurchased != null)
+                            {
+                                foreach (var item in Model.productalsopurchased)
+                                {
+                                <div class="item-box">
+
+                                    @{
+                                    //prepare "Add to cart" AJAX link
+                                    string addtocartlink = "";
+                                    var shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart;
+                                    var quantity = 1;
+                                    if (item.ProductPrice.ForceRedirectionAfterAddingToCart)
+                                    {
+                                        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = item.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, forceredirection = item.ProductPrice.ForceRedirectionAfterAddingToCart });
+                                    }
+                                    else
+                                    {
+                                        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = item.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, });
+                                    }    
+                                    }
+                                    <div class="product-item" data-productid="@item.Id">
+                                        <div class="picture">
+                                            <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })" title="@item.DefaultPictureModel.Title">
+                                                <img alt="@item.DefaultPictureModel.AlternateText" src="@item.DefaultPictureModel.ImageUrl" title="@item.DefaultPictureModel.Title" />
+                                            </a>
+                                        </div>
+                                        <div class="details">
+                                            <h2 class="product-title">
+                                                @{ 
+                                    var description = "";
+                                    if (item.ShortDescription != null)
+                                    {
+                                        var descriptionvalue = item.ShortDescription;
+
+                                        if (descriptionvalue.Length > 53)
+                                        {
+                                            description = descriptionvalue.Substring(0, 53) + "...";
+                                        }
+                                        else
+                                        {
+                                            description = descriptionvalue;
+                                        }
+                                    }
+                                    var name = "";
+                                    if (item.Name != null)
+                                    {
+                                        var namevalue = item.Name;
+
+                                        if (namevalue.Length > 24)
+                                        {
+                                            name = namevalue.Substring(0, 24) + "...";
+                                        }
+                                        else
+                                        {
+                                            name = namevalue;
+                                        }
+                                    }
+                                                }
+                                                <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })">@name</a>
+                                            </h2>
+
+                                            <div class="description1" style="display:none">
+
+                                                @Html.Raw(description)
+                                            </div>
+                                            <div class="add-info">
+                                                <div class="prices home-best-seller">
+                                                    @if (!String.IsNullOrEmpty(item.ProductPrice.OldPrice))
+                                                    {
+                                                        <span class="price old-price">@item.ProductPrice.OldPrice</span>
+                                                    }
+                                                    <span class="price actual-price">@item.ProductPrice.Price</span>
+                                                    <div class="clear"></div>
+                                                    @if (item.ProductPrice.DisplayTaxShippingInfo)
+                                                    {
+                                                        var inclTax = EngineContext.Current.Resolve<IWorkContext>().TaxDisplayType == TaxDisplayType.IncludingTax;
+                                                        //tax info is already included in the price (incl/excl tax). that's why we display only shipping info here
+                                                        //of course, you can modify appropriate locales to include VAT info there
+                                                        <div class="tax-shipping-info">
+                                                            @T(inclTax ? "Products.Price.TaxShipping.InclTax" : "Products.Price.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
+                                                        </div>
+                                                    }
+                                                </div>
+                                              @*  @if (item.ReviewOverviewModel.AllowCustomerReviews)
+                                                {
+                                                    int ratingPercent = 0;
+                                                    if (item.ReviewOverviewModel.TotalReviews != 0)
+                                                    {
+                                                        ratingPercent = ((item.ReviewOverviewModel.RatingSum * 100) / item.ReviewOverviewModel.TotalReviews) / 5;
+                                                    }
+                                                    <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, item.ReviewOverviewModel.TotalReviews)">
+                                                        <div class="rating">
+                                                            <div style="width: @(ratingPercent)%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }*@
+                                                <div class="clear"></div>
+                                                @*<div class="cart1" style="display: block">
+                                                    @if (!item.ProductPrice.DisableWishlistButton)
+                                                    {
+                                                        <input type="button" id="add-to-wishlist-button-@item.Id" class="add-to-wishlist-button-mobile" value="@T("ShoppingCart.AddToWishlist")" data-productid="@item.Id" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = item.Id, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })    ', '#product-details-form');return false;" />
+                                                    }
+                                                    @if (!item.ProductPrice.DisableBuyButton)
+                                                    {
+                                                        <input type="button" value="@(item.ProductPrice.AvailableForPreOrder ? T("ShoppingCart.PreOrder") : T("ShoppingCart.AddToCart"))" class="product-box-add-to-cart-button-mobile" onclick="AjaxCart.addproducttocart_catalog('@addtocartlink    ');return false;" />
+                                                    }
+
+                                                    <div class="clear"></div>
+                                                </div>*@
+                                                @*  @Html.Widget("productbox_add_info", item.Id)*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                }
+                            }
+                        </div>
+                    </div>
+
+                </div>
+            </p>
+        </div>
+    }
+
+</div>

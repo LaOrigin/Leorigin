@@ -1,0 +1,400 @@
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Nop.Services.dll.config
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Nop.Services.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Nop.Services.pdb
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Autofac.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\EPPlus.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\ImageResizer.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\itextsharp.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\MaxMind.Db.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\mscorlib.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Nop.Core.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Nop.Data.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\PerlRegex.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\RestSharp.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.Razor.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\UserAgentStringLibrary.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\EntityFramework.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Nop.Core.pdb
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Nop.Data.pdb
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Autofac.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\EPPlus.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\ImageResizer.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\itextsharp.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\MaxMind.Db.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\RestSharp.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.Razor.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\EntityFramework.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\normidna.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\normnfc.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\normnfd.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\normnfkc.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\bin\Debug\normnfkd.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\obj\Debug\Nop.Services.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\obj\Debug\Nop.Services.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Services\obj\Debug\Nop.Services.pdb
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll.config
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.pdb
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Autofac.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\mscorlib.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\PerlRegex.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\UserAgentStringLibrary.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.pdb
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.pdb
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Autofac.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.xml
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\normidna.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\normnfc.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\normnfd.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\normnfkc.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Services\bin\Debug\normnfkd.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.csprojResolveAssemblyReference.cache
+E:\Kinnal\leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.dll
+E:\Kinnal\leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.pdb
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll.config
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.pdb
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Autofac.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\mscorlib.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\PerlRegex.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\UserAgentStringLibrary.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.pdb
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.pdb
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Autofac.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\normidna.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\normnfc.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\normnfd.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\normnfkc.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\bin\Debug\normnfkd.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.csprojResolveAssemblyReference.cache
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.pdb
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Nop.Services.dll.config
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Nop.Services.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Nop.Services.pdb
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Autofac.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\EPPlus.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\ImageResizer.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\itextsharp.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\MaxMind.Db.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\mscorlib.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Nop.Core.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Nop.Data.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\PerlRegex.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\RestSharp.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.Razor.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\UserAgentStringLibrary.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\EntityFramework.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Nop.Core.pdb
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Nop.Data.pdb
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Autofac.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\EPPlus.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\ImageResizer.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\itextsharp.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\MaxMind.Db.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\RestSharp.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.Razor.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\EntityFramework.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\normidna.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\normnfc.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\normnfd.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\normnfkc.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\bin\Debug\normnfkd.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\obj\Debug\Nop.Services.csprojResolveAssemblyReference.cache
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\obj\Debug\Nop.Services.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Services\obj\Debug\Nop.Services.pdb
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Nop.Services.dll.config
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Nop.Services.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Nop.Services.pdb
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Autofac.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\EPPlus.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\ImageResizer.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\itextsharp.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\MaxMind.Db.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\mscorlib.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Nop.Core.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Nop.Data.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\PerlRegex.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\RestSharp.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.Razor.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\UserAgentStringLibrary.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\EntityFramework.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Nop.Core.pdb
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Nop.Data.pdb
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Autofac.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\EPPlus.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\ImageResizer.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\itextsharp.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\MaxMind.Db.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\RestSharp.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.Razor.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\EntityFramework.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\normidna.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\normnfc.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\normnfd.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\normnfkc.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\bin\Debug\normnfkd.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\obj\Debug\Nop.Services.csprojResolveAssemblyReference.cache
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\obj\Debug\Nop.Services.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Services\obj\Debug\Nop.Services.pdb
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll.config
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.pdb
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.pdb
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.pdb
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.xml
+D:\fullsource\Leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.csprojResolveAssemblyReference.cache
+D:\fullsource\Leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.dll
+D:\fullsource\Leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.csprojResolveAssemblyReference.cache
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.pdb
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll.config
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Services.pdb
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Core.pdb
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Nop.Data.pdb
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\EPPlus.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\ImageResizer.Plugins.PrettyGifs.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\itextsharp.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.Db.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\MaxMind.GeoIP2.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\RestSharp.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.Razor.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Razor.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\Autofac.Integration.Mvc.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\bin\Debug\EntityFramework.xml
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.csprojResolveAssemblyReference.cache
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.dll
+D:\fullsource\Final\Leorigin\Libraries\Nop.Services\obj\Debug\Nop.Services.pdb

@@ -1,0 +1,258 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    Disable default header menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.header-menu,.back-button {
+    display: none;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
+    MEGA MENU
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.mega-menu {
+    position:relative;
+	z-index: 1001;
+	background: url('images/navpad1.png');
+	margin: 0 10px 15px;
+	padding:0;
+	list-style:none;
+	border: 1px solid #999;
+	border-bottom: 1px solid #888;
+	box-shadow: 0 0 3px #fff inset;
+}
+.mega-menu:after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+.menu-title,
+.mega-menu-responsive {
+    display: none;
+}
+
+.mega-menu > li {
+	float:left;
+}
+
+.mega-menu > li:first-child 
+{
+}
+
+.mega-menu > li:hover {
+}
+
+.mega-menu > li > a,
+.mega-menu > li > span {
+    display:block;
+	height: 40px;
+    padding: 0 15px;
+	font: bold 13px/40px Arial,Helvetica,sans-serif;
+	color: #fff;
+	text-decoration:none;
+	text-transform: uppercase;
+    text-shadow: -1px -1px 0 #666666;
+    cursor: pointer;
+}
+
+.mega-menu > li:hover > a,
+.mega-menu > li:hover > span {
+	background: url('images/navpad2.png') center repeat-x;
+}
+
+/*.mega-menu li .drop {
+	background:url("images/drop.png") no-repeat right center;
+}
+.mega-menu li:hover .drop {
+	background:url("images/drop.png") no-repeat right center;
+}*/
+
+.mega-menu .dropdown 
+{
+    display: none;
+	position:absolute;
+	background: #fff url('images/header.png') top repeat-x;
+	overflow:hidden;
+	padding:15px;
+	text-align: left;
+	border: 1px solid #fff;
+    border-top:none;
+	box-shadow: 0 0px 5px #999;
+}
+
+.mega-menu .dropdown.fullWidth {
+	left: 0;
+	width: 908px;
+	margin-left: -1px;
+}
+.mega-menu .dropdown.active {
+    display: block;
+}
+
+.mega-menu .box {
+	float: left;
+	margin: 0 5px;
+	border-radius: 3px;
+}
+
+.mega-menu .box ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.mega-menu .categories .box
+{
+    width: 214px;
+}
+.mega-menu .manufacturers .box
+{
+    width: 214px;
+}
+.mega-menu .manufacturers.fullWidth .box
+{
+    width: 140px;
+}
+.mega-menu .title 
+{
+    display: block;
+	margin-bottom: 8px;
+	padding: 5px 0 8px;
+    font: normal bold 12px Arial, Helvetica, sans-serif;
+	color: #333;
+	text-shadow: 1px 1px 0 #fff;
+	text-transform: uppercase;
+    border-bottom: 1px dotted #789;
+}
+.mega-menu .title a 
+{
+	display: block;
+	color: #333;
+}
+.mega-menu .title a:hover 
+{
+	color: #4be !important;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+.mega-menu .box li a 
+{
+    display: block;
+	background: url('images/arrow1.png') left center no-repeat;
+    padding: 5px 12px;
+    font: normal normal 12px Arial, Helvetica, sans-serif;
+    color: #333 !important;
+    /*border-bottom: 1px dotted #ccc;*/
+}
+.mega-menu .box li a:hover 
+{
+	color: #4be !important;
+	text-decoration: none;
+}
+.mega-menu a.view-all 
+{
+    font-weight:bold !important;
+    background: none;
+}
+
+
+.mega-menu .row 
+{
+    display: table;
+    width: 100%;
+    border-spacing: 10px 5px;
+    overflow: hidden;
+}
+.mega-menu .row:first-child 
+{
+    margin-top: 0;
+}
+.mega-menu .row .box 
+{
+    display: table-cell;
+    float: none;
+	vertical-align: top;
+}
+.mega-menu .row .box:first-child 
+{
+}
+.mega-menu .row .title 
+{
+	margin-bottom: 10px;
+	padding: 0 0 5px;
+}
+.mega-menu .picture 
+{
+    float: left;
+}
+.mega-menu .picture img
+{
+    border-width: 0px;
+}
+
+.mega-menu .picture a 
+{
+    display: block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.mega-menu .box .subcategories 
+{
+    margin: 0 0 0 110px;
+}
+.mega-menu .row .box li a 
+{
+    padding: 5px 0 5px 10px;
+    font-size: 11px;
+}
+
+.mega-menu .manufacturer span
+{
+    display: block;
+    margin-bottom: 5px;
+	text-align: center;
+}
+.mega-menu li a.manufacturer
+{
+	background: none !important;
+	text-align: center;
+}
+.mega-menu li a.manufacturer:hover
+{
+	background: none;
+}
+
+.mega-menu .topic-wrapper 
+{
+	overflow: hidden;
+}
+.mega-menu .topic-wrapper p
+{
+	margin: 0 0 10px;
+	padding: 0;
+	font: normal normal 11px/18px Arial, Helvetica, sans-serif;
+	color: #333;
+}
+.mega-menu .topic-wrapper strong 
+{
+	display: block;
+    padding: 5px 0 10px;
+    font: normal bold 12px Arial, Helvetica, sans-serif;
+	color: #333;
+	text-shadow: 1px 1px 0 #fff;
+	text-transform: uppercase;
+    border-bottom: 1px dotted #ccc;
+}

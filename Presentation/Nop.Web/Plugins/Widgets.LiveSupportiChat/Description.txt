@@ -1,0 +1,8 @@
+﻿Group: Widgets
+FriendlyName: LiveSupporti Live Chat
+SystemName: Widgets.LiveSupportiChat
+Version: 1.00
+SupportedVersions: 3.60
+Author: LiveSupporti
+DisplayOrder: 1
+FileName: Nop.Plugin.Widgets.LiveSupportiChat.dll

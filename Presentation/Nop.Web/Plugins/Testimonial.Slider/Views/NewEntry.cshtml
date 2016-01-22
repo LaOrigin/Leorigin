@@ -1,0 +1,145 @@
+﻿@model NyunopCommerce.Nop.Widgets.Testimonial.Slider.Models.TestimonialRecord
+
+@{
+    Layout = "_AdminLayout.cshtml";
+    var descmsg = TempData["lbldescriptionerror"];
+    var name = TempData["lblname"];
+}
+
+@using System
+@using Nop.Web.Framework
+@using Nop.Web.Framework.UI
+<!-- Button trigger modal -->
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    @*<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>*@
+   @* <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>*@
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            if ('@descmsg' != '') {
+                $("#lbldescriptionerror").show();
+            }
+            else {
+                $("#lbldescriptionerror").hide();
+            }
+            if ('@name' != '') {
+
+                $("#lblname").val('@name');
+            }
+            else {
+                $("#lblname").val('');
+            }
+        }
+    </script>
+</head>
+</html>
+
+
+
+@using (Html.BeginForm("NewEntry", "MyTestimonial", FormMethod.Post, new { enctype = "multipart/form-data", id = "addform" }))
+{
+    <div class="section-header">
+        <div class="title">
+            <img src="~/Plugins/Testimonial.Slider/ico_testimonial.png" />
+            Add a new Testimonial  <a href="@Url.Action("Manage", "MyTestimonial")">(back to testimonial list)</a>
+        </div>
+        <input type="submit" id="btnadd" value="Save" class="k-button" style="float: right; margin-right: 5px" /><br />
+        <br />
+        <br />
+    </div>
+    
+    
+        
+    <table style="width: 100%">
+       <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.ClientName):
+            </td>
+            <td class="adminData">
+                @Html.TextBoxFor(model => model.ClientName, new { @id = "lblname", @width = "250px", @class = "text-box single-line" })
+                @Html.ValidationMessageFor(model => model.ClientName)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                <div>
+                    @Html.NopLabelFor(model => model.Description):
+                </div>
+            </td>
+            <td class="adminData">
+                @Html.TextAreaFor(model => model.Description, new { style = "Width: 500px; Height: 150px;" })
+                <span style="vertical-align: top">
+                    @Html.ValidationMessageFor(model => model.Description)
+                </span>
+            </td>
+        </tr>
+        <tr>
+
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.ImagePath):
+            </td>
+            <td class="adminData">
+                <input type="file" name="file" id="file" />
+            </td>
+        </tr>
+         <tr>
+
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.PhotoPath):
+            </td>
+            <td class="adminData">
+                <input type="file" name="file1" id="file1" />
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.ShowOnHome):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.ShowOnHome)
+                @Html.ValidationMessageFor(model => model.ShowOnHome)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.DisplayOrder):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.DisplayOrder)
+                @Html.ValidationMessageFor(model => model.DisplayOrder)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.Published):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.Published)
+                @Html.ValidationMessageFor(model => model.Published)
+            </td>
+        </tr>
+    </table>
+   
+    
+}
+
+@*<div class="form-group">
+    @Html.NopLabelFor(model => model.CustomerName)
+    @Html.TextBoxFor(model => model.CustomerName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.CustomerName)
+</div>*@
+@*<div class="form-group">
+    @Html.NopLabelFor(model => model.CustomerEmail)
+    @Html.TextBoxFor(model => model.CustomerEmail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.CustomerEmail)
+</div>
+@Html.HiddenFor(model => model.ProductName)*@

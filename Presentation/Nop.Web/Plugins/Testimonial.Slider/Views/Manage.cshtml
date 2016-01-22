@@ -1,0 +1,320 @@
+﻿@model NyunopCommerce.Nop.Widgets.Testimonial.Slider.Models.TestimonialRecord
+
+@{
+    Layout = "_AdminLayout.cshtml";
+    var msg = TempData["newentry"];
+
+    var defaultGridPageSize = EngineContext.Current.Resolve<Nop.Core.Domain.Common.AdminAreaSettings>().DefaultGridPageSize;
+    var gridPageSizes = EngineContext.Current.Resolve<Nop.Core.Domain.Common.AdminAreaSettings>().GridPageSizes;
+}
+
+@using Nop.Core.Infrastructure;
+@using Nop.Services.Configuration;
+@{
+    bool autoAdd = EngineContext.Current.Resolve<ISettingService>().GetSettingByKey<bool>("AutoAddTrialEmail");
+}
+
+        <style>
+        .rin{
+         text-decoration: none;
+color: #009FFF;
+border: 0px;
+background:none;
+box-shadow: none;
+outline: none;
+stop-opacity: 0;
+font-weight: 700;
+font-size: 12px;
+font-family: arial;
+        }
+        .rin:hover{
+         text-decoration: underline;
+        }
+
+        </style>
+    
+    
+
+<script type="text/javascript">
+    window.onload=function(){
+        
+        if('@msg'!='')
+        {
+            $("#lblmsg").show()
+        }
+        else
+        {
+            $("#lblmsg").hide()
+        }
+        
+    }
+</script>
+
+<div class="messageBox messageBoxSuccess" id="lblmsg">The new testimonial has been added successfully. </div>
+<div class="section-header">
+    <div class="title">
+        <img src="~/Plugins/Testimonial.Slider/ico_testimonial.png" />
+        Manage Testimonials
+    </div>
+    <input type="button" id="delete-selected" class="k-button" style="float: right;margin-right: 5px" value="@T("Admin.Common.Delete.Selected")" />
+    <input type="button" value="Add New" class="k-button" style="float: right;margin-right: 5px" onclick="location.href='@Url.Action("NewEntry", "MyTestimonial")    '" />
+</div>
+
+<script id="template" type="text/x-kendo-template">
+</script>
+
+<div id="trials-grid"></div>
+
+<script type="text/javascript">
+    
+    $(document).ready(function () {
+        
+
+        
+
+        
+    });
+    
+
+
+    function toolbar_click() {
+      
+        var paramdata = {
+            CustomerName: $("#CustomerName").val(),
+            Title: $("#Title").val(),
+            date: $("#date").val()
+
+        };
+        var url = "@Url.Action("NewEntry", "MyTestimonial")";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: paramdata,
+            success: function (data) {
+                alert('data inserted');
+            },
+            dataType: "json"
+        });
+        
+    }
+
+    $(function () {
+
+        $('#autoAdd').change(function () {
+            var status = "false";
+
+            if ($('#autoAdd').prop('checked')) {
+                status = "true";
+            }
+
+            statusData = {
+                add: status
+            }
+
+            $.post("/trialtracker/autoadd", statusData, function (data) {
+                if (data == "success") {
+                    $("#autoStatus").html("Changes saved.").show().css("color", "green").fadeOut('slow')
+                } else {
+                    $("#autoStatus").html("Changes could not be saved.").show().css("color", "red").fadeOut('slow')
+                }
+
+            })
+        })
+    })
+</script>
+
+<script>
+
+    $(document).ready(function () {
+        var selectedIds = [];
+        $("#trials-grid").kendoGrid({
+         dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: "@Html.Raw(Url.Action("GetTestimonial", "MyTestimonial"))",
+                        type: "POST",
+                        dataType: "json"
+                    },
+                    destroy: {
+                        url: "@Html.Raw(Url.Action("DeleteTestimonial", "MyTestimonial"))",
+                        type: "POST",
+                        dataType: "json"
+                    },
+                    update: {
+                       
+                        url: "@Html.Raw(Url.Action("Edit", "MyTestimonial"))",
+                        type: "POST",
+                        dataType: "json"
+                    }
+                  
+                },
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    errors: "Errors",
+                    model: {
+                        id: "Id",
+                        fields: {
+                            ClientName: { editable: true, type: "string" },
+                            Published: { editable: true, type: "boolean" },
+                            DisplayOrder: { editable: true, type: "number" }
+                           
+                        }
+                    }
+                },
+                requestEnd: function (e) {
+                    if (e.type == "update") {
+                        this.read();
+                    }
+                },
+                error: function (e) {
+                    display_kendoui_grid_error(e);
+                   
+                    this.saveChanges();
+                    
+                },
+             //Update
+                pageSize: @(defaultGridPageSize),
+                serverPaging: false,
+                serverFiltering: false,
+                serverSorting: false
+         },
+            //pageable: {
+            //    refresh: true,
+            //    numeric: false,
+            //    previousNext: false,
+            //    info: false
+                
+            //},
+            pageable: {
+                refresh: true,
+                pageSizes: [@(gridPageSizes)]
+            },
+            //Update
+              
+            editable:  {
+                mode: "popup",
+                
+                
+            },
+            scrollable: false,
+            dataBound: onDataBound,
+            toolbar: [
+    { template: kendo.template($("#template").html()) }
+            ],
+
+            columns: [{
+                field: "Id",
+                headerTemplate: "<input id='mastercheckbox' type='checkbox'/>",
+                headerAttributes: { style: "text-align:center" },
+                attributes: { style: "text-align:center" },
+                template: "<input type='checkbox' value='#=Id#' class='checkboxGroups'/>",
+                width: 50
+            }, {
+                field: "ClientName",
+                title: "Client name",
+                width: 350
+            }, {
+
+                field: "DisplayOrder",
+                title: "Display order",
+                width: 150
+            },{
+                field: "Published",
+                title: "Published",
+                width: 50,
+                headerAttributes: { style: "text-align:center" },
+                attributes: { style: "text-align:center" },
+                template: '<img src="@Url.Content("~/Administration/Content/images/")active-#=Published#.gif" />'
+            }, {
+                field: "Id",
+                title: "@T("Admin.Common.Edit")",
+                width: 70,
+                template: '<a href="Edit/#=Id#">@T("Admin.Common.Edit")</a>'
+            },
+             ]
+        });
+
+        $('#delete-selected').click(function(e) {
+
+            e.preventDefault();
+
+            var postData = {
+                selectedIds: selectedIds
+            };
+
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "@(Url.Action("DeleteSelected", "MyTestimonial"))",
+                    data: postData,
+                    complete: function(data) {
+                        //reload grid
+                        var grid = $('#trials-grid').data('kendoGrid');
+                        //grid.dataSource.page(1); //new search. Set page size to 1
+                        grid.dataSource.read();
+                        $("#lblmsg").hide()
+                        $('#mastercheckbox').attr('checked',false);
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        //alert(thrownError);
+                        alert('Please select any testimonial to delete.');
+                    },
+                    traditional: true
+                });
+            return false;
+        });
+
+        $('#mastercheckbox').click(function () {
+            $('.checkboxGroups').attr('checked', $(this).is(':checked')).change();
+        });
+
+        $('#trials-grid').on('change', 'input[type=checkbox][id!=mastercheckbox]', function (e) {
+            var $check = $(this);
+            if ($check.is(":checked") == true) {
+                var checked = jQuery.inArray($check.val(), selectedIds);
+                if (checked == -1) {
+                    //add id to selectedIds.  
+                    selectedIds.push($check.val());
+                }
+            }
+            else {
+                var checked = jQuery.inArray($check.val(), selectedIds);
+                if (checked > -1) {
+                    //remove id from selectedIds.  
+                    selectedIds = $.grep(selectedIds, function (item, index) {
+                        return item != $check.val();
+                    });
+                }
+            }
+            updateMasterCheckbox();
+
+        });
+        function onDataBound(e) {
+            $('#trials-grid input[type=checkbox][id!=mastercheckbox]').each(function () {
+                var currentId = $(this).val();
+                var checked = jQuery.inArray(currentId, selectedIds);
+                //set checked based on if current checkbox's value is in selectedIds.  
+                $(this).attr('checked', checked > -1);
+            });
+
+            updateMasterCheckbox();
+        }
+
+        function updateMasterCheckbox() {
+            var numChkBoxes = $('#trials-grid input[type=checkbox][id!=mastercheckbox]').length;
+            var numChkBoxesChecked = $('#trials-grid input[type=checkbox][checked][id!=mastercheckbox]').length;
+            $('#mastercheckbox').attr('checked', numChkBoxes == numChkBoxesChecked && numChkBoxes > 0);
+        }
+     });
+    function confirmmsg(data){
+        
+        var answer =confirm("Are you sure you want to delete testimonial?");
+        if(answer){
+            var url =data.attr("flag");
+            window.location.href= url;
+        }
+        //return r;
+    }
+</script>

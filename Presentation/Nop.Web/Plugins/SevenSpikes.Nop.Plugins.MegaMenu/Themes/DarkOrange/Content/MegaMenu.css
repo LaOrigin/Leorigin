@@ -1,0 +1,227 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+    Disable default header menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.header-menu,
+.menu-title,
+.mega-menu-responsive,
+.back-button {
+    display: none;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
+    MEGA MENU
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.mega-menu {
+    position:relative;
+	z-index: 1001;
+	width:940px;
+	margin:0 auto 10px;
+	padding:0;
+	list-style:none;
+	border-radius: 5px;
+	background: #373737;
+    background: -moz-linear-gradient(top,  #404040 0%, #333333 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#404040), color-stop(100%,#333333));
+    background: -webkit-linear-gradient(top,  #404040 0%,#333333 100%);
+    background: -o-linear-gradient(top,  #404040 0%,#333333 100%);
+    background: -ms-linear-gradient(top,  #404040 0%,#333333 100%);
+    background: linear-gradient(to bottom,  #404040 0%,#333333 100%);
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#404040', endColorstr='#333333',GradientType=0 );*/
+
+}
+    .mega-menu:after {
+        content: ".";
+        display: block;
+        visibility: hidden;
+        clear: both;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+    }
+
+.mega-menu > li {
+	float:left;
+	height:43px;
+	border-right: 1px dotted #555555;
+}
+
+.mega-menu > li:first-child 
+{
+    border-radius: 5px 0 0 5px;
+}
+
+.mega-menu > li:hover {
+	background: #373737;
+    background: -moz-linear-gradient(top,  #333333 0%, #404040 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#404040));
+    background: -webkit-linear-gradient(top,  #333333 0%,#404040 100%);
+    background: -o-linear-gradient(top,  #333333 0%,#404040 100%);
+    background: -ms-linear-gradient(top,  #333333 0%,#404040 100%);
+    background: linear-gradient(to bottom,  #333333 0%,#404040 100%);
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#404040',GradientType=0 );*/
+
+}
+
+.mega-menu > li > a,
+.mega-menu > li > span {
+    display:block;
+    padding: 0 20px;
+	font: normal bold 12px/43px Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-decoration:none;
+	text-transform: uppercase;
+    cursor: pointer;
+}
+
+.mega-menu > li:hover > a {
+	color:#f93;
+}
+
+.mega-menu .dropdown 
+{
+    display: none;
+	position: absolute;
+	background: #fff url('images/shadow1.png') top repeat-x;
+	overflow: hidden;
+	padding: 8px 2px 0;
+	border-top: 1px solid #444;
+	border-radius: 0 0 5px 5px;
+	box-shadow: 0 0 3px #333;
+}
+.mega-menu .dropdown.fullWidth 
+{
+	left: 0;
+	width:936px;
+	background: #333 url('images/shadow2.png') top repeat-x;
+	border-radius: 5px;
+}
+.mega-menu .dropdown.active {
+    display: block;
+}
+
+.mega-menu .box {
+	float: left;
+	background: #fff;
+	margin: 0 5px 10px;
+	padding: 10px;
+	border-radius: 5px;
+}
+.mega-menu .categories .box {
+    width: 204px;
+    min-height: 180px;
+    margin: 0 5px;
+}
+.mega-menu .manufacturers .box
+{
+    width: 202px;
+}
+.mega-menu .manufacturers.fullWidth .box
+{
+    width: 126px;
+}
+.mega-menu .box strong {
+    display: block;
+    padding: 5px 0;
+    font: normal bold 12px Arial, Helvetica, sans-serif;
+    color: #f93;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #999;
+}
+.mega-menu .box strong a 
+{
+	color: #f93;
+}
+.mega-menu .box .subcategories li a,
+.dropdown.categories li a,
+.dropdown.manufacturers li a {
+    display: block;
+	background: url('images/arrow1.png') left center no-repeat;
+    font: normal normal 12px Arial, Helvetica, sans-serif;
+    color: #666 !important;
+    padding: 5px 0 5px 7px;
+    font-size: 11px;
+}
+.mega-menu .box .subcategories li a:hover,
+.dropdown.categories li a:hover,
+.dropdown.manufacturers li a:hover {
+	background: url('images/arrow2.png') left center no-repeat;
+    color: #f93 !important;
+}
+.mega-menu .box li:last-child:hover a 
+{
+    border-bottom: none;
+}
+.mega-menu a.view-all 
+{
+    font-weight:bold !important;
+    background: none;
+}
+
+.mega-menu .row {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.mega-menu .row .box strong 
+{
+	border: none;
+}
+
+.mega-menu .picture 
+{
+    float: left;
+	box-shadow: 0 0 5px #999;
+}
+.mega-menu .picture img
+{
+    border-width: 0px;
+}
+
+.mega-menu .picture a 
+{
+    display: block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.mega-menu .box .subcategories 
+{
+    margin: -5px 0 0 100px;
+}
+
+.mega-menu .manufacturer 
+{
+    display: block;
+	background: none !important;
+}
+.mega-menu .manufacturer span
+{
+    display: block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.mega-menu li a.manufacturer 
+{
+    font: normal bold 12px Arial, Helvetica, sans-serif !important;
+}
+.mega-menu li a.manufacturer:hover 
+{
+    background: none !important;
+}
+.mega-menu .row.topic-wrapper .box {
+    width: 240px;
+}
+.mega-menu .topic-wrapper p {
+	margin: 0;
+	color: #666;
+}

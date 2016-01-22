@@ -1,0 +1,107 @@
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+D:\Bhumika_WorkingProject\Te\source\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+D:\Bhumika_WorkingProject\Te\source\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+D:\Bhumika_WorkingProject\LeOrigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+E:\Kinnal\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+E:\Kinnal\leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+E:\Kinnal working projects\leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+D:\Rinkal_Drive\Leorigin\Source\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+D:\fullsource\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+D:\fullsource\Leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+D:\fullsource\Final\Leorigin\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb

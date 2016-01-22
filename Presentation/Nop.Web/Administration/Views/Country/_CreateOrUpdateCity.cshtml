@@ -1,0 +1,127 @@
+﻿@model CityModel
+
+@Html.ValidationSummary(true)
+@Html.HiddenFor(model => model.Id)
+
+<div id="country-edit">
+    @*<ul>
+        <li @Html.RenderSelectedTabIndex(0, GetSelectedTabIndex())>
+            @T("Admin.Configuration.Countries.Info")
+        </li>
+    </ul>*@
+    <div>
+        @TabInfo()
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#city-edit").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: "fadeIn"
+                }
+            },
+            select: tabstrip_on_tab_select
+        });
+    });
+</script>
+
+@{
+    //custom tabs
+    var eventMessage = new AdminTabStripCreated(this.Html, "city-edit");
+    EngineContext.Current.Resolve<IEventPublisher>().Publish(eventMessage);
+    foreach (var eventBlock in eventMessage.BlocksToRender)
+    {
+        @eventBlock
+    }
+}
+
+
+@*save selected tab index*@
+<input type="hidden" id="selected-tab-index" name="selected-tab-index" value="@(GetSelectedTabIndex())">
+
+@helper TabInfo()
+    {        
+    @(Html.LocalizedEditor<CityModel, CityLocalizedModel>("city-info-localized",
+                @<table class="adminContent">
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.Locales[item].Name):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.Locales[item].Name)
+                            @Html.ValidationMessageFor(model => model.Locales[item].Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            @Html.HiddenFor(model => model.Locales[item].LanguageId)
+                        </td>
+                    </tr>
+                </table>
+                ,
+                @<table class="adminContent">
+                    <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.CountryId):
+            </td>
+            <td class="adminData">
+                @Html.HiddenFor(model => model.CityID)
+                @Html.DropDownListFor(model => model.CountryId,Model.Countries)
+                @Html.ValidationMessageFor(model => model.CountryId)
+            </tr>
+                    <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.StateID):
+            </td>
+            <td class="adminData">
+                @Html.DropDownListFor(model => model.StateID,Model.States)
+                @Html.ValidationMessageFor(model => model.StateID)
+            </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.CityName):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.CityName)
+                            @Html.ValidationMessageFor(model => model.CityName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.zipcodesbulk):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.zipcodesbulk, new {@Textmode="Multiline" })
+                            @Html.ValidationMessageFor(model => model.zipcodesbulk)
+                        </td>
+                    </tr>
+                </table>
+            ))
+}
+<script>
+    function bindstates() {
+        $.ajax({
+            cache: false,
+            url: "@(Url.Action("StateList", "Country"))",
+            data: { "countryid": $("#CountryId").val() },
+            dataType: "json",
+            type: "POST",
+            success: function (result) {
+                $("#StateID").empty();
+                var data = result;
+                var r = "";
+                $.each(data, function (index, value) {
+                    r = r + "<option value='" + value.Value + "'>" + value.Text + "</option>";
+                });
+                $("#StateID").html(r);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                //$(placeholderName).html('Failed to load requirement content.');
+            }
+        });
+    }
+    $("#CountryId").change(function () {
+        bindstates();
+    });
+</script>

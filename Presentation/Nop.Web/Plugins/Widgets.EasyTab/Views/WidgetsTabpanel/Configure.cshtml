@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "";
+}
+@model NyunopCommerce.Nop.Widgets.EasyTab.Models.ConfigurationModel
+@using Nop.Web.Framework;
+@*@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".check-all").hide();
+    });
+    
+</script>
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend><strong>@T("Plugins.Widgets.EasyTab.ConfigureTabPanel")</strong></legend>
+        <table class="adminContent">
+            <tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.DescriptionEnable):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.DescriptionEnable)
+                    @Html.ValidationMessageFor(model => model.DescriptionEnable)
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.TagsEnable):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.TagsEnable)
+                    @Html.ValidationMessageFor(model => model.TagsEnable)
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.SpecificationEnable):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.SpecificationEnable)
+                    @Html.ValidationMessageFor(model => model.SpecificationEnable)
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.RelatedproductEnable):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.RelatedproductEnable)
+                    @Html.ValidationMessageFor(model => model.RelatedproductEnable)
+                </td>
+            </tr>
+            <tr>
+                <td class="adminTitle">
+                    @Html.NopLabelFor(model => model.ProductalsopurchasedEnable):
+                </td>
+                <td class="adminData">
+                    @Html.EditorFor(model => model.ProductalsopurchasedEnable)
+                    @Html.ValidationMessageFor(model => model.ProductalsopurchasedEnable)
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br />
+    <table class="adminContent">
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="save" class="k-button" value="@T("Admin.Common.Save")" />
+            </td>
+        </tr>
+    </table>
+}

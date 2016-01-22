@@ -1,0 +1,301 @@
+﻿@using Nop.Services.Customers
+@using Nop.Services.Stores
+@using Nop.Services.Directory
+@model ProductModel
+
+@if (Model.Id > 0)
+{
+    
+    <input type="submit" id="btnAddNewState" value="@T("Admin.Configuration.Product.City.AddNew")" onclick="javascript:OpenWindow('@(Url.Action("CityCreatePopup", "Product", new { productId = Model.Id, btnId = "btnRefresh", formId = "product-form" }))    ', 800, 250, true); return false;" class="k-button" />
+                        <input type="submit" id="btnRefresh" style="display: none" />
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $('#btnRefresh').click(function () {
+                                    //refresh grid
+                                    var grid = $("#tierprices-grid").data('kendoGrid');
+                                    grid.dataSource.read();
+
+                                    //return false to don't reload a page
+                                    return false;
+                                });
+                            });
+                        </script>
+    <div id="tierprices-grid"></div>
+    <script>
+        $(document).ready(function () {
+            $("#tierprices-grid").kendoGrid({
+                dataSource: {
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: "@Html.Raw(Url.Action("CityList", "Product", new { productId = Model.Id }))",
+                            type: "POST",
+                            dataType: "json"
+                        },
+                        @*create: {
+                            url: "@Html.Raw(Url.Action("CityInsert", "Product", new { productId = Model.Id }))",
+                            type: "POST",
+                            dataType: "json"
+                        },*@
+                        update: {
+                            url:"@Html.Raw(Url.Action("CityUpdate", "Product"))",
+                            type: "POST",
+                            dataType: "json"
+                        },
+                        destroy: {
+                            url: "@Html.Raw(Url.Action("CityDelete", "Product"))",
+                            type: "POST",
+                            dataType: "json"
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total",
+                        errors: "Errors",
+                        model: {
+                            id: "Id",
+                            fields: {
+                                Country: { editable: true, type: "string" },
+                                CountryId: { editable: true, type: "number" },
+                                State: { editable: true, type: "string" },
+                                StateId: { editable: true, type: "number" },
+                                //ProductId: { editable: false, type: "number" },
+                                City: { editable: true, type: "string" },
+                                CityId: { editable: true, type: "number" },
+                            }
+                        }
+                    },
+                    requestEnd: function (e) {
+                        if (e.type == "create" || e.type == "update") {
+                            this.read();
+                        }
+                    },
+                    error: function (e) {
+                        display_kendoui_grid_error(e);
+                        // Cancel the changes
+                        this.cancelChanges();
+                    },
+                    serverPaging: true,
+                    serverFiltering: true,
+                    serverSorting: true
+                },
+                pageable: {
+                    refresh: true,
+                    numeric: false,
+                    previousNext: false,
+                    info: false
+                },
+                //toolbar: ["create"],
+                editable: {
+                    confirmation: false,
+                    mode: "inline"
+                },
+                scrollable: false,
+                columns: [
+                    @*{
+                    field: "CountryId",
+                    title: "@T("Admin.Catalog.Products.City.Fields.Country")",
+                    width: 250,
+                    editor: countryDropDownEditor,
+                    template: "#:Country#"
+                },*@
+                {
+                    field: "StateId",
+                    title: "@T("Admin.Catalog.Products.City.Fields.State")",
+                    width: 250,
+                    editor: stateDropDownEditor,
+                    template: "#:State#"
+                },
+
+                {
+                    field: "CityId",
+                    title: "@T("Admin.Catalog.Products.City.Fields.City")",
+                    width: 250,
+                    editor: cityDropDownEditor,
+                    template: "#:City#"
+                },{
+                    field: "Id",
+                    title: "@T("Admin.Common.Edit")",
+                                        width: 100,
+                                        template: "<input type='submit' value='@T("Admin.Common.Edit")' onclick=\"javascript:OpenWindow('@Url.Content("~/Admin/Product/CityEditPopup/")#=Id#?btnId=btnRefresh&formId=product-form', 800, 250, true); return false;\" class='k-button' />"
+                },
+                {
+                    command: [
+                        @*{
+                        name: "edit",
+                        text: "@T("Admin.Common.Edit")"
+                    }, *@
+                    {
+                        name: "destroy",
+                        text: "@T("Admin.Common.Delete")"
+                    }],
+                    width: 200
+                }]
+            });
+        });
+
+        var allCountry = [
+            {
+                CountryId : 0,
+                CountryName : "@T("Admin.Configuration.Settings.AllSettings.Fields.CountryName.AllCountry")"
+
+            }
+            @{
+    var countryService = EngineContext.Current.Resolve<ICountryService>();
+    var allCountry = countryService.GetAllCountries();
+            }
+            @foreach (var country in allCountry)
+            {
+                <text>
+                        , {
+                            CountryId: @(country.Id),
+                            CountryName: "@(Html.Raw(HttpUtility.JavaScriptStringEncode(country.Name)))"
+                        }
+                        </text>
+            }
+        ];
+        
+        var allStates = [
+            {
+                Id : 0,
+                Name : "@T("Admin.Catalog.Products.City.Fields.States.All")",
+                CountryId:0
+                
+            }
+            @{
+                var stateService = EngineContext.Current.Resolve<IStateProvinceService>();
+                var allStates = stateService.GetStateProvinces();
+            }
+            @foreach (var state in allStates)
+            {
+                <text>
+                    , {
+            Id: @(state.Id),
+            Name: "@(Html.Raw(HttpUtility.JavaScriptStringEncode(state.Name)))"
+        }
+        </text>
+            }
+        ];
+        var allCity = [
+           {
+               Id : 0,
+               Name : "@T("Admin.Catalog.Products.City.Fields.City.AllCity")"
+            }
+            @{
+    var cityService = EngineContext.Current.Resolve<ICityService>();
+    var allCity = cityService.GetCity();
+            }
+            @foreach (var city in allCity)
+            {
+                <text>
+                    , {
+                        Id: @(city.CityID),
+                        Name: "@(Html.Raw(HttpUtility.JavaScriptStringEncode(city.CityName)))"
+                    }
+        </text>
+            }
+         ];
+
+        function countryDropDownEditor(container, options) {
+            $('<input id="countryID" required data-text-field="CountryName" data-value-field="CountryId" data-bind="value:CountryId"/>')
+                .appendTo(container)
+                .kendoDropDownList({
+                    autoBind: false,
+                    dataSource: allCountry,
+                });
+        }
+
+        function onCountryChange(e){
+            var state1 ={
+                Id : 0,
+                Name : "@T("Admin.Catalog.Products.City.Fields.States.All")"
+            };
+            $.ajax({
+                cache: false,
+                url: "@(Url.Action("StateList", "Country"))",
+                //data: { "countryid": $("#CountryId").val() },
+                data: { "countryid": "1" },
+                    dataType: "json",
+                    type: "POST",
+                    success: function (result) {
+                      
+                        $("#StateId").empty();
+                        var data = result;
+                        var r = "";
+                        $.each(data, function (index, value) {
+                            //r = r + "<option value='" + value.Value + "'>" + value.Text + "</option>";
+                            state1+=",{Id : "+value.Value+",Name : "+value.Text+"}";
+                        });
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        //$(placeholderName).html('Failed to load requirement content.');
+                    }
+                });
+   
+            //$('<input id="state" required data-text-field="Name" data-value-field="Id" data-bind="value:StateId"/>')
+            //        .appendTo("#state")
+            //        .kendoDropDownList({
+            //            autoBind: true,
+            //            dataSource: state1
+            //        });
+            //$("#state-list").remove();
+            //$("#state").kendoDropDownList({
+            //    dataTextField: "Name",
+            //    dataValueField: "Id",
+            //    dataSource:state1
+            //});
+        }
+        function stateDropDownEditor(container, options) {
+            $('<input id="state" required data-text-field="Name" data-value-field="Id" data-bind="value:StateId"/>')
+                .appendTo(container)
+                .kendoDropDownList({
+                    autoBind: false,
+                    cascadeFrom: "CountryId",
+                    dataSource: allStates,
+                    
+                });
+        }
+
+        function cityDropDownEditor(container, options) {
+            $('<input  required data-text-field="Name" data-value-field="Id" data-bind="value:CityId"/>')
+                .appendTo(container)
+                .kendoDropDownList({
+                    autoBind: false,
+                    dataSource: allCity,
+                    cascadeFrom: "StateId",
+                });
+        }
+        $("#countryID").change(function(){
+            var state1 ={
+                Id : 0,
+                Name : "@T("Admin.Catalog.Products.City.Fields.States.All")"
+        };
+            $.ajax({
+                cache: false,
+                url: "@(Url.Action("StateList", "Country"))",
+                //data: { "countryid": $("#CountryId").val() },
+                data: { "countryid": $(this).val() },
+                dataType: "json",
+                type: "POST",
+                success: function (result) {
+                      
+                    $("#StateId").empty();
+                    var data = result;
+                    var r = "";
+                    $.each(data, function (index, value) {
+                        //r = r + "<option value='" + value.Value + "'>" + value.Text + "</option>";
+                        state1+=",{Id : "+value.Value+",Name : "+value.Text+"}";
+                    });
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //$(placeholderName).html('Failed to load requirement content.');
+                }
+            });
+            $("#state").kendoDropDownList()
+        });
+    </script>
+}
+else
+{
+    @T("Admin.Catalog.Products.TierPrices.SaveBeforeEdit")
+}

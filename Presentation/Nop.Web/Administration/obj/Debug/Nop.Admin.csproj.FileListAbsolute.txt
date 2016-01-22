@@ -1,0 +1,57 @@
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\bin\AutoMapper.Net4.dll
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\bin\Nop.Admin.dll
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\bin\Nop.Admin.pdb
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+D:\Bhumika_WorkingProject\Te\source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\bin\AutoMapper.Net4.dll
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\bin\Nop.Admin.dll
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\bin\Nop.Admin.pdb
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+D:\Bhumika_WorkingProject\LeOrigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\bin\AutoMapper.Net4.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\bin\Nop.Admin.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\bin\Nop.Admin.pdb
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+D:\Bhumika_WorkingProject\LeOriginSvn\trunk\Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+E:\Kinnal\leorigin\Presentation\Nop.Web\bin\AutoMapper.Net4.dll
+E:\Kinnal\leorigin\Presentation\Nop.Web\bin\Nop.Admin.dll
+E:\Kinnal\leorigin\Presentation\Nop.Web\bin\Nop.Admin.pdb
+E:\Kinnal\leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+E:\Kinnal\leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+E:\Kinnal\leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\bin\AutoMapper.Net4.dll
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\bin\Nop.Admin.dll
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\bin\Nop.Admin.pdb
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+E:\Kinnal working projects\leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\bin\AutoMapper.Net4.dll
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\bin\Nop.Admin.dll
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\bin\Nop.Admin.pdb
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+D:\Rinkal_Drive\Leorigin\Source\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+D:\fullsource\Leorigin\Presentation\Nop.Web\bin\AutoMapper.Net4.dll
+D:\fullsource\Leorigin\Presentation\Nop.Web\bin\Nop.Admin.dll.config
+D:\fullsource\Leorigin\Presentation\Nop.Web\bin\Nop.Admin.dll
+D:\fullsource\Leorigin\Presentation\Nop.Web\bin\Nop.Admin.pdb
+D:\fullsource\Leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+D:\fullsource\Leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+D:\fullsource\Leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\bin\AutoMapper.Net4.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\bin\Nop.Admin.dll.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\bin\Nop.Admin.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\bin\Nop.Admin.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\bin\AutoMapper.Net4.dll
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\bin\Nop.Admin.dll.config
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\bin\Nop.Admin.dll
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\bin\Nop.Admin.pdb
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.csprojResolveAssemblyReference.cache
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.dll
+D:\fullsource\Final\Leorigin\Presentation\Nop.Web\Administration\obj\Debug\Nop.Admin.pdb

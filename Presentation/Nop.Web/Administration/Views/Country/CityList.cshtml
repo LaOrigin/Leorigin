@@ -1,0 +1,176 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model CityModel
+@{
+    var defaultGridPageSize = EngineContext.Current.Resolve<Nop.Core.Domain.Common.AdminAreaSettings>().DefaultGridPageSize;
+    var gridPageSizes = EngineContext.Current.Resolve<Nop.Core.Domain.Common.AdminAreaSettings>().GridPageSizes;
+
+    //page title
+    ViewBag.Title = T("Admin.Country.Zipcode.Manage").Text;
+}
+
+<div class="section-header">
+    <div class="title">
+        <img src="@Url.Content("~/Administration/Content/images/ico-configuration.png")" alt="" />
+        @T("Admin.Configuration.ManageZipcodes")
+    </div>
+    <div class="options">
+        <a href="@Url.Action("CreateCity")" class="k-button">@T("Admin.Common.AddNew")</a>
+    </div></div>
+     <table width="100%">
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.CountryId):
+            </td>
+            <td class="adminData">
+                @Html.DropDownListFor(model => model.CountryId,Model.Countries)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.StateID):
+            </td>
+            <td class="adminData">
+                @Html.DropDownListFor(model => model.StateID, Model.States)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.CityName):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.CityName)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" id="search-products" class="k-button" value="@T("Admin.Common.Search")" />
+            </td>
+        </tr>
+         </table>
+
+<table class="adminContent">
+    <tr>
+        <td>
+            <div id="countries-grid"></div>
+
+            <script>
+                function additionalData() {
+                    return {
+                        CityName: $('#@Html.FieldIdFor(model => model.CityName)').val(),
+                        StateID: $('#StateID').val(),
+                        CountryId: $('#CountryId').val()
+                    };
+                }
+                $(document).ready(function () {
+                    $("#countries-grid").kendoGrid({
+                        dataSource: {
+                            type: "json",
+                            transport: {
+                                read: {
+                                    url: "@Html.Raw(Url.Action("CityList", "Country"))",
+                                    type: "POST",
+                                    dataType: "json",
+                                    data: additionalData
+                                }
+                            },
+                            schema: {
+                                data: "Data",
+                                total: "Total",
+                                errors: "Errors"
+                            },
+                            error: function (e) {
+                                display_kendoui_grid_error(e);
+                                // Cancel the changes
+                                this.cancelChanges();
+                            },
+                            serverPaging: true,
+                            serverFiltering: true,
+                            serverSorting: true
+                        },
+                        pageable: {
+                            refresh: true,
+                            numeric: false,
+                            previousNext: false,
+                            info: false
+                        },
+                        scrollable: false,
+                        //dataBound: onDataBound,
+                        columns: [
+                            //{
+                            //field: "Id",
+                            //headerTemplate: "<input id='mastercheckbox' type='checkbox'/>",
+                            //headerAttributes: { style: "text-align:center" },
+                            //attributes: { style: "text-align:center" },
+                            //template: "<input type='checkbox' value='#=Id#' class='checkboxGroups'/>",
+                            //width: 50
+                            //},
+                        {
+                            field: "StateName",
+                            title: "@T("Admin.Configuration.Countries.Fields.StateName")",
+                            width: 300
+                        }, {
+                            field: "CityName",
+                            title: "@T("Admin.Configuration.Countries.Fields.CityName")",
+                            width: 100,
+                           @* headerAttributes: { style: "text-align:center" },
+                            attributes: { style: "text-align:center" },
+                            template: '<img src="@Url.Content("~/Administration/Content/images/")active-#=AllowsBilling#.gif" />'*@
+                        },  {
+                            field: "Id",
+                            title: "@T("Admin.Common.Edit")",
+                            width: 50,
+                            template: '<a href="EditCity/#=Id#">@T("Admin.Common.Edit")</a>'
+                        }]
+                    });
+                });
+            </script>
+        </td>
+    </tr>
+</table>
+
+
+<script type="text/javascript">
+    $('#search-products').click(function () {
+        //search
+        var grid = $('#countries-grid').data('kendoGrid');
+        grid.dataSource.page(1); //new search. Set page size to 1
+        //grid.dataSource.read(); we already loaded the grid above using "page" function
+        //clear selected checkboxes
+        //$('.checkboxGroups').attr('checked', false).change();
+        //selectedIds = [];
+        return false;
+    });
+
+    $("#@Html.FieldIdFor(model => model.CityName)").keydown(function (event) {
+        if (event.keyCode == 13) {
+            $("#search-products").click();
+            return false;
+        }
+    });
+    function bindstates() {
+        $.ajax({
+            cache: false,
+            url: "@(Url.Action("StateList", "Country"))",
+            data: { "countryid": $("#CountryId").val() },
+            dataType: "json",
+            type: "POST",
+            success: function (result) {
+                $("#StateID").empty();
+                var data = result;
+                var r = "";
+                $.each(data, function (index, value) {
+                    r = r + "<option value='" + value.Value + "'>" + value.Text + "</option>";
+                });
+                $("#StateID").html(r);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                //$(placeholderName).html('Failed to load requirement content.');
+            }
+        });
+    }
+    $("#CountryId").change(function () {
+        bindstates();
+    });
+</script>

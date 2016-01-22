@@ -1,0 +1,44 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+.mega-menu > li {
+    float:right !important;
+    border-left: 1px dotted #aaa;
+    border-right: none !important;
+}
+.mega-menu li:first-child,
+.mega-menu > li:first-child a {
+    border-radius: 0 5px 5px 0 !important;
+}
+.mega-menu .dropdown {
+    border-radius: 5px 0 5px 5px !important;
+}
+.mega-menu li:first-child .dropdown {
+    border-radius: 5px !important;
+}
+.mega-menu .box {
+    float: right;
+}
+.mega-menu .box li a {
+    background: url('images/arrow1RTL.png') right center no-repeat !important;
+    padding: 5px 10px 5px 0 !important;
+}
+.mega-menu .box li:hover a {
+	background: url('images/arrow2RTL.png') right center no-repeat !important;
+}
+.mega-menu .box .subcategories {
+    float: left !important;
+    text-align: right !important;
+    width: 100px !important;
+}
+.mega-menu .picture {
+    float: right !important;
+}
+
+
+.mega-menu .sublist .sublist {
+    right: 100%;
+    left: auto;
+}
