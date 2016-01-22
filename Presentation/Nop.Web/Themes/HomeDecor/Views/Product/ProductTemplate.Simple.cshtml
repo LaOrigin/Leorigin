@@ -1,0 +1,686 @@
+﻿@model ProductDetailsModel
+@using Nop.Core
+@using Nop.Core.Domain.Seo;
+@using Nop.Core.Infrastructure;
+@using Nop.Services.Localization;
+@using Nop.Web.Models.Catalog;
+@using Nop.Core.Plugins;
+@using Nop.Core.Domain.Cms;
+@using Nop.Services.Cms;
+@using Nop.Admin
+@using Nop.Services.Configuration
+@using System.Text.RegularExpressions;
+@using Nop.Services.Catalog;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    //  IPriceFormatter _priceFormatter = new IPriceFormatter();
+    var _priceFormatter = EngineContext.Current.Resolve<IPriceFormatter>();
+    //title, meta
+    Html.AddTitleParts(!String.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Name);
+    Html.AddMetaDescriptionParts(Model.MetaDescription);
+    Html.AddMetaKeywordParts(Model.MetaKeywords);
+
+    var seoSettings = EngineContext.Current.Resolve<SeoSettings>();
+    PluginFinder Descriptor = new PluginFinder();
+    //var pluginDescriptor = Descriptor.GetPluginDescriptorBySystemName("NyunopCommerce.Nop.Widgets.EasyTab", false);Nyusoft
+    var pluginDescriptor = Descriptor.GetPluginDescriptorBySystemName("NyunopCommerce.Nop.Widgets.EasyTab");
+
+
+    var settingservice = EngineContext.Current.Resolve<ISettingService>();
+    var pluginmodel = settingservice.GetSettingByKey("widgetsettings.activewidgetsystemnames", "null", 0, false);
+    var store = EngineContext.Current.Resolve<IStoreContext>().CurrentStore;
+    var isEnableStore = false;
+    if (pluginDescriptor != null)
+    {
+        if (pluginDescriptor.LimitedToStores.Contains(store.Id) || pluginDescriptor.LimitedToStores.Count == 0)
+        {
+            isEnableStore = true;
+        }
+    }
+    //canonical URL
+    if (seoSettings.CanonicalUrlsEnabled)
+    {
+        var productUrl = Url.RouteUrl("Product", new { SeName = Model.SeName }, this.Request.Url.Scheme);
+        Html.AddCanonicalUrlParts(productUrl);
+    }
+
+    //open graph META tags
+    if (seoSettings.OpenGraphMetaTags)
+    {
+        var storeName = EngineContext.Current.Resolve<IStoreContext>().CurrentStore.GetLocalized(x => x.Name);
+        Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Model.MetaDescription) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(storeName) + "\" />");
+    }
+
+    //Twitter META tags
+    if (seoSettings.TwitterMetaTags)
+    {
+        var storeName = EngineContext.Current.Resolve<IStoreContext>().CurrentStore.GetLocalized(x => x.Name);
+        Html.AddHeadCustomParts("<meta property=\"twitter:card\" content=\"summary\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:site\" content=\"" + Html.Encode(storeName) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:description\" content=\"" + Html.Encode(Model.MetaDescription) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+    }
+
+    var dynamicPriceUpdate = EngineContext.Current.Resolve<Nop.Core.Domain.Catalog.CatalogSettings>().EnableDynamicPriceUpdate;
+    var dynamicPriceUpdateAjax = EngineContext.Current.Resolve<Nop.Core.Domain.Catalog.CatalogSettings>().DynamicPriceUpdateAjax;
+    var dynamicPriceUpdateSupported = dynamicPriceUpdate && !dynamicPriceUpdateAjax;
+
+    string dynamicPricePattern = "(?<val>(\\d+[\\s\\,\\.]?)+)";
+    string dynamicPriceReplacement = String.Format("<span class=\"price-val-for-dyn-upd-{0}\">${{val}}</span> ", Model.Id);  
+}
+<!--product breadcrumb-->
+@Html.Partial("_ProductBreadcrumb", Model.Breadcrumb)
+@Html.Widget("productdetails_after_breadcrumb", Model.Id)
+<div class="page product-details-page">
+    <div class="page-body">
+        @Html.Widget("productdetails_top", Model.Id)
+        @using (Html.BeginRouteForm("Product", new { SeName = Model.SeName }, FormMethod.Post, new { id = "product-details-form" }))
+        {
+            <div itemscope itemtype="http://schema.org/Product" data-productid="@Model.Id">
+                <div class="product-essential">
+                    @*<div class="product-name">
+                        <h1 itemprop="name">
+                            @Model.Name
+                        </h1>
+                    </div>*@
+                    @Html.Widget("productdetails_before_pictures", Model.Id)
+                    <!--product pictures-->
+                    <div class="row">
+                        <div class="col-md-9 col-sm-6">
+                            @Html.Partial("_ProductDetailsPictures", Model)
+
+                            @Html.Widget("productdetails_after_pictures", Model.Id)
+                        </div>
+                        <div class="col-md-3  col-sm-6">
+                            <div class="overview">
+                                  <div class="product-name">
+                                    <h1 itemprop="name">
+                                        @Model.Name
+                                    </h1>
+                                </div>
+                                @*  @if (!String.IsNullOrEmpty(Model.ShortDescription))
+                                {
+                                    <div class="short-description">
+                                        @Html.Raw(Model.ShortDescription)
+                                    </div>
+                                }*@
+                                @Html.Widget("productdetails_overview_top", Model.Id)
+
+
+                                <!--sample download-->
+                                @*@Html.Partial("_DownloadSample", Model)*@
+                                <!--product SKU, manufacturer part number, stock info-->
+                             @*   @Html.Partial("_SKU_Man_Stock", Model)*@
+                                <!--Back in stock subscription-->
+                                @Html.Partial("_BackInStockSubscription", Model)
+                                <!--product manufacturers-->
+                                @Html.Partial("_ProductManufacturers", Model.ProductManufacturers)
+                                <!--attributes-->
+                                @{
+            var dataDictAttributes = new ViewDataDictionary();
+            dataDictAttributes.TemplateInfo.HtmlFieldPrefix = string.Format("attributes_{0}", Model.Id);
+            //                                    @Html.Partial("_ProductAttributes", Model.ProductVariantAttributes, dataDictAttributes) Nyusoft
+                                    @Html.Partial("_ProductAttributes", Model.ProductAttributes, dataDictAttributes)                  
+                                }
+                                <!--gift card-->
+                                @{
+            var dataDictGiftCard = new ViewDataDictionary();
+            dataDictGiftCard.TemplateInfo.HtmlFieldPrefix = string.Format("giftcard_{0}", Model.Id);
+                                    @Html.Partial("_GiftCardInfo", Model.GiftCard, dataDictGiftCard)
+                                }
+                                @*Nyusoft*@
+                                <!--rental products-->
+                                @{
+            var dataDictRental = new ViewDataDictionary();
+            dataDictRental.TemplateInfo.HtmlFieldPrefix = string.Format("rental_{0}", Model.Id);
+                                    @Html.Partial("_RentalInfo", Model, dataDictRental)
+                                }
+                                <!--price & add to cart-->
+                                @{
+@* var dataDictPrice = new ViewDataDictionary();
+                                dataDictPrice.TemplateInfo.HtmlFieldPrefix = string.Format("price_{0}", Model.Id);
+                                    @Html.Partial("_ProductPrice", Model.ProductPrice, dataDictPrice)
+                            
+                                var dataDictAddToCart = new ViewDataDictionary();
+                                dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", Model.Id);
+                                    @Html.Partial("_AddToCart", Model.AddToCart, dataDictAddToCart)                    *@
+            //Nyusoft
+
+            var ProductPriceModel = Model.ProductPrice;
+            var AddToCartModel = Model.AddToCart;
+                                     //picture-thumbs
+                                    <div class="add-to-cart">
+                                        @if (AddToCartModel.UpdatedShoppingCartItemId > 0)
+                                        {
+                                            @Html.HiddenFor(x => x.AddToCart.UpdatedShoppingCartItemId)
+                                        }
+                                        @if (AddToCartModel.CustomerEntersPrice)
+                                        {
+                                            <div class="customer-entered-price">
+                                                <div class="price-input">
+                                                    @Html.LabelFor(model => model.AddToCart.CustomerEnteredPrice, new { @class = "enter-price-label" }, ":")
+                                                    @*round price*@
+                                                    @* @Html.TextBox("CustomerEnteredPrice", Convert.ToInt32(Math.Ceiling(AddToCartModel.CustomerEnteredPrice)), new { @class = "enter-price-input" })*@
+                                                    @{
+                                            string CustomerEnteredPrice = string.Format("addtocart_{0}.CustomerEnteredPrice", AddToCartModel.ProductId);
+                                                        <input type="text" id="@CustomerEnteredPrice" name="@CustomerEnteredPrice" class = "enter-price-input"  />
+                                                    }
+                                                </div>
+                                                <div class="price-range">
+                                                    @AddToCartModel.CustomerEnteredPriceRange
+                                                </div>
+                                            </div>
+                                        }
+                                        @if (!AddToCartModel.DisableBuyButton || !AddToCartModel.DisableWishlistButton)
+                                        {
+                                            <div class="add-to-cart-panel">
+                                                @Html.LabelFor(model => model.AddToCart.EnteredQuantity, new { @class = "qty-label", @style = "display:none" }, ":")
+                                                @if (AddToCartModel.AllowedQuantities.Count > 0)
+                                                {
+                                                    @Html.DropDownListFor(model => model.AddToCart.EnteredQuantity, AddToCartModel.AllowedQuantities, new { @class = "qty-dropdown", @style = "display:none" })
+                                                }
+                                                else
+                                                {
+                                                    string EnteredQuantity = string.Format("addtocart_{0}.EnteredQuantity", AddToCartModel.ProductId);
+                                                    <input type="text" id="@EnteredQuantity" name="@EnteredQuantity" class = "qty-input" value="1" style="display:none" />
+                                                        @* @Html.TextBoxFor(model => model.AddToCart.EnteredQuantity, new { @class = "qty-input"})*@
+                
+                                                    //when a customer clicks 'Enter' button we submit the "add to cart" button (if visible)
+                                                    if (!AddToCartModel.DisableBuyButton)
+                                                    {
+                                                    <script type="text/javascript">
+                                                        $(document).ready(function() {
+                                                            $("#@EnteredQuantity").keydown(function(event) {
+                                                                if (event.keyCode == 13) {
+                                                                    $("#add-to-cart-button-@AddToCartModel.ProductId").click();
+                                                                    return false;
+                                                                }
+                                                            });
+                                                        });
+                                                    </script>
+                                                    }
+                                                }
+
+
+                                                @if (dynamicPriceUpdateSupported)
+                                                {
+                                                    <script type="text/javascript">
+                                                        var priceValForDynUpd_@(ProductPriceModel.ProductId) = @(((float)(ProductPriceModel.PriceValue != ProductPriceModel.PriceWithDiscountValue ? ProductPriceModel.PriceWithDiscountValue : ProductPriceModel.PriceValue)).ToString(new System.Globalization.CultureInfo("en-US")));
+                                                    </script>
+                                                }
+                                                <div class="prices" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                                    @if (ProductPriceModel.CustomerEntersPrice)
+                                                    {
+                                                    @*display nothing*@
+                                                    }
+                                                    else if (ProductPriceModel.CallForPrice)
+                                                    {
+                                                            @*call for price*@
+                                                        <div class="product-price call-for-price">
+                                                            <span>@T("Products.CallForPrice")</span>
+                                                        </div>
+                                                        <div class="product-price01">
+                                                            </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        if (!String.IsNullOrWhiteSpace(ProductPriceModel.OldPrice))
+                                                        {
+                                                                            @*old price*@
+                                                        <div class="old-product-price">
+                                                            <label>@T("Products.Price.OldPrice"):</label>
+                                                            <span>@ProductPriceModel.OldPrice</span>
+                                                        </div>
+                                                        }
+
+
+
+                                                        <div class="@if (String.IsNullOrWhiteSpace(ProductPriceModel.PriceWithDiscount))
+                                                                    {<text>product-price</text>
+                                                            
+                                                                    }
+                                                                    else
+                                                                    {<text>non-discounted-price</text>}">
+
+                                                            @if (!String.IsNullOrWhiteSpace(ProductPriceModel.OldPrice) || !String.IsNullOrWhiteSpace(ProductPriceModel.PriceWithDiscount))
+                                                            {
+                                                             @*display "Price:" label if we have old price or discounted one*@
+                                                                <label>@T("Products.Price"):</label>
+                                                            }
+            
+                                                                @*render price*@
+                                                            <span @if (String.IsNullOrWhiteSpace(ProductPriceModel.PriceWithDiscount))
+                                                                  { <text> itemprop="price" class="price-value-@(ProductPriceModel.ProductId)" </text>  }>
+                                                                @if (dynamicPriceUpdateSupported && !ProductPriceModel.HidePrices && String.IsNullOrWhiteSpace(ProductPriceModel.PriceWithDiscount))
+                                                                {
+                                                                    @Html.Raw(Regex.Replace(ProductPriceModel.Price, dynamicPricePattern, dynamicPriceReplacement))
+                                                                }
+                                                                else
+                                                                {
+                                                                    @Html.Raw(ProductPriceModel.Price)
+                                                                }
+                                                            </span>
+                                                        </div>
+        
+        
+                                                                if (!String.IsNullOrWhiteSpace(ProductPriceModel.PriceWithDiscount))
+                                                                {
+                                                                @*discounted price*@
+                                                        <div class="product-price discounted-price">
+                                                            <label>@T("Products.Price.WithDiscount"):</label>
+                                                            <span itemprop="price" class="price-value-@(ProductPriceModel.ProductId)">
+                                                                @if (dynamicPriceUpdateSupported && !ProductPriceModel.HidePrices)
+                                                                {
+                                                                    @Html.Raw(Regex.Replace(ProductPriceModel.PriceWithDiscount, dynamicPricePattern, dynamicPriceReplacement))
+                                                                }
+                                                                else
+                                                                {
+                                                                    @Html.Raw(ProductPriceModel.PriceWithDiscount)
+                                                                }
+                                                            </span>
+                                                        </div>
+                                                         <div class="product-price01">
+                                                            </div>
+                                                                }
+                                                                if (ProductPriceModel.DisplayTaxShippingInfo)
+                                                                {
+                                                                    var inclTax = EngineContext.Current.Resolve<IWorkContext>().TaxDisplayType == Nop.Core.Domain.Tax.TaxDisplayType.IncludingTax;
+                                                                    //tax info is already included in the price (incl/excl tax). that's why we display only shipping info here
+                                                                    //of course, you can modify appropriate locales to include VAT info there
+                                                        <div class="tax-shipping-info">
+                                                            @T(inclTax ? "Products.Price.TaxShipping.InclTax" : "Products.Price.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
+                                                        </div>
+                                                                }
+                                                                if (!String.IsNullOrEmpty(ProductPriceModel.CurrencyCode))
+                                                                {
+                                                        <meta itemprop="priceCurrency" content="@ProductPriceModel.CurrencyCode" />
+                                                                }
+                                                    }
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="checkavailable">
+                                                   
+                                                    <div class="cityavailable">@T("Product.zipcode.available.city")</div>
+                            <input type="text" id="txtzipcode" class="textbox" placeholder="Enter Your Pincode"/>
+                            <input type="button" id="btnzipcode" class="btn" value="Check" onclick="checkzipcode();" />
+                            <div class="clear"></div>
+                                                     <div class="message" id="zipresult"></div>
+                                                     <div class="lblcheck">Check Availability at your place</div>
+                           
+                        </div>
+                                                <div class="also-call">
+                                                    <span>You can also call :</span>                                                    +91 92437 67667 to order
+                                                </div>
+                                                @if (!AddToCartModel.DisableBuyButton)
+                                                {
+                                                    var addToCartText = "Buy Now";
+                                                    if (AddToCartModel.UpdatedShoppingCartItemId > 0)
+                                                    {
+                                                        addToCartText = T("ShoppingCart.AddToCart.Update").Text;
+                                                    }
+                                                   
+                                                    else if(!Model.IsHomeDecor)
+                                                    {
+                                                        addToCartText = AddToCartModel.AvailableForPreOrder ? T("ShoppingCart.PreOrder").Text : "Book Now" + " @" + @Model.BookedAmount; ;
+                                                    }
+                                                    
+                                                    <input type="button" id="add-to-cart-button-@AddToCartModel.ProductId" class="product-box-add-to-cart-button-mobile" value="@addToCartText" data-productid="@AddToCartModel.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = AddToCartModel.ProductId, shoppingCartTypeId = (int)Nop.Core.Domain.Orders.ShoppingCartType.ShoppingCart })    ', '#product-details-form');return false;" />
+                                                }
+                                                
+                                               
+@* @if (!Model.DisableWishlistButton && Model.UpdatedShoppingCartItemId == 0)
+            {
+                <input type="button" id="add-to-wishlist-button-@Model.ProductId" class="button-2 add-to-wishlist-button" value="@T("ShoppingCart.AddToWishlist")" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })', '#product-details-form');return false;" />
+            }*@
+                                            </div>
+                                        }
+                                        @Html.Widget("productdetails_add_info", AddToCartModel.ProductId)
+                                    </div>                  
+                                }
+                                <div class="clear"></div>
+                                <div>
+                                    <!--product reviews-->
+                                    @*@Html.Partial("_ProductReviewOverview", Model.ProductReviewOverview)
+                                    @Html.Partial("_ShareButton", Model)*@
+                                </div>
+                                <div class="delivery-list">
+                                    Free Delivery,Payment on Delivery Free Installation
+                                </div>
+                                @*@Html.Partial("_ProductEmailAFriendButton", Model)*@
+                                @*@Html.Partial("_CompareProductsButton", Model)*@
+
+                                @Html.Widget("productdetails_overview_bottom", Model.Id)
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div>
+                       
+                        @if (Model.ProductAttributes.Count > 0)
+                        {
+                            
+                             <div onclick="toggle('#toggletable','#discountarrowup','#discountarrowdown')" id="toggleid" data-open="true" >
+                            @*<a style="border:none" href="#">*@
+                                <h2 class="dis" >DISCOUNT DETAILS<span style="float:right;"><img id="discountarrowdown" src='@Url.Content("~/down.png")' /><img id="discountarrowup" src='@Url.Content("~/UP.png")' /></span></h2>@*</a>*@
+                        </div>
+                            <table id="toggletable" >
+                                <thead >
+                                    <tr>
+                                        <th class="attr2"></th>
+                                        <th>Set</th>
+                                        <th class="attr1">Price</th>
+                                        <th class="attr1">Discounted Price</th>
+                                        <th>Save</th>
+                                        <th class="attr1">Discount In Percentage</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                     @*<tr style="background:#DBDBDB">
+                                        <td>Set</td>
+                                        <td>Price</td>
+                                        <td>Discounted Price</td>
+                                        <td>Save</td>
+                                        <td>Discount In Percentage</td>
+
+                                    </tr>*@
+                                    @foreach (var attribute in Model.ProductAttributes)
+                                    {
+                                        foreach (var pvaValue in attribute.Values)
+                                        {
+
+                                            decimal pricefinal = Model.ProductPrice.PriceValue + pvaValue.PriceAdjustmentValue;
+                                            decimal discountfinal = pricefinal - pvaValue.Discount;
+                                            string strprice = _priceFormatter.FormatPrice(pricefinal);
+                                            string strdiscountprice = _priceFormatter.FormatPrice(discountfinal);
+                                            string strdiscount = _priceFormatter.FormatPrice(pvaValue.Discount);
+
+
+                                            var currertprice = pricefinal - pvaValue.Discount;
+                                            var discountpercentage = (100 - ((currertprice * 100) / pricefinal));
+                                        <tr>
+                                            <td class="attr2">
+                            <span class="footable-toggle"></span></td>
+                                            <td>@pvaValue.Name</td>
+                                            <td class="attr1">@strprice</td>
+                                            <td class="attr1">@strdiscountprice</td>
+                                            <td>@strdiscount</td>
+                                            <td class="attr1">@discountpercentage.ToString("N2") %</td>
+                                        </tr>
+                                        <tr class="footable-row-detail" style="display: table-row;">
+                                            <td colspan="3">
+                                              <div>Price : @strprice </div>
+                                             <div>Discounted Price : @strdiscountprice</div>
+                                              <div> Discount In Percentage : @discountpercentage.ToString("N2") % </div></td>
+                                        </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                    </div>
+
+                    @if (!String.IsNullOrEmpty(Model.FullDescription))
+                    {
+                        if (!pluginmodel.Contains("NyunopCommerce.Nop.Widgets.EasyTab") || isEnableStore == false)
+                        {   
+@*description from plugin*@
+    <div onclick="toggle('#toggledesc','#descarrowup','#descarrowdown')" data-open="false">
+        @*<a style="border:none" href="#">*@
+        <h2 class="dis">Product Description<span style="float:right;"><img id="descarrowdown" src='@Url.Content("~/down.png")' /><img id="descarrowup" src='@Url.Content("~/UP.png")' /></span></h2>@*</a>*@
+    </div>
+
+                        <div id="toggledesc"  class="full-description" itemprop="description">
+                            @Html.Raw(Model.FullDescription)
+                        </div>
+    
+
+                        }
+                    }
+                    
+                    <div onclick="toggle('#toggletermsandconditions','#termsarrowup','#termsarrowdown', this)" data-open="false">
+                        @*<a style="border:none" href="#">*@
+                        <h2 class="dis">Terms & Conditions<span style="float:right;"><img id="termsarrowdown" src='@Url.Content("~/down.png")' /><img id="termsarrowup" src='@Url.Content("~/UP.png")' /></span></h2>@*</a>*@
+                    </div>
+
+                    <div id="toggletermsandconditions" class="full-description" itemprop="description">
+                        @Html.Raw(Model.TermsAndConditions)
+                    </div>
+                    <div onclick="toggle('#toggleOrderSteps','#OrderStepsarrowup','#OrderStepsarrowdown' ,this )" data-open="false">
+                        @*<a style="border:none" href="#">*@
+                        <h2 class="dis">Steps To Order Your Product<span style="float:right;"><img id="OrderStepsarrowdown" src='@Url.Content("~/down.png")' /><img id="OrderStepsarrowup" src='@Url.Content("~/UP.png")' /></span></h2>@*</a>*@
+                    </div>
+
+                    <div id="toggleOrderSteps" class="full-description" itemprop="description">
+                        @Html.Raw(Model.OrderSteps)
+                    </div>
+                    @if (pluginmodel.Contains("NyunopCommerce.Nop.Widgets.EasyTab") && isEnableStore == true)
+                    {
+                        <div class="full-description" itemprop="description">
+                            @Html.Widget("productdetails_before_collateral", Model.Id)
+                        </div>
+                    }
+
+                </div>
+                @* @Html.Widget("productdetails_before_collateral", Model.Id)*@
+                <div class="product-collateral">
+                    @Html.Partial("_ProductTierPrices", Model.TierPrices)
+                    @*@Html.Partial("_ProductSpecifications", Model.ProductSpecifications)
+                    @Html.Partial("_ProductTags", Model.ProductTags)
+                    @Html.Action("ProductsAlsoPurchased", "Product", new { productId = Model.Id })
+                    @Html.Action("RelatedProducts", "Product", new { productId = Model.Id })*@
+                    @*Properties provided in plugin*@
+                    @if (!pluginmodel.Contains("NyunopCommerce.Nop.Widgets.EasyTab") || isEnableStore == false)
+                    {
+                        <div onclick="toggle('#togglespec','#specarrowup','#specarrowdown')" data-open="true">
+                            @*<a style="border:none" href="#">*@
+                            <h2 class="dis">@T("Products.Specs")<span style="float:right;"><img id="specarrowdown" src='@Url.Content("~/down.png")' /><img id="specarrowup" src='@Url.Content("~/UP.png")' /></span></h2>@*</a>*@
+                        </div>
+    <div id="togglespec">
+        @Html.Partial("_ProductSpecifications", Model.ProductSpecifications)
+    </div>
+                        @*@Html.Partial("_ProductTags", Model.ProductTags)*@
+                        @*@Html.Action("ProductsAlsoPurchased", "Product", new { productId = Model.Id })*@
+                       
+                    }
+                   
+                    @Html.Action("RelatedProducts", "Product", new { productId = Model.Id })
+                </div>
+            </div>
+        }
+        @Html.Widget("productdetails_bottom", Model.Id)
+    </div>
+</div>
+<script>
+    function _Ajax(action, data, Type) {
+        var obj;
+        jQuery.ajax({
+            url: action
+            , type: Type
+            , data: data
+            , dataType: 'json'
+            , async: false
+            , cache: false
+            , contentType: 'application/json; charset=utf-8'
+            , success: function (data) {
+                // debugger;
+                obj=data;
+            }
+            , error: function (xhr, textStatus, errorThrown) {
+                if (xhr.status == 0) {
+                    alert('You are offline!!\n Please Check Your Network.');
+                } else if (xhr.status == 404) {
+                    alert('Requested URL not found.');
+                } else if (xhr.status == 500) {
+                    // window.location.href = "http://www.google.com";
+                    alert('Internel Server Error.');
+                } else if (textStatus == 'parsererror') {
+                    alert('Error.\nParsing JSON Request failed.');
+                } else if (textStatus == 'timeout') {
+                    alert('Request Time out.');
+                } else {
+                    alert('Unknow Error.\n' + xhr.responseText);
+                }
+
+            }
+        });
+        return obj;
+    }
+    function checkzipcode() {
+        var zipcode = $("#txtzipcode").val();
+        if (zipcode == "") {
+            $("#zipresult").empty();
+            $("#zipresult").append("Please enter pincode");
+            return false;
+        }
+        else {
+            //$.ajax({
+            //    cache: false,
+            var action= '@Url.Action("CheckPincodeAvailibility", "Product")';
+            var data= JSON.stringify({ "pincode": zipcode, "productid": '@Model.Id' });
+                //type: 'post',
+                //success: function (data) {
+                //    debugger;
+                    //var msg=data.parse();
+                    //$("#zipresult").empty();
+                    //$("#zipresult").append(msg.Message);
+            //    }
+            //});
+            var result= _Ajax(action, data, "POST");
+            
+                    if(result.Status="true"){
+                        $("#zipresult").empty();
+                        $("#zipresult").append(result.Message);
+                    }
+                    else{
+                        $("#zipresult").empty();
+                        $("#zipresult").append(result.Message);
+                    }
+        }
+    }
+</script>
+@*parth start*@
+<style type="text/css">
+    #toggletable tr th {
+        background: #DBDBDB;
+        padding: 10px;
+        font-size: 15px;
+        color: #213164;
+
+    }
+
+    #toggletable tr td {
+        padding: 6px;
+        color: #213164;
+        font-size: 15px;
+    }
+
+    #toggletable {
+        /*display: inline-block;*/
+        margin-bottom:20px; 
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        #toggletable td  {
+            padding: 7px;
+            border: #ccc 1px solid;
+        }
+        /* provide some minimal visual accomodation for IE8 and below */
+        /*#toggletable tr{
+		background: #b8d1f3;
+	}*/
+
+        /*  Define the background color for all the EVEN background rows  */
+        #toggletable tr:nth-child(even) {
+            background: #F2F2F2;
+        }
+    tr > th {
+        border:1px solid #ccc;
+    }
+    .dis {
+        color: #1C2E5C;
+        margin-bottom:10px;
+        padding:10px 10px 10px 10px;
+        /*padding-top:2px;
+        padding-bottom:2px;*/
+        border-top: #ccc 1px solid;
+        border-bottom: #ccc 1px solid;
+        cursor:pointer;
+
+    }
+</style>
+@*parth end*@
+<script>
+    $(document).ready(function () {
+        //$("#up").hide();
+        $(".footable-row-detail").hide();
+        $("#discountarrowdown").hide();
+        $("#descarrowdown").hide();
+        $("#specarrowdown").hide();
+        $("#termsarrowdown").hide();
+        $("#OrderStepsarrowdown").hide();
+        $("#toggleOrderSteps").hide();
+        
+        
+        //$( "#toggleid" ).click(function(obj) {
+        //    if($(this).attr('data-open') == 'false')
+        //    {
+        //        $(this).attr('data-open','true');
+        //        $( "#toggletable" ).fadeIn(700);
+        //        $("#up").show();
+        //        $("#down").hide();
+        //    }
+        //    else{
+        //        $(this).attr('data-open','false');
+        //        $( "#toggletable" ).fadeOut(700);
+        //        $("#arrow").attr('src','~/down.png')
+        //        $("#up").hide();
+        //        $("#down").show();
+        //    }
+            
+        //});
+    });
+    $(".footable-toggle").click(function () {
+        if ($(this).parent("td").parent("tr").next("tr").css("display") == "none") {
+            //$(this).addClass("footable-detail-show");
+            $(this).css("background", "url('@Url.Content("~/themes/homedecor/content/images/table-minus.png")') no-repeat center");
+            //$(this).addClass("footable-toggle-minus");
+            $(this).parent("td").parent("tr").next("tr").show();
+
+        }
+        else {
+            $(this).parent("td").parent("tr").next("tr").hide();
+            // $(this).addClass("footable-toggle-plus");
+            $(this).css("background", "url('@Url.Content("~/themes/homedecor/content/images/table-plus.png")') no-repeat center");
+            //$(this).removeClass("footable-detail-show");
+        }
+
+    })
+
+    function toggle(toggleElement, arrowupId, arrowdownId){
+        if($(this).attr('data-open') == 'false')
+        {
+            $(this).attr('data-open','true');
+            $( toggleElement ).fadeIn(700);
+            $(arrowupId).show();
+            $(arrowdownId).hide();
+        }
+        else{
+            $(this).attr('data-open','false');
+            $( toggleElement ).fadeOut(700);
+            $(".togglearrow").attr('src','~/down.png')
+            $(arrowupId).hide();
+            $(arrowdownId).show();
+        }
+    };
+
+
+</script>

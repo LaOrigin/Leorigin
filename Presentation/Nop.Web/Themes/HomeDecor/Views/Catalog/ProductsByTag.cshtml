@@ -1,0 +1,110 @@
+﻿@model ProductsByTagModel
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(string.Format(T("PageTitle.ProductsByTag").Text, Model.TagName));
+
+    //canonical URL
+    var canonicalUrlsEnabled = EngineContext.Current.Resolve<SeoSettings>().CanonicalUrlsEnabled;
+    if (canonicalUrlsEnabled)
+    {
+        var productsByTagUrl = Url.RouteUrl("ProductsByTag", new { productTagId = Model.Id, SeName = Model.TagName }, this.Request.Url.Scheme);
+        Html.AddCanonicalUrlParts(productsByTagUrl);
+    }
+}
+@using Nop.Core.Domain.Seo
+@using Nop.Core.Infrastructure
+@using Nop.Web.Models.Catalog;
+@using Nop.Web.Extensions;
+<div class="page product-tag-page">
+    <div class="category-page">
+        <div class="page-title">
+            <h1>@String.Format(T("Products.Tags.ProductsTaggedWith").Text, Model.TagName)</h1>
+        </div>
+    </div>
+    <div class="page-body">
+        @Html.Widget("productsbytag_top", Model.Id)
+        @*<div class="product-selectors">
+            @if (Model.PagingFilteringContext.AllowProductViewModeChanging && Model.Products.Count > 0)
+            {
+                <div class="product-viewmode">
+                    <span>@T("Catalog.ViewMode")</span>
+                    @foreach (var r in Model.PagingFilteringContext.AvailableViewModes)
+                    {
+                        if (r.Text == "Grid")
+                        {
+                        <a class="imgesectionviewmode grid-icon" href="@r.Value"  onclick='setLocation(this.value)' flag="@r.Selected"></a>
+                        }
+                        else if (r.Text == "List")
+                        {
+                        <a class="imgesectionviewmode list-icon" href="@r.Value"  onclick='setLocation(this.value)' flag="@r.Selected"></a>
+                        }
+                    }
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $(".imgesectionviewmode").each(function () {
+                            if ($(this).attr("flag")) {
+                                $(this).css("font-weight", "bold");
+                                $(this).addClass("Lactive");
+                            }
+                        })
+                    });
+                </script>
+            }
+            @if (Model.PagingFilteringContext.AllowProductSorting && Model.Products.Count > 0)
+            {
+                <div class="product-sorting">
+                    <span>@T("Catalog.OrderBy")</span>
+                    @Html.DropDownList("products-orderby", Model.PagingFilteringContext.AvailableSortOptions, new { onchange = "setLocation(this.value);" })
+                </div>
+            }
+            @if (Model.PagingFilteringContext.AllowCustomersToSelectPageSize && Model.Products.Count > 0)
+            {
+                <div class="product-page-size">
+                    <span>@T("Catalog.PageSize")</span>
+                    @Html.DropDownList("products-pagesize", Model.PagingFilteringContext.PageSizeOptions, new { onchange = "setLocation(this.value);" })
+                    <span>@T("Catalog.PageSize.PerPage")</span>
+                </div>
+            }
+        </div>*@
+        @Html.Widget("productsbytag_before_product_list", Model.Id)
+        @*product list*@
+        @if (Model.Products.Count > 0)
+        {
+            if (Model.PagingFilteringContext.ViewMode == "list")
+            {
+@*list mode*@
+            <div class="product-list">
+                @foreach (var product in Model.Products)
+                {
+                    <div class="item-box">
+                        @Html.Partial("_ProductListBox", product)
+                    </div>
+                }
+            </div>     
+            }
+            else
+            {
+@*grid mode*@
+            <div class="category-page">
+                <div class="product-grid">
+                    @foreach (var product in Model.Products)
+                    {
+                        <div class="col-md-4 col-sm-6">
+                            <div class="item-box">
+                                @Html.Partial("_ProductBox", product)
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            }
+        }
+        <div class="pager">
+            @Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber")
+        </div>
+        @Html.Widget("productsbytag_bottom", Model.Id)
+    </div>
+</div>

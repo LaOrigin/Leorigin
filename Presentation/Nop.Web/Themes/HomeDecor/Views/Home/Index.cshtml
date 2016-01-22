@@ -1,0 +1,271 @@
+@{
+    Layout = "~/Views/Shared/_ColumnsOneHome.cshtml";
+    
+}
+@using Nop.Core.Domain.Catalog
+@using Nop.Core.Infrastructure
+@using Nop.Services.Catalog
+@using Nop.Core
+@using Nop.Web.Models.Catalog
+@using Nop.Services.Media
+@using Nop.Web.Models.Media
+@using Nop.Core.Domain.Media
+@using Nop.Services.Localization
+@using Nop.Services.Seo
+<div class="page home-page">
+    <div class="page-body">
+
+
+        @Html.Action("TopicBlock", "Topic", new { systemName = "HomePageText" })
+
+        @{
+                    //int currentCategoryId = 0;
+                    //if (Url.RequestContext.RouteData.Values["controller"].ToString().Equals("catalog", StringComparison.InvariantCultureIgnoreCase) &&
+                    //    Url.RequestContext.RouteData.Values["action"].ToString().Equals("category", StringComparison.InvariantCultureIgnoreCase))
+                    //{
+                    //    currentCategoryId = Convert.ToInt32(Url.RequestContext.RouteData.Values["categoryId"].ToString());
+                    //}
+                    //int currentProductId = 0;
+                    //if (Url.RequestContext.RouteData.Values["controller"].ToString().Equals("product", StringComparison.InvariantCultureIgnoreCase) &&
+                    //    Url.RequestContext.RouteData.Values["action"].ToString().Equals("productdetails", StringComparison.InvariantCultureIgnoreCase))
+                    //{
+                    //    currentProductId = Convert.ToInt32(Url.RequestContext.RouteData.Values["productId"].ToString());
+                    //}
+        }
+        @*@Html.Action("HomepageCategories", "Catalog")*@
+
+
+        @*Nyusoft*@
+        @*  @Html.Action("HomepageProducts", "Product", new { productThumbPictureSize = 300 })*@
+
+
+
+
+        @*for advertisement*@
+
+        <div class="row">
+
+            <div class="two-silder">
+
+                @Html.Action("HomepageBestSellers", "Product")
+
+                @*<div class="col-md-12">*@
+
+                @{
+            //            var _catalogSettings = EngineContext.Current.Resolve<CatalogSettings>();
+            //            var _productService = EngineContext.Current.Resolve<IProductService>();
+            //            var _storeContext = EngineContext.Current.Resolve<IStoreContext>();
+            //            var _pictureService = EngineContext.Current.Resolve<IPictureService>();
+            //            var _mediaSettings = EngineContext.Current.Resolve<MediaSettings>();
+            //            var _localizationService = EngineContext.Current.Resolve<ILocalizationService>();
+
+            //            var products = _productService.SearchProducts(
+            //                storeId: _storeContext.CurrentStore.Id,
+            //                visibleIndividuallyOnly: true,
+            //                orderBy: ProductSortingEnum.CreatedOn,
+            //                pageSize: _catalogSettings.RecentlyAddedProductsNumber);
+            //            bool isAssociatedProduct = false;
+            //            var defaultPictureSize = isAssociatedProduct ?
+            //_mediaSettings.AssociatedProductPictureSize :
+            //_mediaSettings.ProductDetailsPictureSize;
+                            
+                }
+
+
+                <div class="col-full">
+                    @*<div class="wrap-col">
+                                <div class="page-title">
+                                    <div class="page-title-inner01">
+                                        <h1><span>@T("Products.NewProducts")</span></h1>
+                                        <a href="#" class="prev1"></a><a href="#" class="next1"></a>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+
+                                <div class="page-body">
+                                    @if (products.Count > 0)
+                                    {<div class="car_wrap">
+
+
+                                        <ul id="carousel2" class="carousel1">
+
+                                            @foreach (var product in products)
+                                            {<li>
+                                                @{
+                                                var pictures = _pictureService.GetPicturesByProductId(product.Id);
+
+                                                var defaultPictureModel = new PictureModel()
+                                                {
+                                                    ImageUrl = _pictureService.GetPictureUrl(pictures.FirstOrDefault(), defaultPictureSize, !isAssociatedProduct),
+                                                    FullSizeImageUrl = _pictureService.GetPictureUrl(pictures.FirstOrDefault(), 0, !isAssociatedProduct),
+                                                    Title = string.Format(_localizationService.GetResource("Media.Product.ImageLinkTitleFormat.Details"), product.Name),
+                                                    AlternateText = string.Format(_localizationService.GetResource("Media.Product.ImageAlternateTextFormat.Details"), product.Name),
+                                                };
+                            
+                                                }
+                                                <div class="item-box">
+                                                    <div class="product-item" data-productid="@product.Id">
+                                                        <div class="picture col1 upp">
+                                                            <a href="@Url.RouteUrl("Product", new { SeName = product.GetSeName() })" class="aditionalInfo" flag="0" >
+                                                                <img alt="@defaultPictureModel.AlternateText" src="@defaultPictureModel.ImageUrl" />
+                                                            </a>
+                                                        </div>
+                                                        @{ 
+                                                var name = "";
+                                                if (product.Name != null)
+                                                {
+                                                    var namevalue = product.Name;
+                                                    if (namevalue.Length > 15)//35
+                                                    {
+                                                        name = namevalue.Substring(0, 15) + "...";
+                                                    }
+                                                    else
+                                                    {
+                                                        name = namevalue;
+                                                    }
+                                                }
+                                                        }
+                                                        <div class="productname"><a href="@Url.RouteUrl("Product", new { SeName = product.GetSeName() })" class="aditionalInfo" flag="0" >@name</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            }
+
+                                        </ul>
+
+                                    </div>
+                                    }
+                                </div>
+                            </div>*@
+                    @*      <script> $(window).load(
+        function () {
+            $('#carousel2').carouFredSel({
+                auto: false, prev: '.prev1', next: '.next1', width: '100%', items: {
+                    visible: {
+                        min: 1,
+                        max: 3
+                    },
+                    height: 'auto',
+                    width: 'auto',
+
+                }, responsive: false,
+
+                scroll: 1,
+
+                mousewheel: false,
+
+                swipe: { onMouse: false, onTouch: false }
+            });
+
+
+        });</script>*@
+                    @*</div>*@
+
+                    @*End Rinkal*@
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        @* <div class="fb-page" data-href="https://www.facebook.com/urbanladder" data-width="1500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/urbanladder"><a href="https://www.facebook.com/urbanladder">Facebook</a></blockquote></div></div>*@
+
+
+
+        @Html.Action("HomePageNews", "News")
+        @Html.Action("HomePagePolls", "Poll")
+        @Html.Widget("right_side_column_after")
+        @Html.Widget("home_page_bottom")
+
+    </div>
+</div>
+
+
+
+
+
+
+@*<div class="fb-page" data-href="https://www.facebook.com/LaOrigin-1205888166104094" data-width="1000" data-height="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/LaOrigin-1205888166104094"><a href="https://www.facebook.com/LaOrigin-1205888166104094">Nyusoft Solutions</a></blockquote></div></div>*@
+@*<div class="fb-page" data-href="https://www.facebook.com/LaOrigin-1205888166104094" data-width="1000" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/LaOrigin-1205888166104094"><a href="https://www.facebook.com/LaOrigin-1205888166104094">Nyusoft Solutions</a></blockquote></div></div>*@
+@*<iframe src="https://www.facebook.com/LaOrigin-1205888166104094" style="border:0px #FFFFFF none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="200px" width="1000px"></iframe>*@
+@*<iframe src="https://www.facebook.com/LaOrigin-1205888166104094" name="frame1" scrolling="auto" frameborder="no" align="center" height = "200px" width = "100%">
+    </iframe>*@
+<script> $(document).ready(function () {
+     $("#HomeBanner").show();
+     $("#LeftListPage").hide();
+     //$("#HomepageBestSeller").show();
+ });</script>
+
+<script>
+
+    $(window).load(function () {
+        $('.slider')._TMS({
+            show: 0,
+            pauseOnHover: false,
+            prevBu: '.prev',
+            nextBu: '.next',
+            playBu: false,
+            duration: 800,
+            preset: 'fade',
+            pagination: true,//'.pagination',true,'<ul></ul>'
+            pagNums: false,
+            slideshow: 8000,
+            numStatus: false,
+            banners: false,
+            waitBannerAnimation: false,
+            progressBar: false
+        })
+    });
+
+    $(window).load(
+   function () {
+       $('#carousel1').carouFredSel({
+           auto: false, prev: '.prev', next: '.next', width: '100%', items: {
+               visible: {
+                   min: 1,
+                   max: 3
+               },
+               height: 'auto',
+               width: 'auto',
+
+           }, responsive: false,
+
+           scroll: 1,
+
+           mousewheel: false,
+
+           swipe: { onMouse: false, onTouch: false }
+       });
+
+
+   });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="home-page-testimonial">@*homepage_testimonial_slider*@
+@Html.Widget("homepage_testimonial_slider")
+</div>@*homepage_testimonial_slider*@
+
+

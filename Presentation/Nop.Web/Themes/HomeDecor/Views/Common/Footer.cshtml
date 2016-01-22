@@ -1,0 +1,1004 @@
+@using Nop.Services.Configuration@*TestimonialLink*@
+@{@*TestimonialLink*@
+    var testimonialsettingservice = EngineContext.Current.Resolve<ISettingService>();
+    var testimonialpluginmodel = testimonialsettingservice.GetSettingByKey("mytestimonialsettings.showtestimonialpage", "null", 0, false);
+    var testimonialenablepluginmodel = testimonialsettingservice.GetSettingByKey("widgetsettings.activewidgetsystemnames", "null", 0, false);
+}@*TestimonialLink*@
+
+
+
+
+
+
+
+@model FooterModel
+@using Nop.Core
+@using Nop.Core.Domain.Tax
+@using Nop.Core.Infrastructure
+@using Nop.Web.Models.Common;
+
+<div class="all-footer">
+    <div class="paypal-bg">
+
+        <div class="col-md-4 col-sm-6">
+            <h2 class="call-icone">Need Assistance?<span>Call +123 4567890</span></h2>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <h2 class="safe-icone">Your details are safe<span>100% secure payment</span></h2>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="paypal-icon-f">
+                <img class="img-responsive" src="~/Themes/HomeDecor/Content/images/paypal-icon-bg.png" /></div>
+
+        </div>
+        @*<div class="col-md-3 col-sm-6">
+            <div class="footerNewsleter">
+                @Html.Action("NewsletterBox", "Newsletter")
+            </div>
+        </div>*@
+        <div class="clear"></div>
+    </div>
+
+    <div class="footer">
+        <div class="col-md-3 col-sm-6 information">
+            <h3><span>@T("Footer.Information")</span></h3>
+            <ul>
+                <li><a href="@Url.RouteUrl("aboutus")">@T("AboutUs")</a></li>
+              
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("Careers") })">@T("Careers")</a></li>
+                @*<li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("Catalog") })">@T("Catalog")</a></li>*@
+                @* @if (Model.SitemapEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("Sitemap")">@T("Sitemap")</a></li>
+                    }
+                    <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") })">@T("ShippingReturns")</a></li>
+                    <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("privacyinfo") })">@T("PrivacyNotice")</a></li>
+                    <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("conditionsofuse") })">@T("ConditionsOfUse")</a></li>
+
+                    <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>*@
+
+
+
+                @if (testimonialpluginmodel.Contains("True") && testimonialenablepluginmodel.Contains("NyunopCommerce.Nop.Widgets.Testimonial.Slider"))
+                {<li><a href="~/testimonials">Customer Stories</a></li>}
+            </ul>
+
+        </div>
+        <div class="col-md-3 col-sm-6 customer-service">
+            <h3><span>@T("Footer.CustomerService")</span></h3>
+            <ul>
+                <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+               
+                @*<li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("DesignTrade") })">@T("DesignTrade")</a></li>*@
+
+                @*  <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a> </li>
+
+</ul>
+            
+        </div>
+        <div class="col-md-3 col-sm-6 customer-service">
+            <h3><span>@T("Footer.CustomerService")</span></h3>
+            <ul>
+                <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("ShippingInfo") })">@T("Shipping")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("Returns") })">@T("Returns")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("DesignTrade") })">@T("DesignTrade")</a></li>
+                <li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("Wholesale") })">@T("Wholesale")</a></li>
+                @*  <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a> </li>
+                    @if (Model.NewsEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("NewsArchive")">@T("News")</a></li>
+                    }
+                    @if (Model.BlogEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>
+                    }
+                    @if (Model.ForumEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("Boards")">@T("Forum.Forums")</a></li>
+                    }
+                    @if (Model.RecentlyViewedProductsEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("RecentlyViewedProducts")">@T("Products.RecentlyViewedProducts")</a></li>
+                    }
+                    @if (Model.CompareProductsEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("CompareProducts")">@T("Products.Compare.List")</a></li>
+                    }
+                    @if (Model.RecentlyAddedProductsEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("RecentlyAddedProducts")">@T("Products.NewProducts")</a></li>
+                    }*@
+
+            </ul>
+        </div>
+
+        <div class="col-md-3 col-sm-6 my-account">
+            <h3><span>@T("Footer.MyAccount")</span></h3>
+            <ul>
+                
+                <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-login">@T("Footer.Login")</a></li>
+                @if (Model.ShoppingCartEnabled)
+                {
+                    <li><a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart">@T("ShoppingCart")</a></li>
+                }
+@* <li><a href="@Url.RouteUrl("CustomerInfo")" class="account">@T("Account.MyAccount")</a></li>*@
+@* @if (Model.WishlistEnabled)
+                {
+                    <li><a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">@T("Wishlist")</a></li>
+                }*@
+                @*<li><a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("GiftRegistry") })">@T("GiftRegistry")</a></li>*@
+                @if (!Model.HideOrders)
+                {
+                    <li><a href="@Url.RouteUrl("CustomerOrders")">@T("Footer.Orders")</a></li>
+                }
+
+@* @if (!Model.HideAddresses)
+                    {
+                        <li><a href="@Url.RouteUrl("CustomerAddresses")" class="">@T("Account.CustomerAddresses")</a></li>
+                    }
+                    @if (Model.ShoppingCartEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart">@T("ShoppingCart")</a></li>
+                    }*@
+
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 follow-us">
+            <h3><span>@T("Footer.FollowUs")</span></h3>
+            <ul>
+                @if (!string.IsNullOrEmpty(Model.FacebookLink))
+                {
+                    <li class="facebook"><a href="@Model.FacebookLink" target="_blank">@T("Footer.FollowUs.Facebook")</a></li>
+                }
+                @if (!string.IsNullOrEmpty(Model.TwitterLink))
+                {
+                    <li class="twitter"><a href="@Model.TwitterLink" target="_blank">@T("Footer.FollowUs.Twitter")</a></li>
+                }
+                @*@if (Model.NewsEnabled)
+                {
+                    <li class="rss"><a target="_blank" href="@Url.RouteUrl("NewsRSS", new { languageId = Model.WorkingLanguageId })">@T("Footer.FollowUs.RSS")</a></li>
+                }
+                @if (!string.IsNullOrEmpty(Model.YoutubeLink))
+                {
+                    <li class="youtube"><a href="@Model.YoutubeLink" target="_blank">@T("Footer.FollowUs.Youtube")</a></li>
+                }
+                @if (!string.IsNullOrEmpty(Model.GooglePlusLink))
+                {
+                    <li class="google-plus"><a href="@Model.GooglePlusLink" target="_blank">@T("Footer.FollowUs.GooglePlus")</a></li>
+                }*@
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="copy-bg">
+
+
+        <div class="copy-inner">
+
+            <div class="col-md-8">
+                <div class="footer-disclaimer">
+                    @T("Content.CopyrightNotice", DateTime.Now.Year, Model.StoreName) | <a href="@Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("privacyinfo") })">@T("PrivacyNotice")</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="follow-us-bottom">
+
+                    <ul>
+                        @if (!string.IsNullOrEmpty(Model.FacebookLink))
+                        {
+                            <li class="facebook"><a class="facebook-icon" href="@Model.FacebookLink" target="_blank"></a></li>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.TwitterLink))
+                        {
+                            <li class="twitter"><a class="twitter-icon" href="@Model.TwitterLink" target="_blank"></a></li>
+                        }
+                      
+                          @*@if (!string.IsNullOrEmpty(Model.GooglePlusLink))
+                        {
+                            <li class="google-plus"><a class="google-plus-icon" href="@Model.GooglePlusLink" target="_blank"></a></li>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.YoutubeLink))
+                        {
+                            <li class="youtube"><a class="youtube-icon" href="@Model.YoutubeLink" target="_blank"></a></li>
+                        }
+                        <li class="rss"><a class="pinterest-icon" href="#"></a></li>
+
+                        <li class="rss"><a class="rss-icon" href="#"></a></li>*@
+
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+
+
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".footerNewsleter .footernewsletter").show();
+        $(".footerNewsleter .leftnewsletter").html("");
+        $(".footerNewsleter .leftnewsletter").hide();
+    })
+    $("#fade").click(function () {
+        $("#fade").hide();
+        $("#searchbox1").hide();
+        $("#searchbox2").show();
+    })
+</script>
+<div id="fade" class="black_overlay"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

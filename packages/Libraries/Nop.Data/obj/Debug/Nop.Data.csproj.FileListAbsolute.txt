@@ -1,0 +1,175 @@
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\Nop.Data.dll.config
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\Nop.Data.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\Nop.Data.pdb
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\EntityFramework.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\mscorlib.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\Nop.Core.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Data.SqlServerCe.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\Autofac.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.Razor.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\Nop.Core.pdb
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\EntityFramework.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\Autofac.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.Razor.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\normidna.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\normnfc.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\normnfd.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\normnfkc.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\bin\Debug\normnfkd.nlp
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\obj\Debug\Nop.Data.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\obj\Debug\Nop.Data.dll
+D:\Bhumika_WorkingProject\Te\source\Libraries\Nop.Data\obj\Debug\Nop.Data.pdb
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Data.dll.config
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Data.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Data.pdb
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\mscorlib.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Core.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Data.SqlServerCe.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\Autofac.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.Razor.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Core.pdb
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\Autofac.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.Razor.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\normidna.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\normnfc.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\normnfd.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\normnfkc.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Data\bin\Debug\normnfkd.nlp
+E:\Kinnal\leorigin\Libraries\Nop.Data\obj\Debug\Nop.Data.csprojResolveAssemblyReference.cache
+E:\Kinnal\leorigin\Libraries\Nop.Data\obj\Debug\Nop.Data.dll
+E:\Kinnal\leorigin\Libraries\Nop.Data\obj\Debug\Nop.Data.pdb
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Data.dll.config
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Data.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Data.pdb
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\mscorlib.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Core.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Data.SqlServerCe.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\Autofac.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.Razor.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\Nop.Core.pdb
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\Autofac.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.Razor.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\normidna.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\normnfc.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\normnfd.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\normnfkc.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\bin\Debug\normnfkd.nlp
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\obj\Debug\Nop.Data.csprojResolveAssemblyReference.cache
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\obj\Debug\Nop.Data.dll
+E:\Kinnal working projects\leorigin\Libraries\Nop.Data\obj\Debug\Nop.Data.pdb
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\Nop.Data.dll.config
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\Nop.Data.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\Nop.Data.pdb
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\EntityFramework.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\mscorlib.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\Nop.Core.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Data.SqlServerCe.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\Autofac.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.Razor.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\Nop.Core.pdb
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\EntityFramework.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\Autofac.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.Razor.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\normidna.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\normnfc.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\normnfd.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\normnfkc.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\bin\Debug\normnfkd.nlp
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\obj\Debug\Nop.Data.csprojResolveAssemblyReference.cache
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\obj\Debug\Nop.Data.dll
+D:\Working Projects 2014\LeoriginNewScope\Libraries\Nop.Data\obj\Debug\Nop.Data.pdb
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\Nop.Data.dll.config
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\Nop.Data.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\Nop.Data.pdb
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\EntityFramework.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\mscorlib.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\Nop.Core.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Data.SqlServerCe.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\Autofac.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.Razor.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\Nop.Core.pdb
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\EntityFramework.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\EntityFramework.SqlServerCompact.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\Autofac.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.Mvc.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\Autofac.Integration.Mvc.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.Razor.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\normidna.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\normnfc.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\normnfd.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\normnfkc.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\bin\Debug\normnfkd.nlp
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\obj\Debug\Nop.Data.csprojResolveAssemblyReference.cache
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\obj\Debug\Nop.Data.dll
+D:\Rinkal_Drive\Leorigin\Source\Libraries\Nop.Data\obj\Debug\Nop.Data.pdb

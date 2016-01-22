@@ -1,0 +1,170 @@
+﻿@using Nop.Core.Domain.Common;
+@using Nop.Core.Infrastructure;
+@{
+    var displayMiniProfiler = EngineContext.Current.Resolve<Nop.Core.Domain.StoreInformationSettings>().DisplayMiniProfilerInPublicStore;
+
+    //resources
+    Html.AppendCssFileParts("~/Content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css");
+
+    Html.AppendScriptParts("~/Scripts/public.ajaxcart.js");
+    Html.AppendScriptParts("~/Scripts/public.common.js");
+    Html.AppendScriptParts("~/Scripts/jquery-migrate-1.2.1.min.js");
+    Html.AppendScriptParts("~/Scripts/jquery-ui-1.10.3.custom.min.js");
+    Html.AppendScriptParts("~/Scripts/jquery.validate.unobtrusive.min.js");
+    Html.AppendScriptParts("~/Scripts/jquery.validate.min.js");
+    Html.AppendScriptParts("~/Scripts/jquery-1.10.2.min.js");
+
+    //X-UA-Compatible tag
+    var commonSettings = EngineContext.Current.Resolve<CommonSettings>();
+    if (commonSettings.RenderXuaCompatible)
+    {
+        Html.AppendHeadCustomParts(string.Format("<meta http-equiv=\"X-UA-Compatible\" content=\"{0}\"/>", commonSettings.XuaCompatibleValue));
+    }
+    var NewsLetterTooltip = T("Newsletter.Subscribe");
+      
+    
+}
+<!DOCTYPE html>
+<html @Html.Partial("LanguageAttributes")>
+<head>
+    <title>@Html.NopTitle(true)</title>
+      <meta name="viewport" content="" />
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0">-->
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="description" content="@(Html.NopMetaDescription())" />
+    <meta name="keywords" content="@(Html.NopMetaKeywords())" />
+    <meta name="generator" content="nopCommerce" />
+    @Html.NopHeadCustom()
+    @*This is used so that themes can inject content into the header*@
+    @Html.Partial("Head")
+    @Html.Widget("head_html_tag")
+    @Html.NopCssFiles(this.Url, ResourceLocation.Head)
+    @Html.NopScripts(this.Url, ResourceLocation.Head)
+    @Html.NopCanonicalUrls()
+    @Html.Action("RssHeaderLink", "News")
+    @Html.Action("RssHeaderLink", "Blog")
+    @*Favicon - upload favicon.ico file to the root directory*@
+    @Html.Action("Favicon", "Common")
+    @if (displayMiniProfiler)
+    {
+        @StackExchange.Profiling.MiniProfiler.RenderIncludes()
+    }
+    <!-- Mega menu start -->
+    <script src="~/Themes/HomeDecor/Content/Js/MegaMenu.js"></script>
+    <link href="~/Themes/HomeDecor/Content/MegaMenu.css" rel="stylesheet" />
+    <script src="~/Themes/HomeDecor/Content/Js/jquery.lazyload.min.js"></script>
+    <script src="~/Themes/HomeDecor/Content/Js/PluginExtensions.js"></script>
+    <!-- Mega menu end -->
+    <!--Powered by nopCommerce - http://www.nopCommerce.com-->
+    <!--Copyright (c) 2008-2014-->
+    <script type="text/javascript">
+        // BUG orientation portrait/lanscape IOS //
+        if (navigator.userAgent.match(/iPad/i)) {
+            var viewportmeta = document.querySelector('meta[name="viewport"]');
+            if (viewportmeta) {
+                viewportmeta.content = 'width=1020; ';
+            }
+            else {
+                viewportmeta.content = 'width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0';
+            }
+        }
+        else {
+            var viewportmeta2 = document.querySelector('meta[name="viewport"]');
+            viewportmeta2.content = 'width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0';
+        }
+    </script>
+    <script type="text/javascript">
+
+        function css_browser_selector(u) { var ua = u.toLowerCase(), is = function (t) { return ua.indexOf(t) > -1 }, g = 'gecko', w = 'webkit', s = 'safari', o = 'opera', m = 'mobile', h = document.documentElement, b = [(!(/opera|webtv/i.test(ua)) && /msie\s(\d)/.test(ua)) ? ('ie ie' + RegExp.$1) : is('firefox/2') ? g + ' ff2' : is('firefox/3.5') ? g + ' ff3 ff3_5' : is('firefox/3.6') ? g + ' ff3 ff3_6' : is('firefox/3') ? g + ' ff3' : is('gecko/') ? g : is('opera') ? o + (/version\/(\d+)/.test(ua) ? ' ' + o + RegExp.$1 : (/opera(\s|\/)(\d+)/.test(ua) ? ' ' + o + RegExp.$2 : '')) : is('konqueror') ? 'konqueror' : is('blackberry') ? m + ' blackberry' : is('android') ? m + ' android' : is('chrome') ? w + ' chrome' : is('iron') ? w + ' iron' : is('applewebkit/') ? w + ' ' + s + (/version\/(\d+)/.test(ua) ? ' ' + s + RegExp.$1 : '') : is('mozilla/') ? g : '', is('j2me') ? m + ' j2me' : is('iphone') ? m + ' iphone' : is('ipod') ? m + ' ipod' : is('ipad') ? m + ' ipad' : is('mac') ? 'mac' : is('darwin') ? 'mac' : is('webtv') ? 'webtv' : is('win') ? 'win' + (is('windows nt 6.0') ? ' vista' : '') : is('freebsd') ? 'freebsd' : (is('x11') || is('linux')) ? 'linux' : '', 'js']; c = b.join(' '); h.className += ' ' + c; return c; }; css_browser_selector(navigator.userAgent);
+
+</script>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: ['Raleway::latin'] }
+        };
+        (function () {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })(); </script>
+</head>
+<body>
+    @*  <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>*@
+
+    @*Nyusoft*@
+    @RenderBody()
+    @Html.NopCssFiles(this.Url, ResourceLocation.Foot)
+    @Html.NopScripts(this.Url, ResourceLocation.Foot)
+    <div id="goToTop"></div>
+    <script>
+        jQuery(document).ready(function () {
+            var offset = 220;
+            var duration = 1000;
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('#goToTop').fadeIn(offset);
+                } else {
+                    jQuery('#goToTop').fadeOut(offset);
+                }
+            });
+            jQuery('#goToTop').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({ scrollTop: 0 }, duration);
+                return false;
+            })
+            //$('a', $('#mob-menu-button'))
+            $('.footerNewsleter .footernewsletter #newsletter-email1').focus(function () {
+                if (this.value == '@T("Newsletter.Subscribe")') {
+                    this.value = '';
+                }
+            });
+            var r = $('.footerNewsleter .footernewsletter #newsletter-email1').val();
+            if (r == '') {
+                $('.footerNewsleter .footernewsletter #newsletter-email1').val('@NewsLetterTooltip');
+            }
+            $('.footerNewsleter .footernewsletter #newsletter-email1').blur(function () {
+                if (this.value == '') {
+                    this.value = '@NewsLetterTooltip';
+                }
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('.header-stick').css("position", "fixed");
+                }
+                else {
+                    $('.header-stick').css("position", "relative");
+                    
+                }
+
+            });
+
+        });
+        $(".title1").click(function () {
+            if ($(this).next("div").css("display") == "none") {
+                $(this).next("div").show(300);
+            }
+            else {
+                $(this).next("div").hide(300);
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

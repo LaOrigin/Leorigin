@@ -1,0 +1,119 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+}
+@using Nop.Core;
+@using Nop.Services;
+@using Nop.Services.Catalog;
+@using Nop.Core.Infrastructure;
+@using Nop.Core.Domain.Catalog;
+@using System.Linq;
+@using Nop.Core.Caching;
+@using Nop.Web.Infrastructure.Cache;
+@using Nop.Services.Orders;
+@using Nop.Services.Security;
+@using Nop.Services.Stores;
+@{
+    //current category ID
+    int currentCategoryId = 0;
+    if (Url.RequestContext.RouteData.Values["controller"].ToString().Equals("catalog", StringComparison.InvariantCultureIgnoreCase) &&
+        Url.RequestContext.RouteData.Values["action"].ToString().Equals("category", StringComparison.InvariantCultureIgnoreCase))
+    {
+        currentCategoryId = Convert.ToInt32(Url.RequestContext.RouteData.Values["categoryId"].ToString());
+    }
+
+
+    //current manufacturer ID
+    int currentManufacturerId = 0;
+    if (Url.RequestContext.RouteData.Values["controller"].ToString().Equals("catalog", StringComparison.InvariantCultureIgnoreCase) &&
+        Url.RequestContext.RouteData.Values["action"].ToString().Equals("manufacturer", StringComparison.InvariantCultureIgnoreCase))
+    {
+        currentManufacturerId = Convert.ToInt32(Url.RequestContext.RouteData.Values["manufacturerId"].ToString());
+    }
+
+
+    //current product ID
+    int currentProductId = 0;
+    if (Url.RequestContext.RouteData.Values["controller"].ToString().Equals("product", StringComparison.InvariantCultureIgnoreCase) &&
+        Url.RequestContext.RouteData.Values["action"].ToString().Equals("productdetails", StringComparison.InvariantCultureIgnoreCase))
+    {
+        currentProductId = Convert.ToInt32(Url.RequestContext.RouteData.Values["productId"].ToString());
+    }
+
+                //var _catalogSettings=EngineContext.Current.Resolve<CatalogSettings>();
+                //if (!_catalogSettings.ShowBestsellersOnHomepage || _catalogSettings.NumberOfBestsellersOnHomepage == 0)
+
+                //        var _cacheManager=EngineContext.Current.Resolve<ICacheManager>();
+                //         var _storeContext= EngineContext.Current.Resolve<IStoreContext>();
+                //     var _orderReportService= EngineContext.Current.Resolve<IOrderReportService>();
+                //         var _productService= EngineContext.Current.Resolve<IProductService>();
+
+                //    //load and cache report
+                //    var report = _cacheManager.Get(string.Format(ModelCacheEventConsumer.HOMEPAGE_BESTSELLERS_IDS_KEY, _storeContext.CurrentStore.Id),
+                //        () =>
+                //            _orderReportService.BestSellersReport(storeId: _storeContext.CurrentStore.Id,
+                //            pageSize: _catalogSettings.NumberOfBestsellersOnHomepage)).ToList();
+
+                //var _aclService = EngineContext.Current.Resolve<IAclService>();
+                //var _storeMappingService =EngineContext.Current.Resolve<IStoreMappingService >();
+                //    //load products
+                //    var products = _productService.GetProductsByIds(report.Select(x => x.ProductId).ToArray());
+                //    //ACL and store mapping
+                //    products = products.Where(p => _aclService.Authorize(p) && _storeMappingService.Authorize(p)).ToList();
+
+
+
+                //prepare model
+                //var model = PrepareProductOverviewModels(products, true, true, productThumbPictureSize).ToList();
+            
+}
+@*<div class="hader-banner-inner">
+    <img class="img-responsive" id="hader-banner-inner" src="~/Themes/HomeDecor/Content/images/0000081.jpg" style="width: 100%; display: inline;" />
+</div>*@
+<div class="b-top">
+    <div class="row">
+        <div class="col-md-3">
+
+            @if (IsSectionDefined("left"))
+            {
+                @RenderSection("left")
+            }
+            else
+            {
+@* @Html.Widget("left_side_column_before")*@
+                @Html.Action("CategoryNavigation", "Catalog", new { currentCategoryId = currentCategoryId, currentProductId = currentProductId })
+                @Html.Action("HomepageBestSellers", "Product")
+                @Html.Widget("left_side_column_after_category_navigation")
+                @Html.Action("ManufacturerNavigation", "Catalog", new { currentManufacturerId = currentManufacturerId })
+                @Html.Action("VendorNavigation", "Catalog")
+                <div class="leftnewsletter">
+                    @Html.Action("NewsletterBox", "Newsletter")
+                </div>
+                @Html.Widget("left_side_column_after")
+            }
+        </div>
+        <div class="col-md-9">
+            @Html.Widget("main_column_before")
+            @RenderBody()
+            @Html.Widget("main_column_after")
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        $("#LeftListPage").show();
+        $("#HomepageBestSeller").hide();
+
+    });
+
+</script>
+<script>
+    $(document).ready(function () {
+        $(".leftnewsletter .leftnewsletter").show();
+        $(".leftnewsletter .footernewsletter").html("");
+        $(".leftnewsletter .footernewsletter").hide();
+
+
+    })
+</script>

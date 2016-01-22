@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+    var NewsLetterTooltip = T("Newsletter.Title");
+}
+
+<div class="hader-banner-inner">
+    @*<img class="img-responsive" id="hader-banner-inner" src="~/Themes/HomeDecor/Content/images/0000081.jpg" style="width: 100%; display: inline;" />*@
+</div>
+
+
+@Html.Widget("main_column_before")
+
+@RenderBody()
+@Html.Widget("main_column_after")
+
+<script>
+    $(document).ready(function () {
+
+        $(".footerNewsleter .footernewsletter #newsletter-email1").focus(function () {
+            if (this.value == '@T("Newsletter.Title")') {
+                this.value = '';
+            }
+        });
+        $(".footerNewsleter .footernewsletter #newsletter-email1").focus(function () {
+            if (this.value == '@T("Newsletter.Title")') {
+                this.value = '';
+            }
+        });
+
+        $(".footerNewsleter .footernewsletter #newsletter-email1").blur(function () {
+            if (this.value == '') {
+                this.value = '@NewsLetterTooltip';
+            }
+        });
+    });
+
+</script>

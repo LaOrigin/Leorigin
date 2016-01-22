@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+}
+@*<link href="~/Themes/HomeDecor/Content/StyleSheet1.css" rel="stylesheet" />*@
+<div class="container">
+    <div class="row">
+        @Html.Widget("main_column_before")
+    </div>
+</div>
+
+@RenderBody()
+<h5 class="facebook-top">Find us on Facebook</h5>
+<div class="facebook-content">
+    <iframe style="width: 50%" src="https://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/LaOrigin-1205888166104094&width=1000&height=200&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false"></iframe>
+    </div>
+@Html.Widget("main_column_after")

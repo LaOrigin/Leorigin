@@ -1,0 +1,153 @@
+﻿@model IList<ProductOverviewModel>
+
+@using Nop.Web.Models.Catalog;
+
+
+@if (Model.Count > 0)
+{
+    <div class="col-md-12">
+        <div id="HomepageBestSeller">
+            <div class="col-full">
+                <div class="wrap-col">
+                    <div class="page-title">
+                        <div class="page-title-inner">
+                            <h1>@T("Key Products")</h1>
+
+                            @*<a href="#" class="prev"></a><a href="#" class="next"></a>*@
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="car_wrap">
+                        @*<ul id="carousel1" class="carousel1">*@
+                        @foreach (var item in Model)
+                        {
+                            //var names = "";
+                            //if (item.Name != null)
+                            //{
+                            //    var namesvalue = item.Name;
+                            //    if (namesvalue.Length > 15)//53
+                            //    {
+                            //        names = namesvalue.Substring(0, 15) + "...";
+                            //    }
+                            //    else
+                            //    {
+                            //        names = namesvalue;
+                            //    }
+                            //}
+@*<li>*@
+                            <div class="col-md-4 col-sm-6">
+                                <div class="item-box">
+                                    @Html.Partial("_ProductBox", item)
+
+                                    @*<div class="product-item" data-productid="@item.Id">
+                                        <div class="picture col1 upp">
+                                            <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })" class="aditionalInfo" flag="0" >
+                                                <img alt="@item.DefaultPictureModel.AlternateText" src="@item.DefaultPictureModel.ImageUrl" />
+                                            </a>
+                                        </div>
+                                        <div class="productname">
+                                            <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })" class="aditionalInfo" flag="0" >
+                                                <label style="text-overflow: ellipsis"></label>@names</a>
+                                        </div>
+                                    </div>*@
+
+                                </div>
+                            </div>@*
+
+                            </li>*@
+                        }
+                        @*  </ul>*@
+<div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="LeftListPage">
+        <div class="block block-category-navigation">
+            <div class="title title1" id="Bestsellerstitle">
+                <strong>@T("Bestsellers")</strong>
+            </div>
+
+            <div flag="1" id="bestSellerDiv" class="listbox listbox1">
+                <ul class="bestsellerstitle-left">
+                    @foreach (var item in Model)
+                    {
+                        <li>
+                            <div class="item-box">
+
+                                <div class="product-item" data-productid="item.Id">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="picture">
+                                                <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })" title="@item.DefaultPictureModel.Title">
+                                                    <img class="img-responsive01"  alt="@item.DefaultPictureModel.AlternateText" src="@item.DefaultPictureModel.ImageUrl" title="@item.DefaultPictureModel.Title" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="details">
+
+                                                <h2 class="product-title">
+
+                                                    <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })">@Html.Raw(item.Name.Length > 15 ? item.Name.Substring(0, 15) + "..." : item.Name)</a>
+                                                    @* <a href="@Url.RouteUrl("Product", new { SeName = item.SeName })">@item.Name</a>*@
+                                                </h2>
+
+                                                @{
+                        var description = "";
+                        if (item.ShortDescription != null)
+                        {
+                            var descriptionvalue = item.ShortDescription;
+                            if (descriptionvalue.Length > 30)
+                            {
+                                description = descriptionvalue.Substring(0, 30) + "...";
+                            }
+                            else
+                            {
+                                description = descriptionvalue;
+                            }
+                        }
+                                                }
+                                                <div class="description">
+                                                    @Html.Raw(@description)
+                                                </div>
+                                                @if (item.ReviewOverviewModel.AllowCustomerReviews)
+                                                {
+                                                    int ratingPercent = 0;
+                                                    if (item.ReviewOverviewModel.TotalReviews != 0)
+                                                    {
+                                                        ratingPercent = ((item.ReviewOverviewModel.RatingSum * 100) / item.ReviewOverviewModel.TotalReviews) / 5;
+                                                    }
+                                                    <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, item.ReviewOverviewModel.TotalReviews)">
+                                                        <div class="rating">
+                                                            <div style="width: @(ratingPercent)%">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                                <div class="add-info">
+                                                    <div class="prices">
+                                                        @if (!String.IsNullOrEmpty(item.ProductPrice.OldPrice))
+                                                        {
+                                                            <span class="price old-price rin">@item.ProductPrice.OldPrice</span>
+                                                        }
+                                                        <span class="price actual-price">@item.ProductPrice.Price</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+     
+}

@@ -1,0 +1,56 @@
+﻿@using Nop.Core;
+@using Nop.Core.Domain
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Framework.UI
+@{
+    var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+    var supportResponsive = EngineContext.Current.Resolve<StoreInformationSettings>().ResponsiveDesignSupported;
+    //we do not support responsive for RTL yet
+    if (supportRtl)
+    {
+        supportResponsive = false;
+    }
+    //add browser specific CSS files
+    var browser = Request.Browser;
+    if (browser.Browser == "IE" && browser.MajorVersion == 6)
+    {
+        Html.AppendCssFileParts("~/Themes/HomeDecor/Content/ie6.css");
+    }
+    else if (browser.Browser == "IE" && browser.MajorVersion == 7)
+    {
+        Html.AppendCssFileParts("~/Themes/HomeDecor/Content/ie7.css");
+    }
+    //responsive design
+    if (supportResponsive)
+    {
+        Html.AppendCssFileParts("~/Themes/HomeDecor/Content/bootstrap.min.css");
+    }
+    if (supportResponsive)
+    {
+        Html.AppendCssFileParts("~/Themes/HomeDecor/Content/responsive.css");
+    }
+    //add main CSS file
+    if (supportRtl)
+    {
+        Html.AppendCssFileParts("~/Themes/HomeDecor/Content/styles.rtl.css");
+    }
+    else
+    {
+        Html.AppendCssFileParts("~/Themes/HomeDecor/Content/styles.css");
+    }
+    //responsive design
+    if (supportResponsive)
+    {
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    }
+    Html.AppendCssFileParts("~/Themes/HomeDecor/Content/slider.css");
+    Html.AddScriptParts("~/Themes/HomeDecor/Content/superfish.js");
+    Html.AddScriptParts("~/Themes/HomeDecor/Content/jquery.carouFredSel-6.1.0-packed.js");
+    Html.AppendCssFileParts("~/Themes/HomeDecor/Content/zerogrid.css");
+    Html.AppendCssFileParts("~/Themes/HomeDecor/Content/superfish.css");
+    Html.AddScriptParts("~/Themes/HomeDecor/Content/tms-0.4.1.js");
+    Html.AddScriptParts("~/Themes/HomeDecor/Content/css3-mediaqueries.js");
+    Html.AppendCssFileParts("~/Themes/HomeDecor/Content/StyleSheet1.css");
+    
+}
+

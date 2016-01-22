@@ -1,0 +1,249 @@
+﻿@model TopMenuModel
+@using Nop.Core.Domain
+@using Nop.Core.Infrastructure
+@using Nop.Web.Models.Catalog;
+@using Nop.Core.Domain.Catalog
+@{
+    var isRtl = this.ShouldUseRtlTheme();
+    var supportResponsive = EngineContext.Current.Resolve<StoreInformationSettings>().ResponsiveDesignSupported;
+    var searchTooltip = T("Search.SearchBox.Tooltip");
+    var _catalogSettings = EngineContext.Current.Resolve<CatalogSettings>();
+    var AutoCompleteEnabled = _catalogSettings.ProductSearchAutoCompleteEnabled;
+    var ShowProductImagesInSearchAutoComplete = _catalogSettings.ShowProductImagesInSearchAutoComplete;
+    var SearchTermMinimumLength = _catalogSettings.ProductSearchTermMinimumLength;
+}
+@helper RenderCategoryLine(CategorySimpleModel category, int level, bool responsiveMobileMenu)
+{
+    <li>
+        <a href="@Url.RouteUrl("Category", new { SeName = category.SeName })">@category.Name
+            @if (category.NumberOfProducts.HasValue)
+            {
+                <text> </text>@T("Categories.TotalProducts", category.NumberOfProducts.Value)
+            }
+        </a>
+        @{
+            var levelClass = "";
+            if (level == 0)
+            {
+                levelClass = "firstLevel";
+            <div class="top-menu-triangle"></div>
+            }
+            if (category.SubCategories.Count > 0)
+            {
+                if (responsiveMobileMenu)
+                {
+            <span class="expand">&nbsp;</span>
+                }
+            <ul class="sublist @levelClass">
+                @foreach (var subCategory in category.SubCategories)
+                {
+                    @RenderCategoryLine(subCategory, level + 1, responsiveMobileMenu)
+                }
+            </ul>
+            }
+        }
+    </li>
+}
+
+<ul class="top-menu">
+    <li><a href="@Url.RouteUrl("HomePage")" class="Home-02"></a></li>
+    @Html.Widget("header_menu_before")
+    @if (Model.Categories.Count > 0)
+    {
+        foreach (var category in Model.Categories)
+        {
+        @RenderCategoryLine(category, 0, false)
+        }
+    }
+    else
+    {
+        //no categories to display? in this case let's diplay some default menu items (should we?)
+        <li><a href="@Url.RouteUrl("HomePage")">@T("HomePage")</a></li>
+        if (Model.RecentlyAddedProductsEnabled)
+        {
+        <li><a href="@Url.RouteUrl("RecentlyAddedProducts")">@T("Products.NewProducts")</a>
+        </li>
+        }
+        <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a> </li>
+        <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
+        if (Model.BlogEnabled)
+        {
+        <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>
+        }
+        if (Model.ForumEnabled)
+        {
+        <li><a href="@Url.RouteUrl("Boards")">@T("Forum.Forums")</a></li>
+        }
+        <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+    }
+    @Html.Widget("header_menu_after")
+</ul>
+
+<script type="text/javascript">
+    $('li', '.top-menu').on('mouseenter', function () {
+        $('a', $(this)).first().addClass('hover');
+        if (!$(this).parent().hasClass('top-menu')) {
+            var width = $(this).innerWidth();
+            $('.sublist', $(this)).first().css('@(isRtl ? "right" : "left")', width + 15);
+        }
+        $('.sublist', $(this)).first().addClass('active');
+        $('.top-menu-triangle', $(this)).addClass('active');
+    });
+
+    $('li', '.top-menu').on('mouseleave', function () {
+        $('a', $(this)).first().removeClass('hover');
+        $('.sublist', $(this)).first().removeClass('active');
+        $('.top-menu-triangle', $(this)).removeClass('active');
+    });
+
+</script>
+
+@if (supportResponsive)
+{<div class="mobile-button">
+    <div id="mob-menu-button">
+        <a href="#">
+            <span class="icon"><span class="line"></span><span class="line"></span><span class="line"></span></span>
+            @{
+    var responsiveMenuTitle = Model.Categories.Count > 0 ? T("Categories") : T("Menu");
+            }
+            @*<span>@responsiveMenuTitle</span>*@
+        </a>
+
+    </div>
+
+    <div class="search-box" id="searchbox1" style="display: none;">
+
+        <form action="@Url.RouteUrl("ProductSearch")" method="get" onsubmit="return check_small_search_form1()">
+            <input type="text" class="search-box-text" id="small-searchterms1" autocomplete="off" value="@searchTooltip" name="q" />
+            <input type="submit" class="button-1 search-box-button" value="@T(" ")" />
+            <script type="text/javascript">
+                $(function() {
+                    $('#small-searchterms1').autocomplete({
+                        delay: 500,
+                        minLength: @(SearchTermMinimumLength.ToString()),
+                        source: '@(Url.RouteUrl("ProductSearchAutoComplete"))',
+                        select: function(event, ui) {
+                            $("#small-searchterms1").val(ui.item.label);
+                            setLocation(ui.item.producturl);
+                            return false;
+                        }
+                    })
+                        .data("ui-autocomplete")._renderItem = function(ul, item) {
+                            var t = item.label;
+                            //html encode
+                            t = htmlEncode(t);
+                            return $("<li></li>")
+                                .data("item.autocomplete", item)
+                                .append("<a>@(ShowProductImagesInSearchAutoComplete ? Html.Raw("<img src='\" + item.productpictureurl + \"'>") : null)" + t + "</a>")
+                            .appendTo(ul);
+                        };
+                });
+            </script>
+
+        </form>
+    </div>
+    <div class="mobSearch-new">
+        <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" id="mobSearch"><span class="search-box-button-mobile"></span></a>
+        <div id="fade" class="black_overlay"></div>
+    </div>
+    <div class="clear"></div>
+    </div>
+    <ul class="mob-top-menu">
+        @Html.Widget("mob_header_menu_before")
+        @if (Model.Categories.Count > 0)
+        {
+            foreach (var category in Model.Categories)
+            {
+            @RenderCategoryLine(category, 0, true)
+            }
+        }
+        else
+        {
+            //no categories to display? in this case let's diplay some default menu items (should we?)
+            <li><a href="@Url.RouteUrl("HomePage")">@T("HomePage")</a></li>
+            if (Model.RecentlyAddedProductsEnabled)
+            {
+            <li>
+                <a href="@Url.RouteUrl("RecentlyAddedProducts")">@T("Products.NewProducts")</a>
+            </li>
+            }
+            <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a> </li>
+            <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
+            if (Model.BlogEnabled)
+            {
+            <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>
+            }
+            if (Model.ForumEnabled)
+            {
+            <li><a href="@Url.RouteUrl("Boards")">@T("Forum.Forums")</a></li>
+            }
+            <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+        }
+        @Html.Widget("mob_header_menu_after")
+    </ul>
+    <script type="text/javascript">
+        $('a', $('#mob-menu-button')).toggle(function() {
+            $('.mob-top-menu').addClass('show');
+        },
+            function() {
+                $('.mob-top-menu').removeClass('show');
+            }
+        );
+
+        $(function($) {
+            $('.mob-top-menu .expand').click(function() {
+                var parent = $(this).parent();
+                if (parent.hasClass('active')) {
+                    $(".sublist:first", parent).hide(300);
+                    parent.removeClass('active');
+                } else {
+                    $(".sublist:first", parent).show(300);
+                    parent.addClass('active');
+                }
+            });
+        });
+        $("#mobSearch").click(function () {
+            $("#searchbox1").show();
+            $("#searchbox2").hide();
+            $("#fade").show();
+            $("#searchbox1").children("#small-searchterms").focus();
+            //$("#searchbox1").children("#small-searchterms").clear();
+        });
+        $(document).ready(function () {
+            $("#searchbox1").hide();
+            $("#searchbox2").show();
+        })
+       
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#small-searchterms1").focus(function() {
+                if (this.value == '@T("Search.SearchBox.Tooltip")') {
+                    this.value = '';
+                }
+            });
+            $("#small-searchterms1").focus(function() {
+                if (this.value == '@T("Search.SearchBox.Tooltip")') {
+                    this.value = '';
+                }
+            });
+
+            $("#small-searchterm1s").blur(function() {
+                if (this.value == '') {
+                    this.value = '@searchTooltip';
+                }
+            });
+        });
+
+        function check_small_search_form1() {
+            var search_terms = $("#small-searchterms1");
+            if (search_terms.val() == "" || search_terms.val() == "@searchTooltip") {
+                alert('@Html.Raw(HttpUtility.JavaScriptStringEncode(T("Search.EnterSearchTerms").Text))');
+                search_terms.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    
+}

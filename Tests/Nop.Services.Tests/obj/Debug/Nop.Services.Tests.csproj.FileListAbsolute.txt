@@ -1,0 +1,388 @@
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll.config
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.pdb
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Autofac.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\mscorlib.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\WebActivator.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\itextsharp.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\UserAgentStringLibrary.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\EPPlus.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\PerlRegex.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.pdb
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.pdb
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.pdb
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.pdb
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Autofac.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\itextsharp.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\EPPlus.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\normidna.nlp
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\normnfc.nlp
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\normnfd.nlp
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\normnfkc.nlp
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\bin\Debug\normnfkd.nlp
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.csprojResolveAssemblyReference.cache
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.dll
+D:\Bhumika_WorkingProject\Te\source\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.pdb
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll.config
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.pdb
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\mscorlib.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\WebActivator.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\UserAgentStringLibrary.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\PerlRegex.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.pdb
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.pdb
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.pdb
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.pdb
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.xml
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\normidna.nlp
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\normnfc.nlp
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\normnfd.nlp
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\normnfkc.nlp
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\bin\Debug\normnfkd.nlp
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.csprojResolveAssemblyReference.cache
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.dll
+E:\Kinnal\leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.pdb
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll.config
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.pdb
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\mscorlib.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\WebActivator.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\UserAgentStringLibrary.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\PerlRegex.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.pdb
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.pdb
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.pdb
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.pdb
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.xml
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\normidna.nlp
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\normnfc.nlp
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\normnfd.nlp
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\normnfkc.nlp
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\bin\Debug\normnfkd.nlp
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.csprojResolveAssemblyReference.cache
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.dll
+E:\Kinnal working projects\leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.pdb
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll.config
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.pdb
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Autofac.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\mscorlib.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\WebActivator.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\itextsharp.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\UserAgentStringLibrary.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\EPPlus.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\PerlRegex.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.pdb
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.pdb
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.pdb
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.pdb
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Autofac.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\itextsharp.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\EPPlus.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\normidna.nlp
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\normnfc.nlp
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\normnfd.nlp
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\normnfkc.nlp
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\bin\Debug\normnfkd.nlp
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.csprojResolveAssemblyReference.cache
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.dll
+D:\Rinkal_Drive\Leorigin\Source\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.pdb
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll.config
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.pdb
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\WebActivator.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\UserAgentStringLibrary.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\PerlRegex.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.pdb
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.pdb
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.pdb
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.pdb
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.csprojResolveAssemblyReference.cache
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.dll
+D:\fullsource\Leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll.config
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\WebActivator.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\UserAgentStringLibrary.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\PerlRegex.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.pdb
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.csprojResolveAssemblyReference.cache
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.dll
+C:\Users\sunilkumar.sharma\Desktop\Personal\Leorigin\Leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.pdb
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll.config
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.Tests.pdb
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\WebActivator.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\UserAgentStringLibrary.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\PerlRegex.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Core.pdb
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Data.pdb
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Services.pdb
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Nop.Tests.pdb
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Autofac.Integration.Mvc.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\nunit.framework.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Rhino.Mocks.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Helpers.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Mvc.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.Razor.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EntityFramework.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\itextsharp.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.GeoIP2.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\MaxMind.Db.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\EPPlus.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\ImageResizer.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.csprojResolveAssemblyReference.cache
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.dll
+D:\fullsource\Final\Leorigin\Tests\Nop.Services.Tests\obj\Debug\Nop.Services.Tests.pdb

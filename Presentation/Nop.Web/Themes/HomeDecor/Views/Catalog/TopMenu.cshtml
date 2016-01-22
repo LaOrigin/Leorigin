@@ -1,0 +1,442 @@
+﻿@model TopMenuModel
+@using Nop.Core.Domain
+@using Nop.Core.Infrastructure
+@using Nop.Web.Models.Catalog;
+@using Nop.Core.Domain.Catalog
+@{
+    var isRtl = this.ShouldUseRtlTheme();
+    var supportResponsive = EngineContext.Current.Resolve<StoreInformationSettings>().ResponsiveDesignSupported;
+    var searchTooltip = T("Search.SearchBox.Tooltip");
+    var _catalogSettings = EngineContext.Current.Resolve<CatalogSettings>();
+    var AutoCompleteEnabled = _catalogSettings.ProductSearchAutoCompleteEnabled;
+    var ShowProductImagesInSearchAutoComplete = _catalogSettings.ShowProductImagesInSearchAutoComplete;
+    var SearchTermMinimumLength = _catalogSettings.ProductSearchTermMinimumLength;
+}
+
+@helper RenderCategoryLine(CategorySimpleModel category, int level, bool responsiveMobileMenu)
+{
+    
+   
+}
+<ul class="mega-menu">
+    @RenderMegaMenu(isMegaMenuResponsive: false)
+</ul>
+<div class="search-box" id="searchbox1" style="display: none;">
+
+    <form action="@Url.RouteUrl("ProductSearch")" method="get" onsubmit="return check_small_search_form1()">
+        <input type="text" class="search-box-text" id="small-searchterms1" autocomplete="off" value="@searchTooltip" name="q" />
+        <input type="submit" class="button-1 search-box-button" value="@T(" ")" />
+        <script type="text/javascript">
+            $(function() {
+                $('#small-searchterms1').autocomplete({
+                    delay: 500,
+                    minLength: @(SearchTermMinimumLength.ToString()),
+                    source: '@(Url.RouteUrl("ProductSearchAutoComplete"))',
+                    select: function(event, ui) {
+                        $("#small-searchterms1").val(ui.item.label);
+                        setLocation(ui.item.producturl);
+                        return false;
+                    }
+                })
+                        .data("ui-autocomplete")._renderItem = function(ul, item) {
+                            var t = item.label;
+                            //html encode
+                            t = htmlEncode(t);
+                            return $("<li></li>")
+                                .data("item.autocomplete", item)
+                                .append("<a>@(ShowProductImagesInSearchAutoComplete ? Html.Raw("<img src='\" + item.productpictureurl + \"'>") : null)" + t + "</a>")
+                            .appendTo(ul);
+                        };
+            });
+        </script>
+
+    </form>
+</div>
+
+<div class="mobile-new-menu">
+    <div class="menu-title">@*<span>Menu</span>*@
+
+        <span class="icon">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </span>
+    </div>
+
+    <div class="mobSearch-new">
+        <a href="javascript:void(0)" id="mobSearch"><span class="search-box-button-mobile"></span></a>
+        <div id="fade" class="black_overlay"></div>
+
+    </div>
+    <div id="topcartlinkMobile">
+    </div>
+    <ul class="mega-menu-responsive">
+        @RenderMegaMenu(isMegaMenuResponsive: true)
+    </ul>
+    <div class="clear"></div>
+
+
+</div>
+@*<ul class="top-menu">*@
+@*<ul class="mega-menu">
+   
+</ul>*@
+
+@helper RenderMegaMenu(bool isMegaMenuResponsive)
+{
+    @Html.Widget("header_menu_before")
+    if (Model.Categories.Count > 0)
+    {
+        if (isMegaMenuResponsive)
+        {
+    <span class="with-subcategories labelForNextPlusButton">Category</span>
+    <div class="plus-button"></div>
+    <div class="sublist-wrap">
+        <ul class="sublist">
+            @* <li class="back-button">
+                <span>@T("SevenSpikes.MegaMenu.ResponsiveBackButton")</span>
+            </li>*@
+            @for (int i = 0; i < Model.Categories.Count; i++)
+            {
+                var category = Model.Categories[i];
+            
+                <li>
+                    @if (category.SubCategories.Count > 0)
+                    {
+                        <a href="@Url.RouteUrl("Category", new { SeName = category.SeName })" title="@category.Name" class="with-subcategories">@category.Name</a>
+                        <div class="plus-button"></div>
+                        <div class="sublist-wrap">
+                            <ul class="sublist">
+                                <li class="back-button">
+                                    <span>@T("SevenSpikes.MegaMenu.ResponsiveBackButton")</span>
+                                </li>
+                                @{
+                        var categoriesCounter = 0;
+                        foreach (var subCategory in category.SubCategories)
+                        {
+                            categoriesCounter++;
+                                
+                                    <li>
+                                        <a href="@Url.RouteUrl("Category", new { SeName = subCategory.SeName })" title="@subCategory.Name">@subCategory.Name</a>
+                                    </li>
+                                    
+                                
+                        }
+                              
+                                }
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <a href="@Url.RouteUrl("Category", new { SeName = category.SeName })" title="@category.Name">@category.Name</a>
+                    }
+                </li>
+            }
+        </ul>
+    </div>
+        }
+        else
+        {
+            for (int i = 0; i < Model.Categories.Count; i++)
+            {
+                var category = Model.Categories[i];
+            
+    <li>
+        <a href="@Url.RouteUrl("Category", new { SeName = category.SeName })" title="@category.Name">@category.Name</a>
+        @if (category.SubCategories.Count > 0)
+        {
+            <div class="dropdown categories fullWidth">
+                <div class="row">
+                    
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="row-wrapper">
+                                    @CategoryDataTable(category.SubCategories)
+
+
+                                </div>
+                                </td><td>
+                                <div class="dropdown-banner">
+                                    <img alt="@category.PictureModel.AlternateText" src="@category.PictureModel.ImageUrl"
+                                         title="@category.PictureModel.Title" />
+                                </div>
+                            </td>
+                           
+                        </tr>
+                    </table>
+                   
+                </div>
+               
+                <div class="clear"></div>
+            </div>
+                      
+                  
+        }
+
+    </li>
+            }
+        }
+
+    }
+    else
+    {
+        //no categories to display? in this case let's diplay some default menu items (should we?)
+    <li><a href="@Url.RouteUrl("HomePage")">@T("HomePage")</a></li>
+        if (Model.RecentlyAddedProductsEnabled)
+        {
+    <li><a href="@Url.RouteUrl("RecentlyAddedProducts")">@T("Products.NewProducts")</a>
+    </li>
+        }
+    <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a> </li>
+    <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
+        if (Model.BlogEnabled)
+        {
+    <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>
+        }
+        if (Model.ForumEnabled)
+        {
+    <li><a href="@Url.RouteUrl("Boards")">@T("Forum.Forums")</a></li>
+        }
+    <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+    }
+    @Html.Widget("header_menu_after")
+    
+}
+
+
+@helper CategoryDataTable(List<CategorySimpleModel> categoriesModels)
+{
+   
+    <div class="row">
+        @foreach (var item in categoriesModels)
+        {
+            <div class="box">
+
+                @*<div class="picture">
+                <a href="@Url.RouteUrl("Category", new { SeName = item.SeName })" title="@item.PictureModel.Title">
+                    <img class="lazy" alt="@item.PictureModel.AlternateText" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-original="@item.CategoryModel.PictureModel.ImageUrl" />
+                </a>
+            </div>*@
+                <div class="title">
+                    <a href="@Url.RouteUrl("Category", new { SeName = item.SeName })" title="@item.Name">@item.Name</a>
+                </div>
+                <ul class="subcategories">
+
+                    @foreach (var subCategory in item.SubCategories)
+                    {
+                        <li>
+                            <a href="@Url.RouteUrl("Category", new { SeName = subCategory.SeName })" title="@subCategory.Name">@subCategory.Name</a>
+                        </li>
+                    }
+
+                    @* @if (item.SubCategories.Count == megaMenuSettings.NumberOfCategories)
+                {
+                    <li>
+                        <a class="view-all" href="@Url.RouteUrl("Category", new { SeName = item.CategoryModel.SeName })" title="@T("SevenSpikes.MegaMenu.ViewAllCategories")">@T("SevenSpikes.MegaMenu.ViewAllCategories")</a>
+                    </li>
+                }*@
+                </ul>
+
+            </div>
+        }
+    </div>
+}
+
+<script type="text/javascript">
+
+    var megaMenuClick = "click.megaMenuEvent";
+    var megaMenuDocumentClick = "click.megaMenuDocumentEvent";
+
+    $(function () {
+        $("img.lazy").lazyload({
+            event: "menuShown",
+            effect: "fadeIn"
+        });
+    });
+
+    // We need to trigger an event, in order for the lazy loading to work. The default event is scroll, which is not useful in this case
+    $(".mega-menu").on("mouseover", function () {
+        $("img.lazy").trigger("menuShown");
+    });
+    $(".mega-menu > li, .mega-menu .sublist > li").off('mouseenter mouseleave').on('mouseenter',
+       function () {
+           var that = $(this);
+           t = setTimeout(function () {
+
+               $('a', that).first().addClass('hover');
+               $('.sublist-wrap, .dropdown', that).first().addClass('active');
+
+           }, 180);
+       }).on('mouseleave',
+       function () {
+           clearTimeout(t);
+           $('a', $(this)).first().removeClass('hover');
+           $('.sublist-wrap, .dropdown', $(this)).first().removeClass('active');
+       });
+
+    $megaMenuDropdowns = $(".mega-menu > li > .dropdown, .mega-menu > li > .sublist-wrap");
+    $megaMenuDropdowns.siblings("a").click(function (e) {
+        e.preventDefault();
+    });
+    $megaMenuDropdowns.click(function (e) {
+        e.stopPropagation();
+    });
+
+    // open/close dropdowns(comment because remove click event on mega menu)
+    //$(".mega-menu > li").off(megaMenuClick).on(megaMenuClick, function (e) {
+    //    e.stopPropagation();
+    //    var currentDropdown = $(this).children(".dropdown, .sublist-wrap");
+    //    $megaMenuDropdowns.not(currentDropdown).filter(":visible").slideToggle("fast"); // Hides all visible dropdowns except the current one
+    //    currentDropdown.slideToggle("fast", function () {
+    //        if ($(this).is(":visible")) {    // remove the overflow:hidden which is left after the dropdown is shown. This is a know bug with jquery and is
+    //            $(this).css("overflow", ""); // due to the box-sizing:border-box; See ticket here: http://bugs.jquery.com/ticket/12854
+    //        }
+    //    }); // Shows current li dropdown only
+    //});
+
+    //// close opened dropdown
+    //$(document).off(megaMenuDocumentClick).on(megaMenuDocumentClick, function () {
+    //    $megaMenuDropdowns.filter(":visible").slideToggle("fast");
+    //});
+
+</script>
+@*<script type="text/javascript">
+    $('li', '.top-menu').on('mouseenter', function () {
+        $('a', $(this)).first().addClass('hover');
+        if (!$(this).parent().hasClass('top-menu')) {
+            var width = $(this).innerWidth();
+            $('.sublist', $(this)).first().css('@(isRtl ? "right" : "left")', width + 15);
+        }
+        $('.sublist', $(this)).first().addClass('active');
+        $('.top-menu-triangle', $(this)).addClass('active');
+    });
+
+    $('li', '.top-menu').on('mouseleave', function () {
+        $('a', $(this)).first().removeClass('hover');
+        $('.sublist', $(this)).first().removeClass('active');
+        $('.top-menu-triangle', $(this)).removeClass('active');
+    });
+
+</script>*@
+
+
+
+@if (supportResponsive)
+{<div class="mobile-button">
+    <div id="mob-menu-button">
+        <a href="#">
+            <span class="icon"><span class="line"></span><span class="line"></span><span class="line"></span></span>
+            @{
+    var responsiveMenuTitle = Model.Categories.Count > 0 ? T("Categories") : T("Menu");
+            }
+            @*<span>@responsiveMenuTitle</span>*@
+        </a>
+
+    </div>
+
+    <div class="clear"></div>
+    </div>
+    
+    
+    
+    <ul class="mob-top-menu">
+        @Html.Widget("mob_header_menu_before")
+        @if (Model.Categories.Count > 0)
+        {
+            foreach (var category in Model.Categories)
+            {
+            @RenderCategoryLine(category, 0, true)
+            }
+        }
+        else
+        {
+            //no categories to display? in this case let's diplay some default menu items (should we?)
+            <li><a href="@Url.RouteUrl("HomePage")">@T("HomePage")</a></li>
+            if (Model.RecentlyAddedProductsEnabled)
+            {
+            <li>
+                <a href="@Url.RouteUrl("RecentlyAddedProducts")">@T("Products.NewProducts")</a>
+            </li>
+            }
+            <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a> </li>
+            <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
+            if (Model.BlogEnabled)
+            {
+            <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>
+            }
+            if (Model.ForumEnabled)
+            {
+            <li><a href="@Url.RouteUrl("Boards")">@T("Forum.Forums")</a></li>
+            }
+            <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+        }
+        @Html.Widget("mob_header_menu_after")
+    </ul>
+    <script type="text/javascript">
+        $('a', $('#mob-menu-button')).toggle(function() {
+            $('.mob-top-menu').addClass('show');
+        },
+            function() {
+                $('.mob-top-menu').removeClass('show');
+            }
+        );
+
+        $(function($) {
+            $('.mob-top-menu .expand').click(function() {
+                var parent = $(this).parent();
+                if (parent.hasClass('active')) {
+                    $(".sublist:first", parent).hide(300);
+                    parent.removeClass('active');
+                } else {
+                    $(".sublist:first", parent).show(300);
+                    parent.addClass('active');
+                }
+            });
+        });
+        $("#mobSearch").click(function () {
+            $("#searchbox1").show();
+            $("#searchbox2").hide();
+            $("#fade").show();
+            $("#searchbox1").children("#small-searchterms").focus();
+            //$("#searchbox1").children("#small-searchterms").clear();
+        });
+        $(document).ready(function () {
+            $("#searchbox1").hide();
+            $("#searchbox2").show();
+        })
+       
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#small-searchterms1").focus(function() {
+                if (this.value == '@T("Search.SearchBox.Tooltip")') {
+                    this.value = '';
+                }
+            });
+            $("#small-searchterms1").focus(function() {
+                if (this.value == '@T("Search.SearchBox.Tooltip")') {
+                    this.value = '';
+                }
+            });
+
+            $("#small-searchterm1s").blur(function() {
+                if (this.value == '') {
+                    this.value = '@searchTooltip';
+                }
+            });
+        });
+
+        function check_small_search_form1() {
+            var search_terms = $("#small-searchterms1");
+            if (search_terms.val() == "" || search_terms.val() == "@searchTooltip") {
+                alert('@Html.Raw(HttpUtility.JavaScriptStringEncode(T("Search.EnterSearchTerms").Text))');
+                search_terms.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    
+}

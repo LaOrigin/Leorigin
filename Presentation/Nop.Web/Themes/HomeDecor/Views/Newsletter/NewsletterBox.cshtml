@@ -1,0 +1,109 @@
+﻿@model NewsletterBoxModel
+@using Nop.Web.Models.Newsletter;
+
+<div class="block block-newsletter leftnewsletter" style="display: none">
+    <div class="title title1">
+        <strong>@T("Newsletter.Title")</strong>
+    </div>
+    <div class="listbox listbox1">
+        <div id="newsletter-subscribe-block" class="newsletter-subscribe-block">
+            <span>@T("Newsletter.Subscribe"):</span>
+            <div class="newsletter-email">
+                @Html.TextBoxFor(x => x.NewsletterEmail, new { id = "newsletter-email" })
+                @Html.ValidationMessageFor(x => x.NewsletterEmail)
+            </div>
+            <div class="buttons">
+                <input type="button" value="@T("Newsletter.Button")" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button" />
+                <span id="subscribe-loading-progress" style="display: none;" class="please-wait">@T("Common.Wait...")</span>
+            </div>
+        </div>
+        <div id="newsletter-result-block" class="newsletter-result-block">
+        </div>
+    </div>
+   
+</div>
+<div class="footernewsletter" style="display: none">
+    <div id="newsletter-subscribe-block1">
+        <div class="newsletter-email">
+            @Html.TextBoxFor(x => x.NewsletterEmail, new { id = "newsletter-email1" , value=T("Newsletter.Title")})
+            @Html.ValidationMessageFor(x => x.NewsletterEmail)
+        </div>
+        <div class="buttons">
+            <input type="button" value="@T(" ")" id="newsletter-subscribe-button-search" class="newsletter-subscribe-button01"  onclick="newsletterfooter()"/>
+            <span id="subscribe-loading-progress1" style="display: none;" class="please-wait">@T("Common.Wait...")</span>
+        </div>
+    </div>
+    <div id="newsletter-result-block1" class="newsletter-result-block">
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#newsletter-subscribe-button').click(function () {
+
+                newssubscription();
+            });
+        });
+        function newssubscription() {
+            var email = $("#newsletter-email").val();
+            var subscribeProgress = $("#subscribe-loading-progress");
+            subscribeProgress.show();
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "@(Url.RouteUrl("SubscribeNewsletter"))",
+             data: { "email": email },
+             success: function (data) {
+                 subscribeProgress.hide();
+                 $("#newsletter-result-block").html(data.Result);
+                 if (data.Success) {
+                     $('#newsletter-subscribe-block').hide();
+                     $('#newsletter-result-block').show();
+                 }
+                 else {
+                     $('#newsletter-result-block').fadeIn("slow").delay(2000).fadeOut("slow");
+                 }
+             },
+             error: function (xhr, ajaxOptions, thrownError) {
+                 alert('Failed to subscribe.');
+                 subscribeProgress.hide();
+             }
+         });
+         return false;
+     }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            $('#newsletter-subscribe-button-search').click(function () {
+            
+                var email = $("#newsletter-email1").val();
+                var subscribeProgress = $("#subscribe-loading-progress1");
+                subscribeProgress.show();
+                $.ajax({
+                    cache: false,
+                    type: "POST",
+                    url: "@(Url.RouteUrl("SubscribeNewsletter"))",
+                    data: { "email": email },
+                    success: function (data) {
+                        subscribeProgress.hide();
+                        $("#newsletter-result-block1").html(data.Result);
+                        if (data.Success) {
+                            $('#newsletter-subscribe-block1').hide();
+                            $('#newsletter-result-block1').show();
+                        }
+                        else {
+                            $('#newsletter-result-block1').css("display", "inline-block");
+                            $('#newsletter-result-block1').fadeIn("slow").delay(2000).fadeOut("slow");
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert('Failed to subscribe.');
+                        subscribeProgress.hide();
+                    }
+                });
+                return false;
+            });
+            
+        });
+       
+    </script>
+</div>

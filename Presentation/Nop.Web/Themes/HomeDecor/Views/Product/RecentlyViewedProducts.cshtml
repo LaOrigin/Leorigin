@@ -1,0 +1,38 @@
+﻿@model IList<ProductOverviewModel>
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.RecentlyViewedProducts").Text);
+}
+@using Nop.Web.Models.Catalog;
+
+<div class="col-full">
+    <div class="wrap-col">
+        <div class="page recently-viewed-products-page">
+            <div class="page-title">
+                <h1>@T("Products.RecentlyViewedProducts")</h1>
+            </div>
+            <div class="page-body">
+                <div class="row">
+                    @if (Model.Count > 0)
+                    {
+                        <div class="car_wrap">
+                            <div class="category-page">
+                                <div class="product-grid">
+                                    @foreach (var product in Model)
+                                    {<div class="col-md-4 col-sm-6">
+                                        <div class="item-box">
+                                            @Html.Partial("_ProductBox", product)
+                                        </div>
+                                    </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

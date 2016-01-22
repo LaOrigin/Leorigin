@@ -1,0 +1,115 @@
+﻿@model ContactUsModel
+@using Nop.Web.Models.Common;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.ContactUs").Text);
+}
+
+<div class="page contact-page">
+    <div class="page-title">
+        <h1>@T("PageTitle.ContactUs")</h1>
+    </div>
+
+    <div class="page-body">
+        <section class="content-wrapper main-content clear-fix">
+
+
+            <section class="site-content site-section">
+                <div class="container">
+                    <div>
+                        @if (Model.SuccessfullySent)
+                        {
+                            <div class="result">
+                                @Model.Result
+                            </div>
+                        }
+                        else
+                        {
+                            
+                        using (Html.BeginForm())
+                                {
+                        <div class="col-md-3">
+                            <div class="site-block">
+                                <img style="width:200px; height:200px" src="Themes/HomeDecor/Content/images/MakhijaTower.jpg" alt="" class="active" />
+                                <h3 class="h2 site-heading"><strong>Address</strong> Info</h3><br />
+                                <address>
+                                    <b>  La Origin Online Business Private Limited </b><br /><br />
+                                    <b>Mumbai Office :</b><br />
+                                    401-A, Makhija Royal Tower,<br />
+                                    S.V. Road,Khar West - Mumbai<br>
+                                    Maharashtra - 400052<br><br />
+
+                                    <i class="fa fa-envelope-o"></i><a href="javascript:void(0)">  care@laorigin.com</a>
+                                </address>
+                            </div>
+
+                        </div>
+                        <div class="col-md-9">
+
+                            @Html.Widget("contactus_top")
+                           
+                           
+                               
+                                    <h3 class="h2 site-heading"><strong>Contact</strong> Form</h3><br />
+                                    <div class="message-error">
+                                        @Html.ValidationSummary(true)
+                                    </div>
+                                    <div class="form-fields">
+                                        <div>
+                                            <div class="inputs">
+
+                                                <div class="input-box">
+                                                    @Html.LabelFor(model => model.FullName)
+                                                    @Html.TextBoxFor(model => model.FullName, new { @class = "fullname", placeholder = T("ContactUs.FullName.Hint") })
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.FullName)
+                                            </div>
+                                            <div class="inputs">
+
+                                                <div class="input-box">
+                                                    @Html.LabelFor(model => model.Email)
+                                                    @Html.TextBoxFor(model => model.Email, new { @class = "email", placeholder = T("ContactUs.Email.Hint") })
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.Email)
+                                            </div>
+                                            @if (Model.DisplayCaptcha)
+                                            {
+                                                <div class="captcha-box">
+                                                    @Html.Raw(Html.GenerateCaptcha())
+                                                </div>
+                                            }
+                                            <div class="inputs">
+                                                <div class="input-box enquiry-f">
+                                                    @Html.LabelFor(model => model.Enquiry)
+                                                    @Html.TextAreaFor(model => model.Enquiry, new { @class = "enquiry", placeholder = T("ContactUs.Enquiry.Hint") })
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.Enquiry)
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="fieldset">
+                                        <div class="inputs">
+                                            <div class="buttons">
+                                                <label class="md"></label>
+                                                <input type="submit" name="send-email" class="button-1 contact-us-button" value="@T("ContactUs.Button")" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                            
+                            @Html.Widget("contactus_bottom")
+                        </div>
+                        }
+                        }
+                       
+                    </div>
+                </div>
+            </section>
+
+            </section>
+           
+</div>
+</div>

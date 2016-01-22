@@ -1,0 +1,342 @@
+﻿
+
+@using Nop.Web.Models.Common;
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+
+    //title
+    Html.AddTitleParts(T("About Us").Text);
+}
+
+<style>
+    /* Main Structure */
+.site-section {
+    padding: 10px 0;
+}
+
+
+
+.themed-background-dark {
+    background-color: #394263;
+}
+ 
+p{margin-top:0;margin-bottom:1.4em;font-size:1em;line-height:1.4em;color:#666666;}
+.team-item-container1{margin-bottom:20px;position:relative;overflow:hidden;}
+.team-item-container1 > .image-container1 img{display:block;width:100%;transition:all 0.3s;}
+.team-item-container1 > .image-container1 img.active{opacity:1;}
+.team-item-container1:hover > .image-container1 img.active{opacity:0;}
+.team-item-container1 > .image-container1 img.hover{position:absolute;top:0;opacity:0;}
+.team-item-container1:hover > .image-container1 img.hover{opacity:1;}
+.team-item-container1.active > .image-container1 img.active{opacity:0;}
+.team-item-container1.active > .image-container1 img.hover{opacity:1;}
+.team-item-container1 > .content-container1{position:absolute;left:0;right:0;bottom:0;height:0;width:100%;display:block;background-color:#394263;transition:height 0.3s;}
+.team-item-container1:hover > .content-container1{height:50px;}
+.team-item-container1.active > .content-container1{height:100%;}
+.team-item-container1 > .content-container1 > .inner{padding:10px 24px;transition:padding 0.3s;}
+.team-item-container1.active > .content-container1 > .inner{padding:24px;}
+.team-item-container1 > .content-container1 *{color:#ffffff;}
+.team-item-container1 > .content-container1 .more-info-container1{opacity:0;transition:opacity 0.3s;}
+.team-item-container1.active > .content-container1 .more-info-container1{opacity:1;}
+.team-item-container1 > .content-container1 .name{font-family:'AguizardTryout-Regular';font-size:1.3em;}
+.team-item-container1 > .content-container1 .job{font-family:'AguizardTryout-Regular';font-size:1.1em;}
+.team-item-container1 > .content-container1 p{font-size:1em;line-height:1.25em;}
+.team-item-container1 > .content-container1 .job + p{margin:1em 0 0;font-size:1em;}
+.team-item-container1 > .content-container1 .sign{position:absolute;bottom:-20px;right:20px;font-family:'AguizardTryout-Regular';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:block;font-size:26px;text-align:right;opacity:0;transition:opacity 0.3s,bottom 0.3s;}
+.team-item-container1:hover > .content-container1 .sign,.team-item-container1.active > .content-container1 .sign{opacity:1;bottom:10px;}
+.team-item-container1 > .content-container1 .sign:before{content:'\e606';}
+.team-item-container1.active > .content-container1 .sign:before{content:'\e61b';}
+.team-item-container1 > .link-hover{position:absolute;left:0;right:0;bottom:0;top:0;background-color:rgba(0,0,0,0);}
+.team-item-container1 > .link-hover .button{position:absolute;bottom:24px;left:24px;opacity:0;transition:all 0.3s;text-transform:uppercase;}
+.team-item-container1 > .link-hover .button:hover{color:#ff3963;background-color:#ffffff;border-color:#ffffff;}
+.team-item-container1.active > .link-hover .button{opacity:1;}
+
+
+.animated{animation-duration:1s;animation-fill-mode:both;}
+.team-item-container1 > .image-container1 img{width:310px; height:300px}
+.team-item-container1 > .image-container1 img.active{opacity:0;}
+.team-item-container1 > .image-container1 img.hover{opacity:1;}
+.team-item-container1 > .content-container1{height:50px;}
+.team-item-container1 > .content-container1 .sign{bottom:10px;opacity:1;}
+.team-item-container1 > .content-container1 p{padding-right:0;}
+
+</style>
+<div class="page contact-page">
+    <div class="page-title">
+        <h1>@T("About Us")</h1>
+    </div>
+
+    <div class="page-body">
+        <div id="body" class="home page page-id-2 page-template page-template-page-home-php">
+            <section class="site-section" style=" padding :10px 0;">
+                <div class="container">
+                    <h2 style="text-align:center" class="topic-html-content-header">
+                        Who we Are
+                    </h2>
+
+                </div>
+            </section>
+            <div style="padding: 20px 0;">
+                <p>
+                    LeOrigin is a leading online e-commerce company committed to becoming the most loved and trusted marketplace on the web. We tirelessly pursue these goals by offering a superior shopping experience, rapid delivery and stellar customer service.
+                </p>
+                <p> At LeOrigin , we strive to provide our customers with quality products at the best prices possible. All the while, we make all efforts to give them a level of service that they will never forget, making them want to come back for more.</p>
+                <p>   We believe service truly begins after the product you ordered arrives at your doorstep. We follow through on this commitment with exceptional customer service. Our team of service associates are available via phone, e-mail and online chat to help ensure your utmost satisfaction.  <p>
+
+                <p>
+                    We've dedicated ourselves to making sure that everyone enjoys shopping at LeOrigin. We take great pride in working passionately to exceed your expectations each and every time you shop with us.
+                <p>
+
+                </p>
+            </div>
+            <section class="site-section" style="padding: 20px 0;">
+                <div class=" container">
+                <h2 style="text-align:center" class="topic-html-content-header">
+                    Meet our Team
+                </h2><br />
+                <h4 style="text-align:center"><b>Passionate</b> people who love what they do!</h4>
+</div>
+            </section>
+
+            <div class="article-team" style="padding: 10px 0;">
+                <div class=" content-row light-gray">
+
+                <div class="list-team-container1">
+                    <div class="container1">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="list team row">
+                                    <div class="item col-xs-12 col-sm-6 col-md-4">
+                                        <div id="teamViewer_779051" class="team-item-container1">
+                                            <div class="image-container1">
+                                                <img src="Themes/HomeDecor/Content/images/devki.png" alt="" class="active" /><img src="Themes/HomeDecor/Content/images/devki.png" alt="" class="hover" />
+                                            </div>
+                                            <div class="content-container1">
+                                                <div class="inner">
+                                                    <div class="name fontfamily">Devki Nandan</div>
+                                                    <div class="more-info-container1">
+                                                        <div class="job fontfamily">Mentor & Director</div>
+                                                        <p class="fontfamily">
+                                                            Merger and Acquisition professional and graduate of IIM Ahmedabad (PGDM) and London Business School (Masters in Finance), Devki guides the company in developing solid strategic intent, vision, and a firm footing in building capabilities for the future growth. <br /><br />
+                                                             He believes that the high degree of ethics & transparency with customers, taking-cost-out, and innovative ideas are indispensable for adapting to a continuously evolving and increasingly competitive global ecommerce business.
+                                                            
+                                                        </p>
+
+                                                    </div>
+                                                    <span class="sign"></span>
+                                                </div>
+                                            </div>
+                                            <a id="teamViewer_77905" title="" class="link-hover da_t">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="item col-xs-12 col-sm-6 col-md-4">
+                                        <div id="teamViewer_779061" class="team-item-container1">
+                                            <div class="image-container1">
+                                                <img src="Themes/HomeDecor/Content/images/chaitali.png" alt="" class="active" /><img src="Themes/HomeDecor/Content/images/chaitali.png" alt="" class="hover" />
+                                            </div>
+                                            <div class="content-container1">
+                                                <div class="inner">
+                                                    <div class="name fontfamily">Chaitali Sharma</div>
+                                                    <div class="more-info-container1">
+                                                        <div class="job fontfamily">Co-Founder & Director</div>
+                                                        <p class="fontfamily">
+                                                            A Post Graduate in Anthropology and NVQ from Carshalton College- London, Chaitali steers the day-to-day wheel at LaOrigin.<br /><br />
+                                                             She has a keen interest and understanding of Home Décor and Furniture Industry.<br /><br />
+                                                            Her stint at Action Cancer Hospital, where she set up a new Clinical Research Department, gave her confidence of starting and leading her own ecommerce company.
+                                                        </p>
+
+
+                                                    </div>
+                                                    <span class="sign"></span>
+                                                </div>
+                                            </div>
+                                            <a id="teamViewer_77906" title="" class="link-hover da_t">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="item col-xs-12 col-sm-6 col-md-4">
+                                        <div id="teamViewer_779081" class="team-item-container1">
+                                            <div class="image-container1">
+                                                <img src="Themes/HomeDecor/Content/images/Sunil.png" alt="" class="active" /><img src="Themes/HomeDecor/Content/images/Sunil.png" alt="" class="hover" />
+                                            </div>
+                                            <div class="content-container1">
+                                                <div class="inner">
+                                                    <div class="name fontfamily">Sunil Sharma</div>
+                                                    <div class="more-info-container1">
+                                                        <div class="job">Co-Founder & CTO</div>
+
+                                                        <p class="fontfamily">
+                                                            A software engineer by profession, Sunil is the main architect and force behind building complete LaOrigin Ecommerce platform. He is always keen to share his coding acumen with his colleagues.<br /><br />
+
+                                                            Through his family business of Furnishing & Home Decor, Sunil has gained thorough knowledge of every minute detail of Furniture Industry, and is responsible for taking the LaOrigin business to the next level.
+                                                        </p>
+
+                                                    </div>
+                                                    <span class="sign"></span>
+                                                </div>
+                                            </div>
+                                            <a id="teamViewer_77908" title="" class="link-hover da_t">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="list team row">
+
+                                    <div class="item col-xs-12 col-sm-6 col-md-4">
+                                        <div id="teamViewer_779091" class="team-item-container1">
+                                            <div class="image-container1">
+                                                <img src="Themes/HomeDecor/Content/images/image1.png" alt="" class="active" /><img src="Themes/HomeDecor/Content/images/image1.png" alt="" class="hover" />
+                                            </div>
+                                            <div class="content-container1">
+                                                <div class="inner">
+                                                    <div class="name fontfamily">Ramswaroop Sharma</div>
+                                                    <div class="more-info-container1">
+                                                        <div class="job">Architect</div>
+                                                        <p class="fontfamily">
+                                                            Having born and brought up in a Carpenter Family, Ramaswaroop came to a full circle when he expended his family business to become a major supplier of high end furniture to some of the top most architectures & designers of the country, such as Casa Paradox-  New Delhi.<br /><br />
+                                                            He provides support in design, quality, and material selection process. He is a graduate from   Rajasthan University.
+                                                        </p>
+
+                                                    </div>
+                                                    <span class="sign"></span>
+                                                </div>
+                                            </div>
+                                            <a id="teamViewer_77909" title="" class="link-hover da_t">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item col-xs-12 col-sm-6 col-md-4">
+                                        <div id="teamViewer_779071" class="team-item-container1">
+                                            <div class="image-container1">
+                                                <img src="Themes/HomeDecor/Content/images/image4.png" alt="" class="active" /><img src="Themes/HomeDecor/Content/images/image4.png" alt="" class="hover" />
+                                            </div>
+                                            <div class="content-container1">
+                                                <div class="inner">
+                                                    <div class="name fontfamily">Prerna Sharma</div>
+                                                    <div class="more-info-container1">
+                                                        <div class="job fontfamily">Head of Department- Home Décor & Community Welfare</div>
+                                                        <p class="fontfamily">
+                                                            A PhD from Rajasthan University and ex-employee of World Bank Group, Prerna is very keen on raising hopes for poor families to live a better life.<br /><br />
+                                                            She wants to take every opportunity to market the products produced by low income families in India.<br /><br />
+                                                            She is the force behind materializing our intent to develop the local community, and designing efficient training and skill development programs for the carpenters.
+                                                        </p>
+                                                    </div>
+                                                    <span class="sign"></span>
+                                                </div>
+                                            </div>
+                                            <a id="teamViewer_77907" title="" class="link-hover da_t">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item col-xs-12 col-sm-6 col-md-4">
+                                        <div id="teamViewer_779111" class="team-item-container1">
+                                            <div class="image-container1">
+                                                <img src="Themes/HomeDecor/Content/images/image1.png" alt="" class="active" /><img src="Themes/HomeDecor/Content/images/image1.png" alt="" class="hover" />
+                                            </div>
+                                            <div class="content-container1">
+                                                <div class="inner">
+                                                    <div class="name fontfamily">Anwer Siekh  </div>
+                                                    <div class="more-info-container1">
+                                                        <div class="job fontfamily">Design & Manufacturing </div>
+                                                        <p class="fontfamily">
+                                                            With over 15 years of experience of manufacturing and marketing furniture in India, Anwer is the key person ensuring that the highest quality of products reach to the customers.<br /><br />
+                                                            Anwer is a founding member of Interior Point, and has marketed furniture of value over INR 100Cr in Mumbai & Pune
+                                                        </p>
+                                                    </div>
+                                                    <span class="sign"></span>
+                                                </div>
+                                            </div>
+                                            <a id="teamViewer_77911" title="" class="link-hover da_t">
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4 style="text-align:center"> We would love you to be part of our team. Get on-board with us -<a href="https://www.laorigin/careers">we're hiring </a>.</h4>
+            </div>
+            </div>
+
+
+
+
+
+            <script type="text/javascript">
+                var google_conversion_id = 1071843896;
+                var google_conversion_label = 'label';
+                var google_conversion_color = 'ffffff'; var google_conversion_value = '1';
+                var google_custom_params = 'window.google_tag_params';
+                var google_remarketing_only = true;
+
+                (function (d) {
+                    var c = d.createElement('script'); c.type = 'text/javascript'; c.async = true;
+                    c.src = '//www.googleadservices.com/pagead/conversion.js';
+                    d.getElementsByTagName('head')[0].appendChild(c);
+                })(document);
+
+
+
+
+                $(".link-hover").click(function () {
+                    $.fn.myFunc(this);
+                });
+                $.fn.myFunc = function (a) {
+                  
+                    var id = a.id;
+                    var ele = document.getElementById(id + 1);
+                    var classname = ele.className;
+                    $(".team-item-container1").removeClass('active');
+                    var h = "#" + id + 1;
+                    if (classname != "team-item-container1 active")
+                        $(h).attr("class", "team-item-container1 active");
+
+
+                }
+
+            </script>
+
+ 
+        </div>
+
+      
+
+        <script type="text/javascript">
+
+            function hover() {
+                $("#1").show();
+                $("#2").show();
+                $("#0").hide();
+            }
+            function unhover() {
+                $("#1").hide();
+                $("#2").hide();
+                $("#0").show();
+            }
+
+            function hover1() {
+                $("#1").show();
+                $("#2").show();
+                $("#0").hide();
+            }
+            function unhover1() {
+                $("#1").hide();
+                $("#2").hide();
+                $("#0").show();
+            }
+
+
+
+
+        </script>
+
+    </div>
+</div>

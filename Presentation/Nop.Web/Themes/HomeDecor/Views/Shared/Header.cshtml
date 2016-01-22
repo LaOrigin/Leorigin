@@ -1,0 +1,99 @@
+﻿@using Nop.Core
+@using Nop.Core.Infrastructure
+@using Nop.Services.Localization
+@using Nop.Web.Framework.Themes
+@using Nop.Services.Security
+@using Nop.Core.Domain.Orders
+@using System
+@using System.Linq
+@{
+    //logo path
+    var currentThemeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+    var logoPath = "~/Themes/" + currentThemeName + "/Content/images/logo.jpg";
+
+    //store name
+    var storeName = EngineContext.Current.Resolve<IStoreContext>().CurrentStore.GetLocalized(x => x.Name);
+            //var customer = WorkContext.CurrentCustomer;
+            //var ShoppingCartEnabled = EngineContext.Current.Resolve<IPermissionService>().Authorize(StandardPermissionProvider.EnableShoppingCart);
+            //var _storeContext = EngineContext.Current.Resolve<IStoreContext>().CurrentStore;
+            //ICollection<ShoppingCartItem> _shoppingCartItems;
+            //ICollection<ShoppingCartItem> WishlistItems = new List<ShoppingCartItem>();
+            //ICollection<ShoppingCartItem> ShoppingCartItems = new List<ShoppingCartItem>();
+            //var ShoppingCartItems = new List<ShoppingCartItem>();
+            //var WishlistItems = new List<ShoppingCartItem>();
+            //if (customer.HasShoppingCartItems)
+            //{
+            //   //var ShoppingCartItems = customer.ShoppingCartItems;
+            //   // foreach(var r in ShoppingCartItems){
+            //   // }
+            //   ShoppingCartItems= customer.ShoppingCartItems.Where(sci => sci.ShoppingCartType == ShoppingCartType.ShoppingCart).LimitPerStore(_storeContext.Id).ToList().GetTotalProducts();
+            //    WishlistItems = customer.ShoppingCartItems.Where(sci => sci.ShoppingCartType == ShoppingCartType.Wishlist).LimitPerStore(_storeContext.Id).ToList().GetTotalProducts();
+            //}
+}
+
+
+    <div class="header">
+        @Html.Widget("header")
+        <div class="header-right">
+            <div class="header-links-wrapper">
+                @Html.Action("HeaderLinks", "Common")
+                 @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+            </div>
+            <div class="header-selectors-wrapper">
+                <div class="tax-display-type-selector">
+                    @Html.Action("TaxTypeSelector", "Common")
+                </div>
+                <div class="currency-selector">
+                    @Html.Action("CurrencySelector", "Common")
+                </div>
+                <div class="language-selector">
+                    @Html.Action("LanguageSelector", "Common")
+                </div>
+                @Html.Widget("header_selectors")
+            </div>
+            <div class="search-box">
+                <div id="topcartlink1">
+                </div>
+                <div class="search-box-inner" id="searchbox2">
+                    @Html.Action("SearchBox", "Catalog")
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+        </div>
+       
+        @* @if(customer.HasShoppingCartItems){
+                 if (ShoppingCartEnabled){
+            <div id="topcartlink1">
+                <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart">
+                   <div>Cart new images</div>
+                    <span class="cart-label">@T("ShoppingCart")</span>
+                    <span class="cart-qty">@T("ShoppingCart.HeaderQuantity",ShoppingCartItems)</span>
+                </a>
+            </div>
+             }
+        }*@
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#topcartlink1").empty();
+                $("#topcartlink1").append($("#topcartlink2").html());
+                $("#topcartlinkMobile").empty();
+                $("#topcartlinkMobile").append($("#topcartlink2").html());
+            })
+        </script>
+       
+        <div class="header-logo">
+            <a href="@Url.RouteUrl("HomePage")">
+                <img title="" alt="@storeName" src="@Url.Content(logoPath)" />
+            </a>
+        </div>
+        <div class="header-contact">
+           
+        </div>
+
+
+
+    </div>
+

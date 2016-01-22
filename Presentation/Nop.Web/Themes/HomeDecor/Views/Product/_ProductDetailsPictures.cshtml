@@ -1,0 +1,185 @@
+﻿@model ProductDetailsModel
+@using Nop.Core.Domain.Media
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Models.Catalog;
+@{
+    Html.AddScriptParts("~/Scripts/jquery.magnific-popup.js");
+        Html.AddCssFileParts("~/Content/magnific-popup/magnific-popup.css");
+
+    int productPerRow = EngineContext.Current.Resolve<MediaSettings>().ProductThumbPerRowOnProductDetailsPage;
+
+    string idForUl = "mycarousel";
+    string classForUl = "jcarousel-skin-tango";
+    productPerRow = 20;
+    Html.AppendCssFileParts("~/Themes/HomeDecor/Content/Carouselcss/skin.css");
+}
+<script src="~/Themes/HomeDecor/Content/carouseljs/jquery.jcarousel.js"></script>
+@*<link href="~/Themes/HomeDecor/Content/cloudzoom.css" rel="stylesheet" />
+<script src="~/Themes/HomeDecor/Content/Js/cloudzoom.js"></script>*@
+<link href="~/Themes/HomeDecor/Content/magiczoomplus/magiczoomplus.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="~/Themes/HomeDecor/Content/magiczoomplus/magiczoomplus.js" type="text/javascript"></script>
+
+<div class="gallery">
+
+    <div class="picture">
+        @if (Model.DefaultPictureZoomEnabled)
+        {
+            @*<a id="Zoomer" href="@Model.DefaultPictureModel.FullSizeImageUrl" class="MagicZoomPlus" rel="disable-expand: true;zoom-position: right; zoom-align: center;zoom-width:125; zoom-height:125;expand-size: height=400px" title="">*@
+                <a id="Zoomer" href="@Model.DefaultPictureModel.FullSizeImageUrl" class="MagicZoomPlus" title="">
+                <img src="@Model.DefaultPictureModel.ImageUrl" style="min-width: 300px;"/></a>
+@* <img data-cloudzoom="zoomImage:'@Model.DefaultPictureModel.FullSizeImageUrl',zoomSizeMode: 'zoom',
+                     tintColor:'#000',
+                     tintOpacity:0.25,
+                     captionPosition:'bottom',
+                     maxMagnification:1,
+                     autoInside:750,
+                zoomPosition:4,
+                variableMagnification :false
+                     " src="@Model.DefaultPictureModel.FullSizeImageUrl" id="zoom1" alt="Cloud Zoom small image" class="cloudzoom img-responsive01" style="min-width: 300px;" >*@@*
+            <a href="@Model.DefaultPictureModel.FullSizeImageUrl" title="@Model.Name" id="main-product-img-lightbox-anchor-@Model.Id">
+                <img alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" itemprop="image" id="main-product-img-@Model.Id" />
+            </a>*@
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#main-product-img-lightbox-anchor-@Model.Id').magnificPopup(
+                    {
+                        type: 'image',
+                        removalDelay: 300,
+                        gallery: {
+                            enabled: true
+                        }
+                    });
+                });
+            </script>
+        }
+        else
+        {<a id="Zoomer" href="@Model.DefaultPictureModel.FullSizeImageUrl" class="MagicZoomPlus" rel="disable-expand: true;zoom-position: right; zoom-align: center;'zoom-width': 150,'zoom-height': 150,'expand-size': width=1000px" title="">
+            <img src="@Model.DefaultPictureModel.ImageUrl" style="min-width: 300px;"/></a>@*
+            <img data-cloudzoom="zoomImage:'@Model.DefaultPictureModel.FullSizeImageUrl',zoomSizeMode: 'zoom',  
+            
+                    variableMagnification :false" 
+                src="@Model.DefaultPictureModel.FullSizeImageUrl" id="zoom1" alt="Cloud Zoom small image" class="cloudzoom img-responsive01" style="min-width: 300px;" >*@@*
+            <img class="img-responsive01" alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" itemprop="image" id="main-product-img-@Model.Id" />*@
+        }
+    </div>
+    @if (Model.PictureModels.Count > 1)
+    {
+        <div class="col-full">
+            <div class="wrap-col">
+
+                <div class="picture-thumbs">
+                    <div class="car_wrap">
+
+                        <div class="product-grid">
+                            @*nyusoft*@
+                            @for (int i = 0; i < Model.PictureModels.Count; i++)
+                            {
+                                var picture = Model.PictureModels[i];
+                                if (i % productPerRow == 0)
+                                {
+                                @Html.Raw("<ul id='" + idForUl + "' class='" + classForUl + "'>")
+                                }
+                                <li>
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td>
+                                                <a href="@picture.FullSizeImageUrl" rel="zoom-id: Zoomer" rev="@picture.DetailsImageUrl">
+                                                    <img class="imgchange" src="@picture.ImageUrl"/></a>
+                                                @*     <a href="@picture.FullSizeImageUrl" class="thumb-link" title="@Model.Name">
+                                                    <img class="cloudzoom-gallery img-responsive01" src="@picture.ImageUrl"
+                         title=""
+                         alt ="Cloud Zoom thumb image"
+                         data-cloudzoom='
+                         useZoom:"#zoom1",
+                         image:"@picture.FullSizeImageUrl",
+                         zoomImage:"@picture.ImageUrl"' style="min-height:69px">
+                                                </a>*@
+                                                @*<a class="thumb-popup-link" href="@picture.FullSizeImageUrl" title="@Model.Name">
+                                                    <img src="@picture.ImageUrl" alt="@picture.AlternateText" title="@picture.Title" />
+                                                </a>*@
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                if ((i % productPerRow == (productPerRow - 1)) ||
+                                        (i == (Model.PictureModels.Count - 1)))
+                                {
+                                @Html.Raw("</ul>")
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.thumb-popup-link').magnificPopup(
+                {
+                    type: 'image',
+                    removalDelay: 300,
+                    gallery: {
+                        enabled: true
+                    }
+                });
+                jQuery('#mycarousel').jcarousel();
+
+            });
+        </script>
+       
+    }
+    <script type="text/javascript">
+        //CloudZoom.quickStart();
+
+        $(document).ready(function () {
+            //$(".cloudzoom").hover(function () {
+            //    $(".cloudzoom-lens").next('div').text('').hide();
+            //});
+
+
+            //$(".cloudzoom").on('touchstart', function (e) {
+            //    $(".cloudzoom-lens").next('div').text('').hide();
+
+            //});
+            //$(".cloudzoom").on('touchmove', function (e) {
+            //    $(".cloudzoom-lens").next('div').text('').hide();
+            //});
+            //$(".cloudzoom").on('click', function (e) {
+            //    $(".cloudzoom-lens").next('div').text('').hide();
+            //});
+        });
+    </script>
+    <script>
+
+        $(".imgchange").click(function () {
+            var currentimage = $(this);
+            $(".imgchange").each(function () {
+                $(this).css("border", "none");
+            });
+            currentimage.css("border", "1px solid red");
+        });
+        window.onload= function(){
+        //$(document).ready(function () {
+            $("#Zoomer").children('img').attr('style', "width: 800px");
+            $("#mycarousel").contents().find("img").css("border", "1px solid #fff");
+            var Imageurl = $("#Zoomer").children('img').attr("src").replace("_800","");
+            $("#mycarousel").contents().find("img").each(function (index) {
+                var i = $(this).attr('src');
+                i = i.replace("_120", "");
+                if (i == Imageurl) {
+                    $(this).css("border", "1px solid red");
+                }
+            });
+        }
+    </script>
+</div>
+@*<script type="text/javascript">
+    MagicZoomPlus.options = {
+        'zoom-width': 150,
+        'zoom-height': 150,
+        'expand-size': 'width=1500px'
+        //'caption-height': 500,
+        //'hint': false,
+        //'opacity': 70
+    };
+</script>*@

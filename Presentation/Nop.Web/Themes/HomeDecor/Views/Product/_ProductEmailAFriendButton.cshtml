@@ -1,0 +1,16 @@
+﻿@model ProductDetailsModel
+@using Nop.Web.Models.Catalog;
+@using Nop.Core.Domain.Orders;
+
+@if (!Model.AddToCart.DisableWishlistButton && Model.AddToCart.UpdatedShoppingCartItemId == 0)
+{<div class="email-a-friend">
+    <input type="button" id="add-to-wishlist-button-@Model.AddToCart.ProductId" class="add-to-wishlist-button" value="@T("ShoppingCart.AddToWishlist")" data-productid="@Model.AddToCart.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.AddToCart.ProductId, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })    ', '#product-details-form');return false;" />
+    </div>
+}
+
+@if (Model.EmailAFriendEnabled)
+{
+    <div class="email-a-friend">
+        <input type="button" value="@T("Products.EmailAFriend")" class="email-a-friend-button" onclick="setLocation('@Url.RouteUrl("ProductEmailAFriend", new { productId = Model.Id })    ')" />
+    </div>
+}
