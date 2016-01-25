@@ -31,3 +31,4 @@ NyunopCommerce.Nop.Widgets.EasyTab
 NyunopCommerce.Nop.Widgets.Testimonial.Slider
 Shipping.FixedRate
 Payments.Payu
+Payments.Emi

@@ -180,25 +180,31 @@ namespace Nop.Web.Controllers
             model.IsReturnRequestAllowed = _orderProcessingService.IsReturnRequestAllowed(order);
            
             decimal payingAmount = 0;
-            if (order.OrderStatus == OrderStatus.Booked)
-            {
-                payingAmount = (_catalogSettings.PercentConfirmAmount * order.OrderTotal)/100;
-                model.IsConfirmButtonEnable = true;
-            }
-            else if (order.OrderStatus == OrderStatus.Confirmed)
-            {
-                payingAmount = order.OrderTotal - order.TotalTransactionAmount;
-                model.IsFinalPaymentButtonEnable = true;
-            }
-            else
-            {
-                model.IsReOrderAllowed = _orderSettings.IsReOrderAllowed;
-            }
 
-            var payingAmountCurrency = _currencyService.ConvertCurrency(payingAmount, order.CurrencyRate);
-            model.PayAmount = payingAmount;
-            model.AmountToBePaid = _priceFormatter.FormatPrice(payingAmountCurrency, true, order.CustomerCurrencyCode, _workContext.WorkingLanguage, true);
+           
+                if (order.OrderStatus == OrderStatus.Booked)
+                {
 
+                    payingAmount = (_catalogSettings.PercentConfirmAmount * order.OrderTotal) / 100;
+                    model.IsConfirmButtonEnable = true;
+                }
+                else if (order.OrderStatus == OrderStatus.Confirmed)
+                {
+                    payingAmount = order.OrderTotal - order.TotalTransactionAmount;
+                    model.IsFinalPaymentButtonEnable = true;
+                }
+                else
+                {
+                    model.IsReOrderAllowed = _orderSettings.IsReOrderAllowed;
+                }
+
+
+            model.EmiPayAmount = order.OrderTotal - order.TotalTransactionAmount;
+            var NonEmipayingAmountCurrency = _currencyService.ConvertCurrency(payingAmount, order.CurrencyRate);
+            var EmipayingAmountCurrency = _currencyService.ConvertCurrency(model.EmiPayAmount, order.CurrencyRate);
+            model.NonEmiPayAmount = payingAmount;
+            model.NonEmiAmountToBePaid = _priceFormatter.FormatPrice(NonEmipayingAmountCurrency, true, order.CustomerCurrencyCode, _workContext.WorkingLanguage, true);
+            model.EmiAmountToBePaid = _priceFormatter.FormatPrice(EmipayingAmountCurrency, true, order.CustomerCurrencyCode, _workContext.WorkingLanguage, true);
             //shipping info
             model.ShippingStatus = order.ShippingStatus.GetLocalizedEnum(_localizationService, _workContext);
             if (order.ShippingStatus != ShippingStatus.ShippingNotRequired)

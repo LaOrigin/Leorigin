@@ -50,8 +50,9 @@
     <Reference Include="Nop.Web">
       <HintPath>..\..\..\..\Leorigin\Presentation\Nop.Web\bin\Nop.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Nop.Web.Framework">
-      <HintPath>..\..\..\..\Leorigin\Presentation\Nop.Web\bin\Nop.Web.Framework.dll</HintPath>
+    <Reference Include="Nop.Web.Framework, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Presentation\Nop.Web\bin\Nop.Web.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

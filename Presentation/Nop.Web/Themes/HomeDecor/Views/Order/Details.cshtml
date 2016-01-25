@@ -1,4 +1,4 @@
-﻿@model      
+﻿@model  OrderDetailsModel    
 @using Nop.Web.Models.Order;
 @{
     if (!Model.PrintMode)
@@ -12,6 +12,23 @@
     //title
     Html.AddTitleParts(T("PageTitle.OrderDetails").Text);
 }
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#DivEmi").hide();
+        $("input[name='IsEmiSelected']").on("change", function () {
+            if ($(this).val() == "True") {
+                $("#DivEmi").show();
+                $("#DivNonEmi").hide();
+            }
+            else {
+                $("#DivEmi").hide();
+                $("#DivNonEmi").show();
+            }
+        });
+    })
+   
+</script>
+
 @if (Model.PrintMode)
 {
     <script type="text/javascript">
@@ -19,6 +36,7 @@
             window.print();
         });
     </script>
+    
 }
 <div class="b-top01">
     <div class="page order-details-page">
@@ -289,30 +307,57 @@
                             {
                                 <input type="button" value="@T("Order.Reorder")" class="button-1 re-order-button" onclick="setLocation('@Url.RouteUrl("ReOrder", new { orderId = Model.Id })    ')" />
                             }
-                            @if (Model.IsConfirmButtonEnable)
+                            else
                             {
-                                <div style="padding: 10px;color: #555;margin: 0 0 10px;border: 1px solid #EEE;" value="Pay" class="pendingamount-box">
-                                    <div class="title">
-                                        <strong>Confirm Your Order: @Model.AmountToBePaid</strong>
-                                    </div>
+                                <div>
+                                    @Html.RadioButtonFor(model => model.IsEmiSelected, false)
+                                    @Html.Label("NonEmi")
+                                    @Html.RadioButtonFor(model => model.IsEmiSelected, true)
+                                    @Html.Label("Emi")
 
-                                    <input type="button" style="width:150px" value="Pay" class="button-1 fullpayment-order-button" onclick="setLocation('@Url.RouteUrl("selectPaymentMethodOrderDetail", new { orderId = Model.Id, amount = Model.PayAmount })    ')" />
+
+                                </div>
+                           
+                           
+                            <div id="DivEmi" style="padding: 10px;color: #555;margin: 0 0 10px;border: 1px solid #EEE;" value="Pay" class="pendingamount-box">
+                                <div class="title">
+                                    <strong>PayThroughEmi: @Model.EmiAmountToBePaid</strong>
                                 </div>
 
+                                <input type="button" style="width:150px" value="Pay" class="button-1 fullpayment-order-button" onclick="setLocation('@Url.RouteUrl("selectPaymentMethodOrderDetail", new { orderId = Model.Id, amount = Model.EmiPayAmount, IsEmiOption = true })    ')" />
+                            </div>
+                          <div id="DivNonEmi">
+                              @if (Model.IsConfirmButtonEnable)
+                              {
 
+                              <div style="padding: 10px;color: #555;margin: 0 0 10px;border: 1px solid #EEE;" value="Pay" class="pendingamount-box">
+                                  <div class="title">
+                                      <strong>Confirm Your Order: @Model.NonEmiAmountToBePaid</strong>
+                                  </div>
+
+                                  <input type="button" style="width:150px" value="Pay" class="button-1 fullpayment-order-button" onclick="setLocation('@Url.RouteUrl("selectPaymentMethodOrderDetail", new { orderId = Model.Id, amount = Model.NonEmiPayAmount, IsEmiOption = false })    ')" />
+                              </div>
+
+
+                              }
+                             @if (Model.IsFinalPaymentButtonEnable)
+                              {
+                              <div style="padding: 10px;color: #555;margin: 0 0 10px;border: 1px solid #EEE;" value="Pay" class="pendingamount-box">
+                                  <div class="title">
+                                      <strong>Final Payment: @Model.NonEmiAmountToBePaid</strong>
+                                  </div>
+
+                                  <input type="button" style="width:150px" value="Pay" class="button-1 fullpayment-order-button" onclick="setLocation('@Url.RouteUrl("selectPaymentMethodOrderDetail", new { orderId = Model.Id, amount = Model.NonEmiPayAmount, IsEmiOption = false })    ')" />
+                              </div>
+
+
+                              }
+                          </div>
+                              
+                          
                             }
-                            @if (Model.IsFinalPaymentButtonEnable)
-                            { 
-                                <div style="padding: 10px;color: #555;margin: 0 0 10px;border: 1px solid #EEE;" value="Pay" class="pendingamount-box">
-                                    <div class="title">
-                                        <strong>Final Payment: @Model.AmountToBePaid</strong>
-                                    </div>
-                                   
-                                    <input type="button" style="width:150px" value="Pay" class="button-1 fullpayment-order-button" onclick="setLocation('@Url.RouteUrl("selectPaymentMethodOrderDetail", new { orderId = Model.Id, amount = Model.PayAmount })    ')" />
-                                </div>
-                             
-                               
-                            }
+                         
+                            
                             @if (Model.IsReturnRequestAllowed)
                             {
                                 <input type="button" value="@T("Order.ReturnItems")" class="button-2 return-items-button" onclick="setLocation('@Url.RouteUrl("ReturnRequest", new { orderId = Model.Id })    ')" />

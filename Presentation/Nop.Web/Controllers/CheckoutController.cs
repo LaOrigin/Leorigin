@@ -371,7 +371,7 @@ namespace Nop.Web.Controllers
                 decimal rate = _currencyService.ConvertFromPrimaryStoreCurrency(rateBase, _workContext.WorkingCurrency);
                 if (rate > decimal.Zero)
                     pmModel.Fee = _priceFormatter.FormatPaymentMethodAdditionalFee(rate, true);
-
+                if(pm.PluginDescriptor.FriendlyName !="Emi")
                 model.PaymentMethods.Add(pmModel);
             }
 
@@ -1769,7 +1769,7 @@ namespace Nop.Web.Controllers
 
         //Advance booking Controller logic
 
-        public ActionResult SelectTransactionPaymentMethod(int orderId, decimal amount)
+        public ActionResult SelectTransactionPaymentMethod(int orderId, decimal amount, bool IsEmiOption)
         {
             var currentcustomer = _workContext.CurrentCustomer;
           
@@ -1804,8 +1804,15 @@ namespace Nop.Web.Controllers
                     LogoUrl = pm.PluginDescriptor.GetLogoUrl(_webHelper)
                 };
 
-
-                checkoutTransactionModel.PaymentMethods.Add(pmModel);
+                if (IsEmiOption)
+                {
+                    if( pm.PluginDescriptor.FriendlyName == "Emi" )
+                    checkoutTransactionModel.PaymentMethods.Add(pmModel);
+                }
+                else
+                {
+                    checkoutTransactionModel.PaymentMethods.Add(pmModel);
+                }
             }
 
             if (checkoutTransactionModel.PaymentMethods.FirstOrDefault(so => so.Selected) == null)
@@ -1825,7 +1832,7 @@ namespace Nop.Web.Controllers
                     SystemCustomerAttributeNames.SelectedPaymentMethod,
                     checkoutTransactionModel.PaymentMethods[0].PaymentMethodSystemName,
                     _storeContext.CurrentStore.Id);
-                return ConfirmOrderTransaction(orderId, amount);
+                return ConfirmOrderTransaction(orderId, amount, IsEmiOption);
             }
 
             return View("PaymentMethodTransaction", checkoutTransactionModel);
@@ -1833,7 +1840,7 @@ namespace Nop.Web.Controllers
 
         [HttpPost, ActionName("ConfirmOrderTransaction")]
         [ValidateInput(false)]
-        public ActionResult ConfirmOrderTransaction(int orderId, decimal amount)
+        public ActionResult ConfirmOrderTransaction(int orderId, decimal amount, bool IsEmiOption)
         {
             //validation
             var customer = _workContext.CurrentCustomer;
@@ -1864,6 +1871,7 @@ namespace Nop.Web.Controllers
                      Amount = amount,
                       OrderId = orderId,
                        CustomerId = _workContext.CurrentCustomer.Id,
+                     IsEmiOption = IsEmiOption
                 };
 
 

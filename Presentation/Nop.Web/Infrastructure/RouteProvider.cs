@@ -719,6 +719,9 @@ namespace Nop.Web.Infrastructure
                  new { controller = "PaymentPayu", action = "Return" },
                  new[] { "Nop.Plugin.Payments.Payu.Controllers" });
 
+           
+
+
         }
 
         public int Priority

@@ -13,6 +13,7 @@ namespace Nop.Services.Orders
         public int OrderId { get; set; }
         public int CustomerId { get; set; }
         public decimal Amount { get; set; }
-        public OrderStatus Status { get; set; } 
+        public OrderStatus Status { get; set; }
+        public bool IsEmiOption { get; set; }
     }
 }

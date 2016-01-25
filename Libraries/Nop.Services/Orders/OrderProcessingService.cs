@@ -1566,6 +1566,9 @@ namespace Nop.Services.Orders
                     
                         if (order.OrderStatus == OrderStatus.Booked)
                         {
+                            if (transactiondetail.IsEmiOption)
+                                amountTobePaid = order.OrderTotal - order.TotalTransactionAmount;
+                            else
                             amountTobePaid = (_catalogSettings.PercentConfirmAmount * order.OrderTotal) / 100;
                         }
 

@@ -8,6 +8,7 @@ namespace Nop.Plugin.Payments.Payu
     {
         public void RegisterRoutes(RouteCollection routes)
         {
+            
             routes.MapRoute("Plugin.Payments.Payu.Configure",
                  "Plugins/PaymentPayu/Configure",
                  new { controller = "PaymentPayu", action = "Configure" },

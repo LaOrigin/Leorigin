@@ -29,6 +29,12 @@ namespace Nop.Web.Models.Order
 
         public bool IsReOrderAllowed { get; set; }
 
+        public bool IsEmiSelected { get; set; }
+
+       
+
+        public bool IsNonEmiSelected { get; set; }
+
         public bool IsReturnRequestAllowed { get; set; }
         
         public bool IsShippable { get; set; }
@@ -65,8 +71,10 @@ namespace Nop.Web.Models.Order
         public int RedeemedRewardPoints { get; set; }
         public string RedeemedRewardPointsAmount { get; set; }
         public string OrderTotal { get; set; }
-        public string AmountToBePaid { get; set; }
-        public decimal PayAmount { get; set; }
+        public string NonEmiAmountToBePaid { get; set; }
+        public string EmiAmountToBePaid { get; set; }
+        public decimal NonEmiPayAmount { get; set; }
+        public decimal EmiPayAmount { get; set; }
         public string TotalAmountPaid { get; set; }
         public string DueAmount { get; set; }
         public IList<GiftCard> GiftCards { get; set; }
