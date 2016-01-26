@@ -126,7 +126,7 @@ namespace Nop.Plugin.Payments.Emi.Controllers
 
             strMerchantId = "96084546";
             astrFileName = "c://key//96084546.key";
-           
+
             if (Request.ServerVariables["REQUEST_METHOD"] == "POST")
             {
 
@@ -141,6 +141,7 @@ namespace Nop.Plugin.Payments.Emi.Controllers
                     respmsg = oPgResp.RespMessage;
 
                     var order = _orderService.GetOrderById(Int32.Parse(orderId));
+                   
                     if (_orderProcessingService.CanMarkOrderAsPaid(order))
                     {
                         _orderProcessingService.MarkOrderAsPaid(order);
@@ -160,31 +161,67 @@ namespace Nop.Plugin.Payments.Emi.Controllers
                 return RedirectToAction("Index", "Home", new { area = "" });
             }
 
-            Response.Write("Response code      :" + oPgResp.RespCode);
-            Response.Write("<br>");
-            Response.Write("\nResponse Message :" + oPgResp.RespMessage);
-            Response.Write("<br>");
-            Response.Write("\nMerchant Txn Id  :" + oPgResp.TxnId);
-            Response.Write("<br>");
-            Response.Write("\nEpg Txn Id		:" + oPgResp.EPGTxnId);
-            Response.Write("<br>");
-            Response.Write("\nAuthId Code		:" + oPgResp.AuthIdCode);
-            Response.Write("<br>");
-            Response.Write("RRN			    :" + oPgResp.RRN);
-            Response.Write("<br>");
-            Response.Write("CVRESP Code	    :" + oPgResp.CVRespCode);
-            Response.Write("<br>");
-            Response.Write("Cookie String	    :" + oPgResp.Cookie);
-            Response.Write("<br>");
-            Response.Write("FDMS Score		    :" + oPgResp.FDMSScore);
-            Response.Write("<br>");
-            Response.Write("FDMS Result        :" + oPgResp.FDMSResult);
         }
 
         [ValidateInput(false)]
-        public ActionResult ReturnDistributedOrder(FormCollection form)
+        public ActionResult ReturnDistributedOrder(string orderId)
         {
-            return View();
+            PGResponse oPgResp = new PGResponse();
+            EncryptionUtil lEncUtil = new EncryptionUtil();
+            string respcd = null;
+            string respmsg = null;
+            string astrResponseData = null;
+            string strMerchantId, astrFileName = null;
+            string strKey = null;
+            string strDigest = null;
+            string astrsfaDigest = null;
+
+            strMerchantId = "96084546";
+            astrFileName = "c://key//96084546.key";
+
+            if (Request.ServerVariables["REQUEST_METHOD"] == "POST")
+            {
+
+                astrResponseData = Request.Form["DATA"];
+                strDigest = Request.Form["EncryptedData"];
+                astrsfaDigest = lEncUtil.getHMAC(astrResponseData, astrFileName, strMerchantId);
+
+                if (strDigest.Equals(astrsfaDigest))
+                {
+                    oPgResp.getResponse(astrResponseData);
+                    respcd = oPgResp.RespCode;
+                    respmsg = oPgResp.RespMessage;
+
+                    var orderTransactinDetail = _orderService.GetOrderByTxnId(new Guid(orderId));
+                    var order = _orderService.GetOrderById(orderTransactinDetail.OrderId);
+                    orderTransactinDetail.PaymentStatusId = (int)PaymentStatus.Paid;
+                    decimal amountpaid = 0;
+                    foreach (var paymentInfo in order.OrderTransactionDetailItems)
+                    {
+                        if (paymentInfo.PaymentStatusId == (int)PaymentStatus.Paid)
+                            amountpaid = amountpaid + paymentInfo.TransactionAmount;
+                    }
+                    order.TotalTransactionAmount = amountpaid;
+                    if (order.OrderStatus == Core.Domain.Orders.OrderStatus.Booked || order.OrderStatus == Core.Domain.Orders.OrderStatus.Confirmed)
+                    {
+                        order.OrderStatus = Core.Domain.Orders.OrderStatus.OrderPaymentComplete;
+                    }
+                    _orderService.UpdateOrder(order);
+                    _orderService.UpdateOrderTransactionDetail(orderTransactinDetail);
+
+                    //Thank you for shopping with us. Your credit card has been charged and your transaction is successful
+                    return RedirectToRoute("CheckoutCompleted", new { orderId = order.Id });
+                }
+
+                else
+                {
+                    return RedirectToAction("Index", "Home", new { area = "" });
+                }
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home", new { area = "" });
+            }
         }
     }
 }

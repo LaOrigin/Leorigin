@@ -27,7 +27,10 @@ namespace Nop.Plugin.Payments.Emi
                 new { controller = "PaymentEmi", action = "Return" },
                 new[] { "Nop.Plugin.Payments.Emi.Controllers" });
 
-
+            routes.MapRoute("Plugin.Payments.Emi.ReturnDistributedOrder",
+               "PaymentEmi/ReturnDistributedOrder",
+               new { controller = "PaymentEmi", action = "ReturnDistributedOrder" },
+               new[] { "Nop.Plugin.Payments.Emi.Controllers" });
 
         }
         public int Priority

@@ -168,7 +168,7 @@ namespace Nop.Web.Controllers
             if (order == null)
                 throw new ArgumentNullException("order");
             var model = new OrderDetailsModel();
-
+            model.IsEmiSelected = false;
             model.Id = order.Id;
             model.CreatedOn = _dateTimeHelper.ConvertToUserTime(order.CreatedOnUtc, DateTimeKind.Utc);
             model.OrderStatus = order.OrderStatus.GetLocalizedEnum(_localizationService, _workContext);

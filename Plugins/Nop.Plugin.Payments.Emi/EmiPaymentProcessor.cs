@@ -199,6 +199,7 @@ namespace Nop.Plugin.Payments.Emi
                 string lMrtTxnID = ((long)structTimespan.TotalMilliseconds).ToString();
                 var merchantId = _EmiPaymentSettings.MerchantId.ToString();
                 var orderId = postProcessPaymentRequest.Order.Id;
+                
                 var Id = orderId.ToString();
                 var amount = postProcessPaymentRequest.Order.TotalTransactionAmount.ToString(new CultureInfo("en-US", false).NumberFormat);
              
@@ -300,8 +301,102 @@ namespace Nop.Plugin.Payments.Emi
             /// <param name="postProcessPaymentRequest">Payment info required for an order processing</param>
             public void PostProcessPaymentDistributedOrder(PostProcessTransactionPaymentRequest postProcessPaymentRequest)
             {
-               
-               
+
+                PGResponse objPGResponse = new PGResponse();
+                CustomerDetails oCustomer = new CustomerDetails();
+                SessionDetail oSession = new SessionDetail();
+                AirLineTransaction oAirLine = new AirLineTransaction();
+                MerchanDise oMerchanDise = new MerchanDise();
+
+                SFA.CardInfo objCardInfo = new SFA.CardInfo();
+
+                SFA.Merchant objMerchant = new SFA.Merchant();
+
+                ShipToAddress objShipToAddress = new ShipToAddress();
+                BillToAddress oBillToAddress = new BillToAddress();
+                ShipToAddress oShipToAddress = new ShipToAddress();
+                MPIData objMPI = new MPIData();
+                PGReserveData oPGreservData = new PGReserveData();
+                Address oHomeAddress = new Address();
+                Address oOfficeAddress = new Address();
+                // For getting unique MerchantTxnID 
+                // Only for testing purpose. 
+                // In actual scenario the merchant has to pass his transactionID
+                DateTime oldTime = new DateTime(1970, 01, 01, 00, 00, 00);
+                DateTime currentTime = DateTime.Now;
+                TimeSpan structTimespan = currentTime - oldTime;
+                string lMrtTxnID = ((long)structTimespan.TotalMilliseconds).ToString();
+                var merchantId = _EmiPaymentSettings.MerchantId.ToString();
+                var orderId = postProcessPaymentRequest.CurrentOrderTransaction.TransactionId;
+                var Id = orderId.ToString();
+                var amount = postProcessPaymentRequest.CurrentOrderTransaction.TransactionAmount.ToString(new CultureInfo("en-US", false).NumberFormat);
+
+
+                //Setting Merchant Details
+                objMerchant.setMerchantDetails(merchantId, merchantId, merchantId, "", lMrtTxnID, Id, "http://localhost:4987/PaymentEmi/ReturnDistributedOrder?orderId=" + Id, "POST", "INR", "INV123", "req.Sale", amount, "GMT+05:30", "ASP.NET64", "true", "ASP.NET64", "ASP.NET64", "ASP.NET64");
+
+                // Setting BillToAddress Details
+                oBillToAddress.setAddressDetails(postProcessPaymentRequest.Order.CustomerId.ToString(),
+                                                   postProcessPaymentRequest.Order.Customer.SystemName,
+                                                postProcessPaymentRequest.Order.BillingAddress.Address1,
+                                                 postProcessPaymentRequest.Order.BillingAddress.Address2,
+                                                 "",
+                                                  postProcessPaymentRequest.Order.BillingAddress.City,
+                                                 postProcessPaymentRequest.Order.BillingAddress.StateProvince.Name
+                                                 , postProcessPaymentRequest.Order.BillingAddress.ZipPostalCode,
+                                                 postProcessPaymentRequest.Order.BillingAddress.Country.Name,
+                                                  postProcessPaymentRequest.Order.Customer.Email);
+
+                // Setting ShipToAddress Details
+                oShipToAddress.setAddressDetails(postProcessPaymentRequest.Order.BillingAddress.Address1,
+                                                postProcessPaymentRequest.Order.BillingAddress.Address2,
+                                                "",
+                                                postProcessPaymentRequest.Order.BillingAddress.City,
+                                                postProcessPaymentRequest.Order.BillingAddress.StateProvince.Name,
+
+                                                postProcessPaymentRequest.Order.BillingAddress.ZipPostalCode,
+                                                postProcessPaymentRequest.Order.BillingAddress.Country.Name,
+                                                postProcessPaymentRequest.Order.Customer.Email);
+
+                //Setting MPI datails.
+                //objMPI.setMPIRequestDetails ("1000","INR10.00","356","2","2 shirts","","","","0","","image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/vnd.ms-powerpoint, application/vnd.ms-excel, application/msword, application/x-shockwave-flash, */*","Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)");
+
+                // Setting Name home/office Address Details 
+                // Order of Parameters =>        AddLine1, AddLine2,      AddLine3,   City,   State ,  Zip,          Country, Email id
+                oHomeAddress.setAddressDetails("2Sandeep", "Uttam Corner", "Chinchwad", "Pune", "state", "4385435873", "IND", "test@test.com");
+
+                // Order of Parameters =>        AddLine1, AddLine2,      AddLine3,   City,   State ,  Zip,          Country, Email id
+                oOfficeAddress.setAddressDetails("2Opus", "MayFairTowers", "Wakdewadi", "Pune", "state", "4385435873", "IND", "test@test.com");
+
+                // Stting  Customer Details 
+                // Order of Parameters =>  First Name,LastName ,Office Address Object,Home Address Object,Mobile No,RegistrationDate, flag for matching bill to address and ship to address 
+                oCustomer.setCustomerDetails(postProcessPaymentRequest.Order.Customer.SystemName, "", oOfficeAddress, oHomeAddress, "", "13-06-2007", "Y");
+
+                //Setting Merchant Dise Details 
+                // Order of Parameters =>       Item Purchased,Quantity,Brand,ModelNumber,Buyers Name,flag value for matching CardName and BuyerName
+                oMerchanDise.setMerchanDiseDetails("Computer", "2", "Intel", "P4", "Sandeep Patil", "Y");
+
+                //Setting  Session Details        
+                // Order of Parameters =>     Remote Address, Cookies Value            Browser Country,Browser Local Language,Browser Local Lang Variant,Browser User Agent'
+                oSession.setSessionDetails(getRemoteAddr(), getSecureCookie(HttpContext.Current.Request), "", HttpContext.Current.Request.ServerVariables["HTTP_ACCEPT_LANGUAGE"], "", HttpContext.Current.Request.ServerVariables["HTTP_USER_AGENT"]);
+
+                //Settingr AirLine Transaction Details  
+                //Order of Parameters =>               Booking Date,FlightDate,Flight   Time,Flight Number,Passenger Name,Number Of Tickets,flag for matching card name and customer name,PNR,sector from,sector to'
+                oAirLine.setAirLineTransactionDetails("10-06-2007", "22-06-2007", "13:20", "119", "Sandeep", "1", "Y", "25c", "Pune", "Mumbai");
+
+                SFAClient objSFAClient = new SFAClient("c:\\inetpub\\wwwroot\\SFAClient\\Config\\");
+                objPGResponse = objSFAClient.postSSL(objMPI, objMerchant, oBillToAddress, oShipToAddress, oPGreservData, oCustomer, oSession, oAirLine, oMerchanDise);
+
+                if (objPGResponse.RedirectionUrl != "" & objPGResponse.RedirectionUrl != null)
+                {
+                    string strResponseURL = objPGResponse.RedirectionUrl;
+                    HttpContext.Current.Response.Redirect(strResponseURL);
+                }
+                else
+                {
+                    HttpContext.Current.Response.Write("Response Code:" + objPGResponse.RespCode);
+                    HttpContext.Current.Response.Write("Response message:" + objPGResponse.RespMessage);
+                }
             }
 
 

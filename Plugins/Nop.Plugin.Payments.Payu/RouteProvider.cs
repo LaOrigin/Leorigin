@@ -21,7 +21,10 @@ namespace Nop.Plugin.Payments.Payu
                  new[] { "Nop.Plugin.Payments.Payu.Controllers" }
             );
 
-           
+            routes.MapRoute("Plugin.Payments.Payu.ReturnDistributedOrder",
+                "PaymentPayu/ReturnDistributedOrder",
+                new { controller = "PaymentPayu", action = "ReturnDistributedOrder" },
+                new[] { "Nop.Plugin.Payments.Payu.Controllers" });
            
 
         }

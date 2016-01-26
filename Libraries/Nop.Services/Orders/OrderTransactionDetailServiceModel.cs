@@ -15,5 +15,6 @@ namespace Nop.Services.Orders
         public decimal Amount { get; set; }
         public OrderStatus Status { get; set; }
         public bool IsEmiOption { get; set; }
+        public string PaymentMethodSystemName { get; set; }
     }
 }

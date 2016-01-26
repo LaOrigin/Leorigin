@@ -1811,6 +1811,7 @@ namespace Nop.Web.Controllers
                 }
                 else
                 {
+                    if (pm.PluginDescriptor.FriendlyName != "Emi")
                     checkoutTransactionModel.PaymentMethods.Add(pmModel);
                 }
             }
@@ -1869,13 +1870,15 @@ namespace Nop.Web.Controllers
                 OrderTransactionDetailServiceModel transactionModel = new OrderTransactionDetailServiceModel()
                 {
                      Amount = amount,
-                      OrderId = orderId,
-                       CustomerId = _workContext.CurrentCustomer.Id,
-                     IsEmiOption = IsEmiOption
+                     OrderId = orderId,
+                     CustomerId = _workContext.CurrentCustomer.Id,
+                     IsEmiOption = IsEmiOption,
+                     PaymentMethodSystemName = processPaymentRequest.PaymentMethodSystemName
                 };
 
 
                 var placeOrderResult = _orderProcessingService.ProcessOrderTransaction(transactionModel);
+               
                 if (placeOrderResult.Success)
                 {
                     _httpContext.Session["OrderPaymentInfo"] = null;
@@ -1885,6 +1888,7 @@ namespace Nop.Web.Controllers
                     };
                     var order = _orderService.GetOrderById(placeOrderResult.PlacedOrder.OrderId);
                     postProcessPaymentRequest.Order = order;
+                    postProcessPaymentRequest.Order.PaymentMethodSystemName = processPaymentRequest.PaymentMethodSystemName;
                     _paymentService.PostProcessTransactionPayment(postProcessPaymentRequest);
 
                     if (_webHelper.IsRequestBeingRedirected || _webHelper.IsPostBeingDone)

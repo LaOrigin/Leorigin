@@ -508,6 +508,8 @@ namespace Nop.Services.Orders
             if (order == null)
                 throw new ArgumentNullException("order");
 
+            
+
             if (order.PaymentStatus == PaymentStatus.Paid && !order.PaidDateUtc.HasValue)
             {
                 //ensure that paid date is set
@@ -539,9 +541,23 @@ namespace Nop.Services.Orders
             {
                 if (order.PaymentStatus == PaymentStatus.Paid)
                 {
+
                     if (order.ShippingStatus == ShippingStatus.ShippingNotRequired || order.ShippingStatus == ShippingStatus.Delivered)
                     {
                         SetOrderStatus(order, OrderStatus.Complete, true);
+                        
+                        
+                    }
+                    else
+                    {
+                        if (order.OrderTotal - order.TotalTransactionAmount > 0)
+                        {
+                            SetOrderStatus(order, OrderStatus.Booked, true);
+                        }
+                        else
+                        {
+                            SetOrderStatus(order, OrderStatus.OrderPaymentComplete, true);
+                        }
                     }
                 }
             }
@@ -1101,7 +1117,7 @@ namespace Nop.Services.Orders
                             CustomerCurrencyCode = customerCurrencyCode,
                             CurrencyRate = customerCurrencyRate,
                             AffiliateId = affiliateId,
-                            OrderStatus = OrderStatus.Booked,
+                            OrderStatus = OrderStatus.Pending,
                             AllowStoringCreditCardNumber = processPaymentResult.AllowStoringCreditCardNumber,
                             CardType = processPaymentResult.AllowStoringCreditCardNumber ? _encryptionService.EncryptText(processPaymentRequest.CreditCardType) : string.Empty,
                             CardName = processPaymentResult.AllowStoringCreditCardNumber ? _encryptionService.EncryptText(processPaymentRequest.CreditCardName) : string.Empty,
@@ -1554,25 +1570,28 @@ namespace Nop.Services.Orders
 
 
             if (transactiondetail.OrderId != null)
+            
             {
                 Order order = _orderService.GetOrderById(transactiondetail.OrderId);
                 if(order!= null)
                 {
-                         decimal ? amountTobePaid = null;
-                        if (order.OrderStatus == OrderStatus.OrderPaymentComplete )
+                    try
+                    {
+                        decimal? amountTobePaid = null;
+                        if (order.OrderStatus == OrderStatus.OrderPaymentComplete)
                         {
                             throw new NopException(string.Format("Order Payment has already been Completed"));
                         }
-                    
+
                         if (order.OrderStatus == OrderStatus.Booked)
                         {
                             if (transactiondetail.IsEmiOption)
                                 amountTobePaid = order.OrderTotal - order.TotalTransactionAmount;
                             else
-                            amountTobePaid = (_catalogSettings.PercentConfirmAmount * order.OrderTotal) / 100;
+                                amountTobePaid = (_catalogSettings.PercentConfirmAmount * order.OrderTotal) / 100;
                         }
 
-                       else if (order.OrderStatus == OrderStatus.Confirmed)
+                        else if (order.OrderStatus == OrderStatus.Confirmed)
                         {
                             amountTobePaid = order.OrderTotal - order.TotalTransactionAmount;
                         }
@@ -1582,18 +1601,11 @@ namespace Nop.Services.Orders
                             throw new NopException(string.Format("Security Issue. Transaction Cannot be processesed"));
                         }
 
-                        decimal amountpaid = 0;
-                        foreach (var paymentInfo in order.OrderTransactionDetailItems)
-                        {
-                            amountpaid = amountpaid + paymentInfo.TransactionAmount;
-                        }
-                        order.TotalTransactionAmount = amountpaid + transactiondetail.Amount;
-
                         OrderTransactionDetails ordertransactiondetail = new OrderTransactionDetails()
                         {
                             TransactionAmount = transactiondetail.Amount,
                             Order = order,
-                            PaymentMethod = order.PaymentMethodSystemName,
+                            PaymentMethod = transactiondetail.PaymentMethodSystemName,
                             TransactionId = Guid.NewGuid().ToString(),
                             TransactionDate = DateTime.Now
 
@@ -1602,6 +1614,13 @@ namespace Nop.Services.Orders
                         order.OrderTransactionDetailItems.Add(ordertransactiondetail);
                         _orderService.UpdateOrder(order);
                         result.PlacedOrder = ordertransactiondetail;
+                    }
+                    catch (Exception exc)
+                    {
+                        _logger.Error(exc.Message, exc);
+                        result.AddError(exc.Message);
+                    }
+                        
 
 
                     }
@@ -2249,6 +2268,12 @@ namespace Nop.Services.Orders
                 throw new NopException("You can't mark this order as paid");
 
             order.PaymentStatusId = (int)PaymentStatus.Paid;
+            
+            if (order.OrderTransactionDetailItems.Count == 1)
+            {
+                order.OrderTransactionDetailItems.First().PaymentStatusId = (int)PaymentStatus.Paid;
+            }
+
             order.PaidDateUtc = DateTime.UtcNow;
             _orderService.UpdateOrder(order);
 

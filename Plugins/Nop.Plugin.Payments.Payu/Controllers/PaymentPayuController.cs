@@ -230,7 +230,14 @@ namespace Nop.Plugin.Payments.Payu.Controllers
                     var orderTransactinDetail = _orderService.GetOrderByTxnId(new Guid(orderId));
                     var order = _orderService.GetOrderById(orderTransactinDetail.OrderId);
                     orderTransactinDetail.PaymentStatusId = (int)PaymentStatus.Paid;
-                    
+                    decimal amountpaid = 0;
+                    foreach (var paymentInfo in order.OrderTransactionDetailItems)
+                    {
+                        if (paymentInfo.PaymentStatusId == (int)PaymentStatus.Paid)
+                        amountpaid = amountpaid + paymentInfo.TransactionAmount;
+                    }
+                    order.TotalTransactionAmount = amountpaid;
+
                     if (order.OrderStatus == Core.Domain.Orders.OrderStatus.Booked)
                     {
                         order.OrderStatus = Core.Domain.Orders.OrderStatus.Confirmed;

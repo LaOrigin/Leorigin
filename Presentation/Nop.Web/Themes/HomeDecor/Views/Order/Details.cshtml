@@ -14,7 +14,15 @@
 }
 <script type="text/javascript">
     $(document).ready(function () {
-        $("#DivEmi").hide();
+        if( $("input[name='IsEmiSelected']").val() == "True"){
+
+            $("#DivEmi").show();
+            $("#DivNonEmi").hide();
+        }
+        else {
+            $("#DivEmi").hide();
+            $("#DivNonEmi").show();
+        }
         $("input[name='IsEmiSelected']").on("change", function () {
             if ($(this).val() == "True") {
                 $("#DivEmi").show();
