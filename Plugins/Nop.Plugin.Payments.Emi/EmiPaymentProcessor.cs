@@ -205,7 +205,7 @@ namespace Nop.Plugin.Payments.Emi
              
 
                 //Setting Merchant Details
-                objMerchant.setMerchantDetails(merchantId, "", "", "", lMrtTxnID, Id, "http://localhost:4987/PaymentEmi/Return?orderId=" + Id, "POST", "INR", "INV123", "req.Sale", amount, "GMT+05:30", "ASP.NET64", "true", "ASP.NET64", "ASP.NET64", "ASP.NET64");
+                objMerchant.setMerchantDetails(merchantId, "", "", "", lMrtTxnID, Id, "https://www.laorigin.com/PaymentEmi/Return?orderId=" + Id, "POST", "INR", "INV123", "req.Sale", amount, "GMT+05:30", "ASP.NET64", "true", "ASP.NET64", "ASP.NET64", "ASP.NET64");
 
                 // Setting BillToAddress Details
                    oBillToAddress.setAddressDetails(postProcessPaymentRequest.Order.CustomerId.ToString(),
@@ -333,7 +333,7 @@ namespace Nop.Plugin.Payments.Emi
 
 
                 //Setting Merchant Details
-                objMerchant.setMerchantDetails(merchantId, merchantId, merchantId, "", lMrtTxnID, Id, "http://localhost:4987/PaymentEmi/ReturnDistributedOrder?orderId=" + Id, "POST", "INR", "INV123", "req.Sale", amount, "GMT+05:30", "ASP.NET64", "true", "ASP.NET64", "ASP.NET64", "ASP.NET64");
+                objMerchant.setMerchantDetails(merchantId, merchantId, merchantId, "", lMrtTxnID, Id, "https://www.laorigin.com/PaymentEmi/ReturnDistributedOrder?orderId=" + Id, "POST", "INR", "INV123", "req.Sale", amount, "GMT+05:30", "ASP.NET64", "true", "ASP.NET64", "ASP.NET64", "ASP.NET64");
 
                 // Setting BillToAddress Details
                 oBillToAddress.setAddressDetails(postProcessPaymentRequest.Order.CustomerId.ToString(),
