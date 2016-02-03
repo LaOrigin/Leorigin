@@ -620,6 +620,11 @@ namespace Nop.Web.Infrastructure
                             new { controller = "Boards", action = "Search" },
                             new[] { "Nop.Web.Controllers" });
 
+            routes.MapLocalizedRoute("ModalEMI",
+                           "Product/EMIModal",
+                           new { controller = "Product", action = "EMIModal" },
+                           new[] { "Nop.Web.Controllers" });
+
             //private messages
             routes.MapLocalizedRoute("PrivateMessages",
                             "privatemessages/{tab}",

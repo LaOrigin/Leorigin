@@ -28,6 +28,7 @@ using Nop.Web.Framework.Controllers;
 using Nop.Web.Framework.Security;
 using Nop.Web.Models.Checkout;
 using Nop.Web.Models.Common;
+using Nop.Core.Domain.Catalog;
 
 namespace Nop.Web.Controllers
 {
@@ -61,7 +62,7 @@ namespace Nop.Web.Controllers
         private readonly IAddressAttributeService _addressAttributeService;
         private readonly IAddressAttributeFormatter _addressAttributeFormatter;
 
-
+        private readonly CatalogSettings _catalogSettings;
 
         private readonly OrderSettings _orderSettings;
         private readonly RewardPointsSettings _rewardPointsSettings;
@@ -96,6 +97,7 @@ namespace Nop.Web.Controllers
             IPluginFinder pluginFinder,
             IOrderTotalCalculationService orderTotalCalculationService,
             ILogger logger,
+          CatalogSettings catalogSettings,
             IOrderService orderService,
             IWebHelper webHelper,
             HttpContextBase httpContext,
@@ -135,7 +137,7 @@ namespace Nop.Web.Controllers
             this._addressAttributeParser = addressAttributeParser;
             this._addressAttributeService = addressAttributeService;
             this._addressAttributeFormatter = addressAttributeFormatter;
-
+            this._catalogSettings = catalogSettings;
             this._orderSettings = orderSettings;
             this._rewardPointsSettings = rewardPointsSettings;
             this._paymentSettings = paymentSettings;
@@ -354,6 +356,20 @@ namespace Nop.Web.Controllers
                 .Where(pm => pm.PaymentMethodType == PaymentMethodType.Standard || pm.PaymentMethodType == PaymentMethodType.Redirection)
                 .Where(pm => !pm.HidePaymentMethod(cart))
                 .ToList();
+            decimal cartadvanceTotal = 0;
+            var bookedamount = _catalogSettings.BookedAmount;
+            if (cart.Count > 0)
+            {
+                foreach (var item in cart)
+                {
+                    if (!item.Product.IsHomeDecor)
+                        cartadvanceTotal = cartadvanceTotal + bookedamount;
+                    else
+                    {
+                        cartadvanceTotal = cartadvanceTotal + item.Product.Price;
+                    }
+                }
+            }
             foreach (var pm in paymentMethods)
             {
                 if (cart.IsRecurring() && pm.RecurringPaymentType == RecurringPaymentType.NotSupported)
@@ -371,8 +387,15 @@ namespace Nop.Web.Controllers
                 decimal rate = _currencyService.ConvertFromPrimaryStoreCurrency(rateBase, _workContext.WorkingCurrency);
                 if (rate > decimal.Zero)
                     pmModel.Fee = _priceFormatter.FormatPaymentMethodAdditionalFee(rate, true);
-                if(pm.PluginDescriptor.FriendlyName !="Emi")
-                model.PaymentMethods.Add(pmModel);
+
+
+                if (cartadvanceTotal < 1500)
+                {
+                    if (pm.PluginDescriptor.FriendlyName != "Emi")
+                        model.PaymentMethods.Add(pmModel);
+                }
+                else
+                    model.PaymentMethods.Add(pmModel);
             }
 
             //find a selected (previously) payment method

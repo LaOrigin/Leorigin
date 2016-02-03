@@ -139,16 +139,20 @@ namespace Nop.Plugin.Payments.Emi.Controllers
                     oPgResp.getResponse(astrResponseData);
                     respcd = oPgResp.RespCode;
                     respmsg = oPgResp.RespMessage;
-
-                    var order = _orderService.GetOrderById(Int32.Parse(orderId));
-                   
-                    if (_orderProcessingService.CanMarkOrderAsPaid(order))
+                    if(Int32.Parse(respcd) == 0)
                     {
-                        _orderProcessingService.MarkOrderAsPaid(order);
+                        var order = _orderService.GetOrderById(Int32.Parse(orderId));
+
+                        if (_orderProcessingService.CanMarkOrderAsPaid(order))
+                        {
+                            _orderProcessingService.MarkOrderAsPaid(order);
+                        }
+
+                        //Thank you for shopping with us. Your credit card has been charged and your transaction is successful
+                        return RedirectToRoute("CheckoutCompleted", new { orderId = order.Id });
                     }
 
-                    //Thank you for shopping with us. Your credit card has been charged and your transaction is successful
-                    return RedirectToRoute("CheckoutCompleted", new { orderId = order.Id });
+                    return Content("Transaction Decline");
                 }
 
                 else
@@ -191,26 +195,33 @@ namespace Nop.Plugin.Payments.Emi.Controllers
                     oPgResp.getResponse(astrResponseData);
                     respcd = oPgResp.RespCode;
                     respmsg = oPgResp.RespMessage;
-
-                    var orderTransactinDetail = _orderService.GetOrderByTxnId(new Guid(orderId));
-                    var order = _orderService.GetOrderById(orderTransactinDetail.OrderId);
-                    orderTransactinDetail.PaymentStatusId = (int)PaymentStatus.Paid;
-                    decimal amountpaid = 0;
-                    foreach (var paymentInfo in order.OrderTransactionDetailItems)
+                    if(Int32.Parse(respcd) == 0)
                     {
-                        if (paymentInfo.PaymentStatusId == (int)PaymentStatus.Paid)
-                            amountpaid = amountpaid + paymentInfo.TransactionAmount;
-                    }
-                    order.TotalTransactionAmount = amountpaid;
-                    if (order.OrderStatus == Core.Domain.Orders.OrderStatus.Booked || order.OrderStatus == Core.Domain.Orders.OrderStatus.Confirmed)
-                    {
-                        order.OrderStatus = Core.Domain.Orders.OrderStatus.OrderPaymentComplete;
-                    }
-                    _orderService.UpdateOrder(order);
-                    _orderService.UpdateOrderTransactionDetail(orderTransactinDetail);
+                        var orderTransactinDetail = _orderService.GetOrderByTxnId(new Guid(orderId));
+                        var order = _orderService.GetOrderById(orderTransactinDetail.OrderId);
+                        orderTransactinDetail.PaymentStatusId = (int)PaymentStatus.Paid;
+                        decimal amountpaid = 0;
+                        foreach (var paymentInfo in order.OrderTransactionDetailItems)
+                        {
+                            if (paymentInfo.PaymentStatusId == (int)PaymentStatus.Paid)
+                                amountpaid = amountpaid + paymentInfo.TransactionAmount;
+                        }
+                        order.TotalTransactionAmount = amountpaid;
+                        if (order.OrderStatus == Core.Domain.Orders.OrderStatus.Booked || order.OrderStatus == Core.Domain.Orders.OrderStatus.Confirmed)
+                        {
+                            order.OrderStatus = Core.Domain.Orders.OrderStatus.OrderPaymentComplete;
+                        }
+                        _orderService.UpdateOrder(order);
+                        _orderService.UpdateOrderTransactionDetail(orderTransactinDetail);
 
-                    //Thank you for shopping with us. Your credit card has been charged and your transaction is successful
-                    return RedirectToRoute("CheckoutCompleted", new { orderId = order.Id });
+                        //Thank you for shopping with us. Your credit card has been charged and your transaction is successful
+                        return RedirectToRoute("CheckoutCompleted", new { orderId = order.Id });
+                    }
+                    else
+                    {
+                        return Content("Transaction Declined");
+                    }
+                    
                 }
 
                 else

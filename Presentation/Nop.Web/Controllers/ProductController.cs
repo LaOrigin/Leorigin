@@ -931,6 +931,14 @@ namespace Nop.Web.Controllers
         //    }
         //    return "";
         //}
+        public ActionResult EMIModal(int amount)
+        {
+            ProductEmiModal modal = new ProductEmiModal();
+            int amt = amount;
+            var modalJson = modal.LoadJson(amt);
+
+            return PartialView("EMIModal", modalJson);
+        }
 
         public string getproduct(int productId=0, int productattrid = 0)
 

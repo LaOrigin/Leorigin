@@ -78,8 +78,84 @@
 <!--product breadcrumb-->
 @Html.Partial("_ProductBreadcrumb", Model.Breadcrumb)
 @Html.Widget("productdetails_after_breadcrumb", Model.Id)
+
+<style>
+    .modal-content {
+        width: 600px !important;
+        margin: 30px auto !important;
+    }
+    .header-stick {
+    background: none repeat scroll 0 0 #fff;
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+    /* z-index: 11111; */
+}
+
+     .price_or_str {
+    margin: 10px 0;
+    color: #BA5A02;
+    font-size: 11px;
+}
+     .emi_price {
+    margin-bottom: 6px;
+}
+     .emistr {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+     .emi_price_str {
+    color: #222222;
+}
+
+     .more {
+    color: #BA5A02;
+    vertical-align: middle;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+     .emi_section {
+    display: inline-block;
+}
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        // Initialize numeric spinner input boxes
+        //$(".numeric-spinner").spinedit();
+        // Initialize modal dialog
+        // attach modal-container bootstrap attributes to links with .modal-link class.
+        // when a link is clicked with these attributes, bootstrap will display the href content in a modal dialog.
+        $('body').on('click', '.modal-link', function (e) {
+            e.preventDefault();
+            $(this).attr('data-target', '#modal-container');
+            $(this).attr('data-toggle', 'modal');
+        });
+        // Attach listener to .modal-close-btn's so that when the button is pressed the modal dialog disappears
+        $('body').on('click', '.modal-close-btn', function () {
+            $('#modal-container').modal('hide');
+        });
+        //clear modal cache, so that new content can be loaded
+        $('#modal-container').on('hidden.bs.modal', function () {
+            $(this).removeData('bs.modal');
+        });
+        $('#CancelModal').on('click', function () {
+            return false;
+        });
+    });
+</script>
+
 <div class="page product-details-page">
+    <div id="modal-container" class="modal fade"
+         tabindex="-1" role="dialog">
+        <div class="modal-content"></div>
+    </div>
     <div class="page-body">
+       
         @Html.Widget("productdetails_top", Model.Id)
         @using (Html.BeginRouteForm("Product", new { SeName = Model.SeName }, FormMethod.Post, new { id = "product-details-form" }))
         {
@@ -333,8 +409,29 @@
                                                     
                                                     <input type="button" id="add-to-cart-button-@AddToCartModel.ProductId" class="product-box-add-to-cart-button-mobile" value="@addToCartText" data-productid="@AddToCartModel.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = AddToCartModel.ProductId, shoppingCartTypeId = (int)Nop.Core.Domain.Orders.ShoppingCartType.ShoppingCart })    ', '#product-details-form');return false;" />
                                                 }
+                                               @if (ProductPriceModel.PriceValue > 1500)
+                                               {
+                                                 
                                                 
-                                               
+                                                <div class="emi_section" id="emi_sofaprod">
+                                                    <div class="price_or_str">OR</div>
+                                                    <div class="emi_price">
+                                                        <div class="emistr">
+                                                            EMI options starting from
+                                                        </div>
+                                                        <span class="emi_price_str">
+                                                            &#8377  @Math.Round(((Convert.ToInt32(ProductPriceModel.PriceValue) * 1.08 / 100 * Math.Pow((1 + 1.08 / 100), 12)) / ((Math.Pow((1 + 1.08 / 100), 12) - 1))))
+                                                         
+                                                        </span>
+                                                    </div>
+
+
+                                                    @Html.ActionLink("More Details ", "EMIModal", "Product",
+          new { amount = Convert.ToInt32(ProductPriceModel.PriceValue) }, new { @class = "modal-link  more" })
+                                                    
+                                                </div>
+                                               }
+
 @* @if (!Model.DisableWishlistButton && Model.UpdatedShoppingCartItemId == 0)
             {
                 <input type="button" id="add-to-wishlist-button-@Model.ProductId" class="button-2 add-to-wishlist-button" value="@T("ShoppingCart.AddToWishlist")" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.Wishlist })', '#product-details-form');return false;" />
@@ -350,9 +447,9 @@
                                     @*@Html.Partial("_ProductReviewOverview", Model.ProductReviewOverview)
                                     @Html.Partial("_ShareButton", Model)*@
                                 </div>
-                                <div class="delivery-list">
+                                @*<div class="delivery-list">
                                     Free Delivery,Payment on Delivery Free Installation
-                                </div>
+                                </div>*@
                                 @*@Html.Partial("_ProductEmailAFriendButton", Model)*@
                                 @*@Html.Partial("_CompareProductsButton", Model)*@
 
@@ -602,9 +699,9 @@
         #toggletable tr:nth-child(even) {
             background: #F2F2F2;
         }
-    tr > th {
+    /*tr > th {
         border:1px solid #ccc;
-    }
+    }*/
     .dis {
         color: #1C2E5C;
         margin-bottom:10px;

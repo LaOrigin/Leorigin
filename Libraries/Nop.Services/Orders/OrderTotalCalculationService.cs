@@ -399,7 +399,10 @@ namespace Nop.Services.Orders
             {
                 foreach (var item in cart)
                 {
-                    cartadvanceTotal = cartadvanceTotal + bookedamount;
+                    if (!item.Product.IsHomeDecor)
+                        cartadvanceTotal = cartadvanceTotal + bookedamount * item.Quantity;
+                    else
+                        cartadvanceTotal = cartadvanceTotal + item.Product.Price * item.Quantity;
                 }
             }
             return cartadvanceTotal;

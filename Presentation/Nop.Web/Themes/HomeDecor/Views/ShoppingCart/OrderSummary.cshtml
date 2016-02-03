@@ -47,6 +47,8 @@
                 <col class="attr1" />
                 <col width="1" class="attr1" />
                 <col width="1" class="attr1" />
+                <col width="1" class="attr1" />
+                <col width="1" class="attr1" />
                 <col width="1" />
                 @if (Model.IsEditable)
                 {
@@ -80,9 +82,16 @@
                     <th data-hide="w410" class="attr1">
                         @T("ShoppingCart.Quantity")
                     </th>
+                    <th data-hide="w410" class="attr1">
+                        Adv Amt
+                    </th>
+                    <th data-hide="w410" class="attr1">
+                        Due Amt
+                    </th>
                     <th class="end">
                         @T("ShoppingCart.ItemTotal")
                     </th>
+
                     @if (Model.IsEditable)
                     {                       <th class="attr1">
                         <div class="attr1">@T("ShoppingCart.Remove")</div>
@@ -185,6 +194,17 @@
                             }
                         </td>
                         <td class="subtotal nobr end">
+                          
+
+                            <span class="product-subtotal">@item.AdvancedAmount</span>
+
+                        </td>
+                        <td class="subtotal nobr end">
+
+                            <span class="product-subtotal">@item.DueAmount</span>
+
+                        </td>
+                        <td class="subtotal nobr end">
                             <span class="td-title attr1">@T("ShoppingCart.ItemTotal"):</span>
                             <span class="product-subtotal">@item.SubTotal</span>
                             @if (!String.IsNullOrEmpty(item.Discount))
@@ -194,6 +214,7 @@
                                 </div>
                             }
                         </td>
+                        
                         @if (Model.IsEditable)
                         {  
                             <td class="remove-from-cart footable-first-column attr1">

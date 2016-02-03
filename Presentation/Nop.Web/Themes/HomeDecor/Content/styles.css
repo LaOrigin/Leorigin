@@ -8527,7 +8527,7 @@ text-transform: uppercase;
     position: relative;
     width: 1020px;
     margin: 0 auto;
-    z-index: 11111;
+    z-index: 10;
 }
 
 .b-top {

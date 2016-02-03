@@ -67,6 +67,8 @@ namespace Nop.Web.Models.ShoppingCart
 
             public int ProductId { get; set; }
 
+            public bool IsHomeDecor { get; set; }
+
             public string ProductName { get; set; }
 
             public string ProductSeName { get; set; }
@@ -78,6 +80,11 @@ namespace Nop.Web.Models.ShoppingCart
             public string Discount { get; set; }
 
             public int Quantity { get; set; }
+
+            public string AdvancedAmount { get; set; }
+
+            public string DueAmount { get; set; }
+
             public List<SelectListItem> AllowedQuantities { get; set; }
             
             public string AttributeInfo { get; set; }

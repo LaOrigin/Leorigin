@@ -466,9 +466,13 @@ namespace Nop.Web.Controllers
                     ProductId = sci.Product.Id,
                     ProductName = sci.Product.GetLocalized(x => x.Name),
                     ProductSeName = sci.Product.GetSeName(),
+                    IsHomeDecor = sci.Product.IsHomeDecor,
+                    
                     Quantity = sci.Quantity,
                     AttributeInfo = _productAttributeFormatter.FormatAttributes(sci.Product, sci.AttributesXml,_workContext.CurrentCustomer,"<br/>",true,false),
                 };
+
+               
                 
                 //allow editing?
                 //1. setting enabled?
@@ -518,6 +522,7 @@ namespace Nop.Web.Controllers
                     cartItemModel.UnitPrice = _priceFormatter.FormatPrice(shoppingCartUnitPriceWithDiscount);
                 }
                 //subtotal, discount
+                decimal subtotal = 0;
                 if (sci.Product.CallForPrice)
                 {
                     cartItemModel.SubTotal = _localizationService.GetResource("Products.CallForPrice");
@@ -531,7 +536,7 @@ namespace Nop.Web.Controllers
                     decimal shoppingCartItemSubTotalWithDiscountBase = _taxService.GetProductPrice(sci.Product, _priceCalculationService.GetSubTotal(sci, true, out shoppingCartItemDiscountBase, out scDiscount), out taxRate);
                     decimal shoppingCartItemSubTotalWithDiscount = _currencyService.ConvertFromPrimaryStoreCurrency(shoppingCartItemSubTotalWithDiscountBase, _workContext.WorkingCurrency);
                     cartItemModel.SubTotal = _priceFormatter.FormatPrice(shoppingCartItemSubTotalWithDiscount);
-
+                    subtotal = shoppingCartItemSubTotalWithDiscount;
                     //display an applied discount amount
                     if (scDiscount != null)
                     {
@@ -563,14 +568,25 @@ namespace Nop.Web.Controllers
                     sci.RentalEndDateUtc,
                     sci.Quantity,
                     false);
+
+           
+                if (cartItemModel.IsHomeDecor)
+                {
+                    cartItemModel.AdvancedAmount = cartItemModel.SubTotal;
+                    cartItemModel.DueAmount = _priceFormatter.FormatPrice(0);
+                    
+                }
+                else
+                {
+                    decimal advamt = _catalogSettings.BookedAmount * cartItemModel.Quantity;
+                    cartItemModel.AdvancedAmount = _priceFormatter.FormatPrice(advamt);
+                    cartItemModel.DueAmount = _priceFormatter.FormatPrice(subtotal - advamt);
+                }
+
                 foreach (var warning in itemWarnings)
                     cartItemModel.Warnings.Add(warning);
                 model.Items.Add(cartItemModel);
-                if(sci.Product.IsHomeDecor)
-                {
-                    model.DecorItems.Add(cartItemModel);
-                }
-                model.NonDecorItems.Add(cartItemModel);
+               
             }
 
             #endregion
@@ -694,8 +710,10 @@ namespace Nop.Web.Controllers
                     Id = sci.Id,
                     Sku = sci.Product.FormatSku(sci.AttributesXml, _productAttributeParser),
                     ProductId = sci.Product.Id,
+                    
                     ProductName = sci.Product.GetLocalized(x => x.Name),
                     ProductSeName = sci.Product.GetSeName(),
+                     
                     Quantity = sci.Quantity,
                     AttributeInfo = _productAttributeFormatter.FormatAttributes(sci.Product, sci.AttributesXml,_workContext.CurrentCustomer,"<br/>",true,false),
                 };
@@ -1062,7 +1080,11 @@ namespace Nop.Web.Controllers
                 {
                     if (!item.Product.IsHomeDecor)
                     {
-                        advancetotal = advancetotal + advancePerItem;
+                        advancetotal = advancetotal + advancePerItem * item.Quantity;
+                    }
+                    else
+                    {
+                        advancetotal = advancetotal + item.Product.Price * item.Quantity;
                     }
                    
                 }

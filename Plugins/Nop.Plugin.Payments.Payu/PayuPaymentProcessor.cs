@@ -84,8 +84,8 @@ namespace Nop.Plugin.Payments.Payu
             remotePostHelper.Add("Order_Id", orderId.ToString());
 			remotePostHelper.Add("txnid", postProcessPaymentRequest.Order.OrderGuid.ToString());
 			
-            remotePostHelper.Add("surl", _webHelper.GetStoreLocation(false) + "PaymentPayu/Return");
-			remotePostHelper.Add("furl", _webHelper.GetStoreLocation(false) + "PaymentPayu/Return");
+            remotePostHelper.Add("surl", _webHelper.GetStoreLocation(true) + "PaymentPayu/Return");
+			remotePostHelper.Add("furl", _webHelper.GetStoreLocation(true) + "PaymentPayu/Return");
             remotePostHelper.Add("hash", myUtility.getchecksum(_PayuPaymentSettings.MerchantId.ToString(),
                 postProcessPaymentRequest.Order.OrderGuid.ToString(), postProcessPaymentRequest.Order.TotalTransactionAmount.ToString(new CultureInfo("en-US", false).NumberFormat),
                 "productinfo",postProcessPaymentRequest.Order.BillingAddress.FirstName.ToString(),
@@ -154,8 +154,8 @@ namespace Nop.Plugin.Payments.Payu
             remotePostHelper.Add("Order_Id", orderId.ToString());
             remotePostHelper.Add("txnid", postProcessPaymentRequest.CurrentOrderTransaction.TransactionId);
 
-            remotePostHelper.Add("surl", _webHelper.GetStoreLocation(false) + "PaymentPayu/ReturnDistributedOrder");
-            remotePostHelper.Add("furl", _webHelper.GetStoreLocation(false) + "PaymentPayu/ReturnDistributedOrder");
+            remotePostHelper.Add("surl", _webHelper.GetStoreLocation(true) + "PaymentPayu/ReturnDistributedOrder");
+            remotePostHelper.Add("furl", _webHelper.GetStoreLocation(true) + "PaymentPayu/ReturnDistributedOrder");
             remotePostHelper.Add("hash", myUtility.getchecksum(_PayuPaymentSettings.MerchantId.ToString(),
                 postProcessPaymentRequest.CurrentOrderTransaction.TransactionId, postProcessPaymentRequest.CurrentOrderTransaction.TransactionAmount.ToString(new CultureInfo("en-US", false).NumberFormat),
                 "productinfo", postProcessPaymentRequest.Order.BillingAddress.FirstName.ToString(),

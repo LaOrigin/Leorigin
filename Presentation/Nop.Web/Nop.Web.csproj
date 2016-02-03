@@ -259,6 +259,7 @@
     <Compile Include="Models\Catalog\BackInStockSubscribeModel.cs" />
     <Compile Include="Models\Catalog\CategorySimpleModel.cs" />
     <Compile Include="Models\Catalog\CompareProductsModel.cs" />
+    <Compile Include="Models\Catalog\ProductEmiModal.cs" />
     <Compile Include="Models\Catalog\VendorModel.cs" />
     <Compile Include="Models\Catalog\VendorNavigationModel.cs" />
     <Compile Include="Models\Catalog\ProductOverviewModel.cs" />
@@ -967,6 +968,8 @@
     <Content Include="Plugins\Testimonial.Slider\Scripts\jquery.jcarousel.min.js" />
     <Content Include="Plugins\Testimonial.Slider\Themes\DefaultClean\Upload\no-image-available.jpg" />
     <Content Include="Plugins\Testimonial.Slider\Themes\DefaultClean\Upload\user-icon.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\fineuploader\edit.gif" />
     <Content Include="Scripts\fineuploader\fineuploader-4.2.2.css" />
     <Content Include="Scripts\fineuploader\fineuploader-4.2.2.min.css" />
@@ -1029,6 +1032,7 @@
     <Content Include="Content\kendo\2014.1.318\images\kendoui.ttf" />
     <Content Include="App_Data\uas_20140809-02.ini" />
     <None Include="Properties\PublishProfiles\leorigin_publish.pubxml" />
+    <Content Include="Scripts\EMIJson.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\fineuploader\iframe.xss.response-4.2.2.js" />
     <Content Include="Scripts\fineuploader\jquery.fineuploader-4.2.2.js" />
@@ -2370,6 +2374,7 @@
     <Content Include="Themes\HomeDecor\Views\Common\AboutUs.cshtml" />
     <Content Include="Themes\HomeDecor\Views\Checkout\PaymentMethodTransaction.cshtml" />
     <Content Include="Themes\HomeDecor\Views\Checkout\PaymentInfoTransaction.cshtml" />
+    <Content Include="Themes\HomeDecor\Views\Product\EMIModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />

@@ -1,0 +1,327 @@
+﻿@model Nop.Web.Models.Catalog.ProductEmiModal
+
+<div class="modal-body">
+
+
+    <style>
+        .emisplit .emisplitcontent {
+            padding: 25px 30px;
+            font-size: 12px;
+            color: #484848;
+            line-height: 18px;
+        }
+
+        .emisplit .emiheader {
+            color: #BA5A02;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin: 0;
+            text-align: center;
+            border-bottom: 1px solid #BA5A02;
+            margin: 10px 0 30px;
+            line-height: 1px;
+        }
+
+            .emisplit .emiheader span {
+                background: #FFFFFF;
+                padding: 0 10px;
+            }
+
+        .tabs:before, .tabs:after {
+            content: " ";
+            display: table;
+        }
+
+        .tabs:after {
+            clear: both;
+        }
+
+        .emisplit .emisplitcontent .emicontent:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .emisplit .subheader {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .emisplit .creditlist {
+            margin-top: 23px;
+        }
+
+        .emisplit .nav-tabs > li {
+            border-bottom: 1px solid #484848;
+        }
+
+        .nav-tabs > li {
+            margin-bottom: 0 !important;
+            margin-left: 0;
+        }
+
+        dl {
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1.6;
+            list-style-position: outside;
+            margin-bottom: 1.25rem;
+        }
+
+        dl {
+            display: block;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+
+        .tabs dd, .tabs .tab-title {
+            float: left;
+            list-style: none;
+            margin-bottom: 0 !important;
+            position: relative;
+        }
+
+        .emisplit .tabs-content {
+            margin-bottom: 0;
+        }
+
+            .emisplit .tabs-content .content {
+                width: 100%;
+            }
+
+        .tabs-content > .content.active {
+            display: block;
+            float: none;
+        }
+
+        .sr-only {
+            background: none;
+            top: 5px;
+            right: 5px;
+            font-weight: normal;
+            color: #666;
+            font-size: 17px;
+            width: 17px;
+            height: 17px;
+        }
+
+        .reveal-modal > :last-child {
+            margin-bottom: 0;
+        }
+        .spanclose{
+            float:right;
+        }
+        apollo-sofa-mistmedia="screen" .close-reveal-modal {
+            z-index: 1000;
+        }
+    </style>
+
+    <div class="modal-body">
+      
+        <div class="emisplit reveal-modal open" data-reveal="" id="reveal_sofaprod" aria-hidden="false" style="display: block; opacity: 1; visibility: visible; top: 5591px;" tabindex="0">
+            <button type="button" class="close spanclose" data-dismiss="modal"><span  aria-hidden="true">&times;</span></button>
+             <div class="emisplitcontent">
+                <div class="emiheader">
+                    <span>EMI Options</span>
+                </div>
+                <div class="emicontent">
+                    <div class="subheader">Credit Cards</div>
+                    <div class="emisubcontent">
+                        You can purchase this product(s) with EMIs, using a credit card issued by any of the following banks:
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#hdfc">HDFC</a></li>
+                            <li><a data-toggle="tab" href="#sbi">SBI</a></li>
+                            <li><a data-toggle="tab" href="#icici">ICICI</a></li>
+                            <li><a data-toggle="tab" href="#axis">AXIS</a></li>
+                            <li><a data-toggle="tab" href="#city">CITIBANK</a></li>
+                            <li><a data-toggle="tab" href="#kotak">KOTAK</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="hdfc" class="tab-pane fade in active">
+                                <table class="table table-striped" id="tblGrid">
+                                    <thead id="tblHead">
+                                        <tr>
+                                            <th>EMI Tenure</th>
+                                            <th>Interest</th>
+                                            <th>EMI Amount</th>
+                                            <th>Total Payment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tbody>
+
+
+                                        @foreach (var item in Model.HdfcList)
+                                        {
+                                            <tr class="">
+                                                <td>@item.EMITenure months</td>
+                                                <td>@item.Interest %</td>
+                                                <td>&#8377 @item.EMIAmount</td>
+                                                <td>&#8377 @item.TotalPayment</td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="sbi" class="tab-pane fade">
+                                <table class="table table-striped" id="tblGrid">
+                                    <thead id="tblHead">
+                                        <tr>
+                                            <th>EMI Tenure</th>
+                                            <th>Interest</th>
+                                            <th>EMI Amount</th>
+                                            <th>Total Payment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tbody>
+
+
+                                        @foreach (var item in Model.SBI)
+                                        {
+                                            <tr class="">
+                                                <td>@item.EMITenure months</td>
+                                                <td>@item.Interest %</td>
+                                                <td>&#8377 @item.EMIAmount</td>
+                                                <td>&#8377 @item.TotalPayment</td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="icici" class="tab-pane fade">
+                                <table class="table table-striped" id="tblGrid">
+                                    <thead id="tblHead">
+                                        <tr>
+                                            <th>EMI Tenure</th>
+                                            <th>Interest</th>
+                                            <th>EMI Amount</th>
+                                            <th>Total Payment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tbody>
+
+
+                                        @foreach (var item in Model.ICICI)
+                                        {
+                                            <tr class="">
+                                                <td>@item.EMITenure months</td>
+                                                <td>@item.Interest %</td>
+                                                <td>&#8377 @item.EMIAmount</td>
+                                                <td>&#8377 @item.TotalPayment</td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="axis" class="tab-pane fade">
+                                <table class="table table-striped" id="tblGrid">
+                                    <thead id="tblHead">
+                                        <tr>
+                                            <th>EMI Tenure</th>
+                                            <th>Interest</th>
+                                            <th>EMI Amount</th>
+                                            <th>Total Payment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                        @foreach (var item in Model.AXIS)
+                                        {
+                                            <tr class="">
+                                                <td>@item.EMITenure months</td>
+                                                <td>@item.Interest %</td>
+                                                <td>&#8377 @item.EMIAmount</td>
+                                                <td>&#8377 @item.TotalPayment</td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="city" class="tab-pane fade">
+                                <table class="table table-striped" id="tblGrid">
+                                    <thead id="tblHead">
+                                        <tr>
+                                            <th>EMI Tenure</th>
+                                            <th>Interest</th>
+                                            <th>EMI Amount</th>
+                                            <th>Total Payment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                        @foreach (var item in Model.Citibank)
+                                        {
+                                            <tr class="">
+                                                <td>@item.EMITenure months</td>
+                                                <td>@item.Interest %</td>
+                                                <td>&#8377 @item.EMIAmount</td>
+                                                <td>&#8377 @item.TotalPayment</td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="kotak" class="tab-pane fade">
+                                <table class="table table-striped" id="tblGrid">
+                                    <thead id="tblHead">
+                                        <tr>
+                                            <th>EMI Tenure</th>
+                                            <th>Interest</th>
+                                            <th> EMI Amount</th>
+                                            <th>Total Payment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                        @foreach (var item in Model.Kotak)
+                                        {
+                                            <tr class="">
+                                                <td>@item.EMITenure  months</td>
+                                                <td>@item.Interest %</td>
+                                                <td>&#8377 @item.EMIAmount</td>
+                                                <td>&#8377 @item.TotalPayment</td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notes">
+                        Estimated calculations. EMIs are approved at the discretion of card issuing bank.
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#approve-btn').click(function () {
+            $('#modal-container').modal('hide');
+        });
+    });
+</script>

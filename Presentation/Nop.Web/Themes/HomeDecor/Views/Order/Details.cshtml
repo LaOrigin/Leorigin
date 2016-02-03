@@ -36,7 +36,17 @@
     })
    
 </script>
-
+<style>
+    #PaymentOption {
+    color: #fff;
+    background: #1b2e5d;
+    font-weight: normal;
+    padding: 6px 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+</style>
 @if (Model.PrintMode)
 {
     <script type="text/javascript">
@@ -317,7 +327,7 @@
                             }
                             else
                             {
-                                <div>
+                                <div id="PaymentOption">
                                     @Html.RadioButtonFor(model => model.IsEmiSelected, false)
                                     @Html.Label("NonEmi")
                                     @Html.RadioButtonFor(model => model.IsEmiSelected, true)

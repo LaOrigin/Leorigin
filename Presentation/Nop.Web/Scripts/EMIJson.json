@@ -1,0 +1,46 @@
+﻿{
+    "HdfcList": [
+        { "BankName": "HDFC","EMITenure": "3","Interest":  "12","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "HDFC","EMITenure": "6","Interest":  "12","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "HDFC","EMITenure": "9","Interest":  "13","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "HDFC","EMITenure": "12","Interest":  "13","EMIAmount": "0","TotalPayment": "0" }
+        
+    ],
+    "SBI": [
+           { "BankName": "SBI","EMITenure": "3","Interest":  "14","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "SBI","EMITenure": "6","Interest":  "14","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "SBI","EMITenure": "9","Interest":  "14","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "SBI","EMITenure": "12","Interest":  "14","EMIAmount": "0","TotalPayment": "0" }
+      
+    ],
+    "ICICI": [
+         { "BankName": "ICICI","EMITenure": "3","Interest":  "13","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "ICICI","EMITenure": "6","Interest":  "13","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "ICICI","EMITenure": "9","Interest":  "13","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "ICICI","EMITenure": "12","Interest":  "13","EMIAmount": "0","TotalPayment": "0" }
+     
+    ],
+    "AXIS": [
+        { "BankName": "AXIS", "EMITenure": "3", "Interest": "12", "EMIAmount": "0", "TotalPayment": "0" },
+        { "BankName": "AXIS", "EMITenure": "6", "Interest": "12", "EMIAmount": "0", "TotalPayment": "0" },
+        { "BankName": "AXIS", "EMITenure": "9", "Interest": "13", "EMIAmount": "0", "TotalPayment": "0" },
+        { "BankName": "AXIS", "EMITenure": "12", "Interest": "13", "EMIAmount": "0", "TotalPayment": "0" }
+
+    ],
+    "Citibank": [
+        { "BankName": "Citibank", "EMITenure": "3", "Interest": "13", "EMIAmount": "0", "TotalPayment": "0" },
+        { "BankName": "Citibank", "EMITenure": "6", "Interest": "13", "EMIAmount": "0", "TotalPayment": "0" },
+        { "BankName": "Citibank", "EMITenure": "9", "Interest": "14", "EMIAmount": "0", "TotalPayment": "0" },
+        { "BankName": "Citibank", "EMITenure": "12", "Interest": "14", "EMIAmount": "0", "TotalPayment": "0" }
+
+    ],
+     "Kotak": [
+        { "BankName": "Kotak","EMITenure": "3","Interest":  "13","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "Kotak","EMITenure": "6","Interest":  "13","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "Kotak","EMITenure": "9","Interest":  "14","EMIAmount": "0","TotalPayment": "0" },
+        { "BankName": "Kotak","EMITenure": "12","Interest":  "14","EMIAmount": "0","TotalPayment": "0" }
+       
+     ]
+}
+
+
