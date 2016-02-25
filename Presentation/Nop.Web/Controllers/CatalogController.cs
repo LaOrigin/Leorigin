@@ -712,7 +712,7 @@ namespace Nop.Web.Controllers
             {
                 foreach (var data in model.Products)
                 {
-                    outputhtml += "<div class='col-md-4 col-sm-6'><div class='item-box'>" + PartialViewdata(this, viewname, data) + "</div></div>";
+                    outputhtml += "<div class='col-md-6 col-sm-6'><div class='item-box'>" + PartialViewdata(this, viewname, data) + "</div></div>";
                 }
             }
             return outputhtml;

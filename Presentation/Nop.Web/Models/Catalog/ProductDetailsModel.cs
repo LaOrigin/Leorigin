@@ -166,6 +166,7 @@ namespace Nop.Web.Models.Catalog
             public string PriceWithDiscount { get; set; }
 
             public decimal PriceValue { get; set; }
+            public double EMIPriceValue { get; set; }
             public decimal PriceWithDiscountValue { get; set; }
 
             public bool CustomerEntersPrice { get; set; }

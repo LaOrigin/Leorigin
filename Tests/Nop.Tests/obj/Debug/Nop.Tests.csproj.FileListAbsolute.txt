@@ -80,6 +80,5 @@ D:\fullsource\Final\Leorigin\Tests\Nop.Tests\bin\Debug\nunit.framework.dll
 D:\fullsource\Final\Leorigin\Tests\Nop.Tests\bin\Debug\Rhino.Mocks.dll
 D:\fullsource\Final\Leorigin\Tests\Nop.Tests\bin\Debug\nunit.framework.xml
 D:\fullsource\Final\Leorigin\Tests\Nop.Tests\bin\Debug\Rhino.Mocks.xml
-D:\fullsource\Final\Leorigin\Tests\Nop.Tests\obj\Debug\Nop.Tests.csprojResolveAssemblyReference.cache
 D:\fullsource\Final\Leorigin\Tests\Nop.Tests\obj\Debug\Nop.Tests.dll
 D:\fullsource\Final\Leorigin\Tests\Nop.Tests\obj\Debug\Nop.Tests.pdb

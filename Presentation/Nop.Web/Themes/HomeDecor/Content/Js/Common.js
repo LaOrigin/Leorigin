@@ -1,7 +1,7 @@
 ﻿function DivscrollCall(callBackFunctio) {
 
     $(window).scroll(function () {
-        debugger;
+      
         var wintop = $(window).scrollTop(),
             docheight = $(document).height(),
             winheight = $(window).height();

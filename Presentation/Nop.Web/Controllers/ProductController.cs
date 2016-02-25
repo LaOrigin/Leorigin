@@ -484,6 +484,7 @@ namespace Nop.Web.Controllers
                             model.ProductPrice.PriceWithDiscount = _priceFormatter.FormatPrice(finalPriceWithDiscount);
 
                         model.ProductPrice.PriceValue = finalPriceWithoutDiscount;
+                        model.ProductPrice.EMIPriceValue = Math.Round(((Convert.ToInt32(model.ProductPrice.PriceValue) * 1.08 / 100 * Math.Pow((1 + 1.08 / 100), 9)) / ((Math.Pow((1 + 1.08 / 100), 9) - 1))));
                         model.ProductPrice.PriceWithDiscountValue = finalPriceWithDiscount;
 
                         //if (Session["picid"] != null)
@@ -999,9 +1000,11 @@ namespace Nop.Web.Controllers
                                 //disper = (((discount * 100) / Final)).ToString().Substring(0,6);
                                 disper = (((discount * 100) / Final)).ToString("N2");
                             }
-                            
+                            double amount = Convert.ToDouble(finalPriceWithDiscount + price.PriceAdjustment);
+                            double emiamount = Math.Round((amount * 1.08 / 100 * Math.Pow((1 + 1.08 / 100), 9)) / ((Math.Pow((1 + 1.08 / 100), 9) - 1)));
+                            string emiamountf = _priceFormatter.FormatPrice((decimal)emiamount);
 
-                            s = "{\"Status\": \"" + true + "\",\"ImageUrl\": \"" + ImageUrl + "\",\"Price\":\"" + priceofproduct + "\",\"finalPriceWithDiscount\":\"" + Final + "\",\"discountpriceofproduct\":\"" + discountpriceofproduct + "\",\"discount\":\"" + discount + "\",\"productId\":\"" + productId + "\",\"productattrid\":\"" + productattrid + "\",\"disper\":\"" + disper + "\"}";
+                            s = "{\"Status\": \"" + true + "\",\"ImageUrl\": \"" + ImageUrl + "\",\"Price\":\"" + priceofproduct + "\",\"EMIPrice\": \"" + emiamountf + "\",\"finalPriceWithDiscount\":\"" + Final + "\",\"discountpriceofproduct\":\"" + discountpriceofproduct + "\",\"discount\":\"" + discount + "\",\"productId\":\"" + productId + "\",\"productattrid\":\"" + productattrid + "\",\"disper\":\"" + disper + "\"}";
 
                             //Session.Remove("picid");
                             return s;
@@ -1018,7 +1021,10 @@ namespace Nop.Web.Controllers
                                 disper = (((discount * 100) / finalPriceWithoutDiscount)).ToString();
                             }
 
-                            s = "{\"Status\": \"" + true + "\",\"ImageUrl\": \"" + ImageUrl + "\",\"Price\": \"" + priceofproduct + "\",\"finalPriceWithDiscount\":\"" + finalPriceWithDiscount + "\",\"discountpriceofproduct\":\"" + discountpriceofproduct + "\",\"discount\":\"" + discount + "\",\"productId\":\"" + productId + "\",\"productattrid\":\"" + productattrid + "\",\"disper\":\"" + disper + "\"}";
+                            double amount = Convert.ToDouble(finalPriceWithoutDiscount - discount);
+                            double emiamount = Math.Round((amount * 1.08 / 100 * Math.Pow((1 + 1.08 / 100), 9)) / ((Math.Pow((1 + 1.08 / 100), 9) - 1))) ;
+                            string emiamountf = _priceFormatter.FormatPrice((decimal)emiamount);
+                            s = "{\"Status\": \"" + true + "\",\"ImageUrl\": \"" + ImageUrl + "\",\"Price\": \"" + priceofproduct + "\",\"EMIPrice\": \"" + emiamountf + "\",\"finalPriceWithDiscount\":\"" + finalPriceWithDiscount + "\",\"discountpriceofproduct\":\"" + discountpriceofproduct + "\",\"discount\":\"" + discount + "\",\"productId\":\"" + productId + "\",\"productattrid\":\"" + productattrid + "\",\"disper\":\"" + disper + "\"}";
 
                             // Session.Remove("picid");
                             return s;
@@ -1691,9 +1697,17 @@ namespace Nop.Web.Controllers
             string Message = "";
             bool z=false;
             var zip = _zipcodeService.GetZipcodeByName(pincode);
+           
             if (zip != null)
             {
-                var productcity = _productCitiesService.GetProductsCitiesByProductId(productid).Where(x => x.CityID == zip.CityID).FirstOrDefault();
+                ProductCities productcity = null;
+                foreach (var item in zip)
+                {
+                    productcity = _productCitiesService.GetProductsCitiesByProductId(productid).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                    if (productcity != null)
+                        break;
+                }
+               
                 if (productcity != null)
                 {
                     var deviveryid = _productService.GetProductById(productid).DeliveryDateId;

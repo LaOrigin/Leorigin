@@ -87,6 +87,7 @@
                                     //$("#Zoomer").children('img').attr('style',"width: 715px;height:715px")
                                     $("#Zoomer").attr("href",Imageurl)
                                     $(".price-value-"+productid).text(discountprice);
+                                  
                                     var p=parseInt(Price1);
                                     var myCheckbox= $("[id^='product_attribute']");
                                     $('.uprice,.dprice,.dprice').remove();
@@ -108,7 +109,7 @@
                                     var discountpercentage = (100 - ((currertprice * 100)/parseFloat(pricemul)));
                                     if(discountpercentage !="0");{
                                         discountpercentage  =discountpercentage.toFixed(2);
-                                        $('.product-price').append('<div id="saveid">Save : <b>'+parseFloat(dis).toFixed(2)+' ('+discountpercentage+' %)</b></div>');
+                                        //$('.product-price').append('<div id="saveid">Save : <b>'+parseFloat(dis).toFixed(2)+' ('+discountpercentage+' %)</b></div>');
                                     }
                                     //$('.attributes').append('<div><label class="uprice" style="margin-top:20px"><li><b>Price</b></li><div id="attr_price'+prid+'_'+atid+'">'+Price1+'</div></label></div>')
                                     //$('.attributes').append('<div><label class="dprice"><li><b>Discount</b></li><div id="attr_discount'+prid+'_'+atid+'">'+dis+'</div></label></div>')
@@ -148,6 +149,7 @@
                                     $("#Zoomer").attr("href",Imageurl);
                                     //$("#Zoomer").attr("href","")
                                     $(".price-value-"+productid).text(discountprice);
+                                    $(".emi_price_str").text(results.EMIPrice);
                                     var p=parseInt(Price1);
                                     var myCheckbox= $("[id^='product_attribute']");
                                     $('.uprice,.dprice,.dprice').remove();

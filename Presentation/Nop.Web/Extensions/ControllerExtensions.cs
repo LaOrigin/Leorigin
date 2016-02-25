@@ -101,8 +101,11 @@ namespace Nop.Web.Extensions
                     ShortDescription = product.GetLocalized(x => x.ShortDescription),
                     FullDescription = product.GetLocalized(x => x.FullDescription),
                     SeName = product.GetSeName(),
+                    
                 };
                 //price
+
+               
                 if (preparePriceModel)
                 {
                     #region Prepare product price
@@ -263,6 +266,7 @@ namespace Nop.Web.Extensions
                                             {
                                                 priceModel.OldPrice = null;
                                                 priceModel.Price = String.Format(localizationService.GetResource("Products.PriceRangeFrom"), priceFormatter.FormatPrice(finalPrice));
+                                                priceModel.PriceValue = finalPrice;
                                             }
                                             else
                                             {
@@ -270,11 +274,13 @@ namespace Nop.Web.Extensions
                                                 {
                                                     priceModel.OldPrice = priceFormatter.FormatPrice(oldPrice);
                                                     priceModel.Price = priceFormatter.FormatPrice(finalPrice);
+                                                    priceModel.PriceValue = finalPrice;
                                                 }
                                                 else
                                                 {
                                                     priceModel.OldPrice = null;
                                                     priceModel.Price = priceFormatter.FormatPrice(finalPrice);
+                                                    priceModel.PriceValue = finalPrice;
                                                 }
                                             }
                                             if (product.IsRental)
@@ -282,6 +288,8 @@ namespace Nop.Web.Extensions
                                                 //rental product
                                                 priceModel.OldPrice = priceFormatter.FormatRentalProductPeriod(product, priceModel.OldPrice);
                                                 priceModel.Price = priceFormatter.FormatRentalProductPeriod(product, priceModel.Price);
+                                                priceModel.PriceValue = finalPrice;
+                                              
                                             }
 
 
@@ -299,6 +307,7 @@ namespace Nop.Web.Extensions
                                     //hide prices
                                     priceModel.OldPrice = null;
                                     priceModel.Price = null;
+                                    
                                 }
 
                                 #endregion

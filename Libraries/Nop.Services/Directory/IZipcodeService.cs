@@ -27,7 +27,7 @@ namespace Nop.Services.Directory
         /// </summary>
         /// <param name="zipcode"></param>
         /// <returns></returns>
-        Zipcodes GetZipcodeByName(string zipcode);
+        IList<Zipcodes> GetZipcodeByName(string zipcode);
 
         /// <summary>
         /// 

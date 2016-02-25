@@ -103,6 +103,7 @@
      .emistr {
     font-size: 12px;
     margin-bottom: 5px;
+    display:inline;
 }
 
      .emi_price_str {
@@ -112,10 +113,10 @@
      .more {
     color: #BA5A02;
     vertical-align: middle;
-    font-size: 11px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 2px 5px;
+   
     cursor: pointer;
 }
      .emi_section {
@@ -380,15 +381,41 @@
                                                                 }
                                                     }
                                                 </div>
+                                                @if (ProductPriceModel.PriceValue > 1500)
+                                                {
+
+
+                                                    <div class="emi_section" id="emi_sofaprod">
+                                                     
+                                                        <div class="emi_price">
+                                                            <div class="emistr">
+                                                                EMI options starting from
+                                                            </div>
+                                                            <span class="emi_price_str">
+                                                                &#8377  @ProductPriceModel.EMIPriceValue
+
+                                                            </span>
+                                                        </div>
+
+
+                                                        @Html.ActionLink("More Details ", "EMIModal", "Product",
+          new { amount = Convert.ToInt32(ProductPriceModel.PriceValue) }, new { @class = "modal-link  more" })
+
+                                                    </div>
+                                                }
                                                 <div class="clear"></div>
-                                                <div class="checkavailable">
-                                                   
+                                                <div class="checkavailable"><br />
+                                                   @if (!Model.IsHomeDecor)
+                                                   {
                                                     <div class="cityavailable">@T("Product.zipcode.available.city")</div>
+                                                   }
+                                                    
+                                                    <div class="lblcheck">Check Availability at your place</div>
                             <input type="text" id="txtzipcode" class="textbox" placeholder="Enter Your Pincode"/>
                             <input type="button" id="btnzipcode" class="btn" value="Check" onclick="checkzipcode();" />
                             <div class="clear"></div>
                                                      <div class="message" id="zipresult"></div>
-                                                     <div class="lblcheck">Check Availability at your place</div>
+                                                    
                            
                         </div>
                                                 <div class="also-call">
@@ -409,28 +436,7 @@
                                                     
                                                     <input type="button" id="add-to-cart-button-@AddToCartModel.ProductId" class="product-box-add-to-cart-button-mobile" value="@addToCartText" data-productid="@AddToCartModel.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = AddToCartModel.ProductId, shoppingCartTypeId = (int)Nop.Core.Domain.Orders.ShoppingCartType.ShoppingCart })    ', '#product-details-form');return false;" />
                                                 }
-                                               @if (ProductPriceModel.PriceValue > 1500)
-                                               {
-                                                 
-                                                
-                                                <div class="emi_section" id="emi_sofaprod">
-                                                    <div class="price_or_str">OR</div>
-                                                    <div class="emi_price">
-                                                        <div class="emistr">
-                                                            EMI options starting from
-                                                        </div>
-                                                        <span class="emi_price_str">
-                                                            &#8377  @Math.Round(((Convert.ToInt32(ProductPriceModel.PriceValue) * 1.08 / 100 * Math.Pow((1 + 1.08 / 100), 12)) / ((Math.Pow((1 + 1.08 / 100), 12) - 1))))
-                                                         
-                                                        </span>
-                                                    </div>
-
-
-                                                    @Html.ActionLink("More Details ", "EMIModal", "Product",
-          new { amount = Convert.ToInt32(ProductPriceModel.PriceValue) }, new { @class = "modal-link  more" })
-                                                    
-                                                </div>
-                                               }
+                                        
 
 @* @if (!Model.DisableWishlistButton && Model.UpdatedShoppingCartItemId == 0)
             {
@@ -550,6 +556,7 @@
                     <div id="toggletermsandconditions" class="full-description" itemprop="description">
                         @Html.Raw(Model.TermsAndConditions)
                     </div>
+
                     <div onclick="toggle('#toggleOrderSteps','#OrderStepsarrowup','#OrderStepsarrowdown' ,this )" data-open="false">
                         @*<a style="border:none" href="#">*@
                         <h2 class="dis">Steps To Order Your Product<span style="float:right;"><img id="OrderStepsarrowdown" src='@Url.Content("~/down.png")' /><img id="OrderStepsarrowup" src='@Url.Content("~/UP.png")' /></span></h2>@*</a>*@

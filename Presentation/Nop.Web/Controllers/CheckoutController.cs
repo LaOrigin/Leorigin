@@ -612,8 +612,14 @@ namespace Nop.Web.Controllers
                     var city= _zipcodeService.GetZipcodeByName(address.ZipPostalCode.Trim());
                     if (city != null)
                     {
-                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                        if (cities == null)
+                        ProductCities productcity = null;
+                        foreach (var item in city)
+                        {
+                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                            if (productcity != null)
+                                break;
+                        }
+                        if (productcity == null)
                         {
                             error = true;
                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -741,8 +747,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(model.NewAddress.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -809,8 +821,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(model.NewAddress.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -866,8 +884,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(model.NewAddress.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -959,8 +983,14 @@ namespace Nop.Web.Controllers
                         var city = _zipcodeService.GetZipcodeByName(address.ZipPostalCode.Trim());
                         if (city != null)
                         {
-                            var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                            if (cities == null)
+                            ProductCities productcity = null;
+                            foreach (var item in city)
+                            {
+                                productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                if (productcity != null)
+                                    break;
+                            }
+                            if (productcity == null)
                             {
                                 error = true;
                                 string msg = p.Product.Name + " is not available on your zip code.";
@@ -1088,8 +1118,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(model.NewAddress.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -1144,8 +1180,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(model.NewAddress.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -1192,8 +1234,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(model.NewAddress.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -2121,8 +2169,14 @@ namespace Nop.Web.Controllers
                                 var city = _zipcodeService.GetZipcodeByName(address.ZipPostalCode.Trim());
                                 if (city != null)
                                 {
-                                    var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                    if (cities == null)
+                                    ProductCities productcity = null;
+                                    foreach (var item in city)
+                                    {
+                                        productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                        if (productcity != null)
+                                            break;
+                                    }
+                                    if (productcity == null)
                                     {
                                         errors = true;
                                         string msg = p.Product.Name + " is not available on your zip code.";
@@ -2219,8 +2273,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(address.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -2290,8 +2350,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(address.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -2448,8 +2514,14 @@ namespace Nop.Web.Controllers
                                 var city = _zipcodeService.GetZipcodeByName(address.ZipPostalCode.Trim());
                                 if (city != null)
                                 {
-                                    var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                    if (cities == null)
+                                    ProductCities productcity = null;
+                                    foreach (var item in city)
+                                    {
+                                        productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                        if (productcity != null)
+                                            break;
+                                    }
+                                    if (productcity == null)
                                     {
                                         errors = true;
                                         string msg = p.Product.Name + " is not available on your zip code.";
@@ -2545,8 +2617,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(address.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";
@@ -2619,8 +2697,14 @@ namespace Nop.Web.Controllers
                                     var city = _zipcodeService.GetZipcodeByName(address.ZipPostalCode.Trim());
                                     if (city != null)
                                     {
-                                        var cities = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == city.CityID).FirstOrDefault();
-                                        if (cities == null)
+                                        ProductCities productcity = null;
+                                        foreach (var item in city)
+                                        {
+                                            productcity = _productCitiesService.GetProductsCitiesByProductId(p.ProductId).Where(x => x.CityID == item.CityID).FirstOrDefault();
+                                            if (productcity != null)
+                                                break;
+                                        }
+                                        if (productcity == null)
                                         {
                                             errors = true;
                                             string msg = p.Product.Name + " is not available on your zip code.";

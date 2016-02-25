@@ -18,6 +18,80 @@
         addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, });
     }    
 }
+<style>
+    .modal-content {
+        width: 600px !important;
+        margin: 30px auto !important;
+    }
+
+   
+    .price_or_str {
+        margin: 10px 0;
+        color: #BA5A02;
+        font-size: 11px;
+    }
+
+    .emi_price {
+        margin-bottom: 6px;
+       
+    }
+
+    .emistr {
+        font-size: 12px;
+        margin-bottom: 5px;
+        display: inline;
+    }
+
+    .emi_price_str {
+        color: #222222;
+        font-size:12px;
+    }
+
+    .more {
+        color: #BA5A02;
+        vertical-align: middle;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+    .emi_section {
+        display: inline-block;
+         float:right;
+        padding:0 40px 0 0;
+    }
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        // Initialize numeric spinner input boxes
+        //$(".numeric-spinner").spinedit();
+        // Initialize modal dialog
+        // attach modal-container bootstrap attributes to links with .modal-link class.
+        // when a link is clicked with these attributes, bootstrap will display the href content in a modal dialog.
+        $('body').on('click', '.modal-link', function (e) {
+            e.preventDefault();
+            $(this).attr('data-target', '#modal-container');
+            $(this).attr('data-toggle', 'modal');
+        });
+        // Attach listener to .modal-close-btn's so that when the button is pressed the modal dialog disappears
+        $('body').on('click', '.modal-close-btn', function () {
+            $('#modal-container').modal('hide');
+        });
+        //clear modal cache, so that new content can be loaded
+        $('#modal-container').on('hidden.bs.modal', function () {
+            $(this).removeData('bs.modal');
+        });
+        $('#CancelModal').on('click', function () {
+            return false;
+        });
+    });
+</script>
+<div id="modal-container" class="modal fade"
+     tabindex="-1" role="dialog">
+    <div class="modal-content"></div>
+</div>
 <a href="@Url.RouteUrl("Product", new { SeName = Model.SeName })" class="aditionalInfo" flag="0" >
     <div class="product-item" data-productid="@Model.Id">
         <div class="picture">
@@ -79,6 +153,26 @@
 
                     @*<div class="clear"></div>*@
                     <span class="price actual-price">@Model.ProductPrice.Price</span>
+                        <div class="emi_section" id="emi_sofaprod">
+
+                            <div class="emi_price">
+                                <div class="emistr">
+                                    EMI
+                                </div>
+                                <span class="emi_price_str">
+                                    &#8377 @Math.Round(((Convert.ToInt32(Model.ProductPrice.PriceValue) * 1.08 / 100 * Math.Pow((1 + 1.08 / 100), 9)) / ((Math.Pow((1 + 1.08 / 100), 9) - 1))))
+
+                                    
+                                </span>
+                               
+                                &nbsp;
+
+                                @Html.ActionLink("More >>", "EMIModal", "Product",
+                   new { amount = Convert.ToInt32(Model.ProductPrice.PriceValue) }, new { @class = "modal-link  more" })
+                            </div>
+                        </div>
+                    
+
                     @if (Model.ProductPrice.DisplayTaxShippingInfo)
                     {
                         var inclTax = EngineContext.Current.Resolve<IWorkContext>().TaxDisplayType == TaxDisplayType.IncludingTax;
@@ -88,6 +182,7 @@
                             @T(inclTax ? "Products.Price.TaxShipping.InclTax" : "Products.Price.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
                         </div>
                     }
+                    
                 </div>
                 @* @if (Model.ReviewOverviewModel.AllowCustomerReviews)
             {

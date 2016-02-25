@@ -155,7 +155,7 @@ namespace Nop.Services.Directory
             //event notification
             _eventPublisher.EntityUpdated(zipcodes);
         }
-        public virtual Zipcodes GetZipcodeByName(string zipcode) {
+        public virtual IList<Zipcodes> GetZipcodeByName(string zipcode) {
 
             if (zipcode == "")
                 throw new ArgumentNullException("zipcodes");
@@ -164,7 +164,7 @@ namespace Nop.Services.Directory
                     orderby sp.ZipcodeID
                     where sp.ZipcodeNumber == zipcode.Trim()
                     select sp;
-            var zipcodes = query.FirstOrDefault();
+            var zipcodes = query.ToList();
             return zipcodes;
         }
         #endregion
